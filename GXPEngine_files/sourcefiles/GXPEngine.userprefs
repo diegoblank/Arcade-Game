@@ -9,7 +9,7 @@
       <File FileName="GXPEngine\MyGame.cs" Line="28" Column="21" />
       <File FileName="GXPEngine\Background.cs" Line="8" Column="4" />
       <File FileName="GXPEngine\Player.cs" Line="14" Column="3" />
-      <File FileName="GXPEngine\Level.cs" Line="68" Column="4" />
+      <File FileName="GXPEngine\Level.cs" Line="81" Column="4" />
       <File FileName="GXPEngine\Enemy.cs" Line="102" Column="29" />
       <File FileName="GXPEngine\LongBackgroundLocomotive.cs" Line="9" Column="24" />
       <File FileName="GXPEngine\LongBackground.cs" Line="6" Column="43" />
