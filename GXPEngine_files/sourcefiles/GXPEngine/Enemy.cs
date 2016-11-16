@@ -197,7 +197,7 @@ namespace GXPEngine
 
 					if (x < crate.x)
 					{
-						x = crate.x - 130;
+						x = crate.x - 140;
 						crate.x = crate.x + 1;
 						Jump();
 					}
