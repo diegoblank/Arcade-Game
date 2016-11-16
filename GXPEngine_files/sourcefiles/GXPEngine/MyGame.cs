@@ -7,14 +7,12 @@ public class MyGame : Game //MyGame is a Game
 
 
 	//initialize game here
-	public MyGame () : base(1280, 960, false)
+	public MyGame () : base(1280, 960, false, false)
 	{
 		
 
 		Level level = new Level();
 		AddChild(level);
-
-
 
 	}
 
