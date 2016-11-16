@@ -14,6 +14,9 @@ namespace GXPEngine
 			Background background = new Background();
 			AddChild(background);
 
+			BaseShort baseshort = new BaseShort(-160, 600);
+			AddChild(baseshort);
+
 			BaseLongCargo baselongcargo = new BaseLongCargo(250, 600);
 			AddChild(baselongcargo);
 
@@ -26,8 +29,8 @@ namespace GXPEngine
 			BaseCeiling baselongceiling = new BaseCeiling(1060, 400);
 			AddChild(baselongceiling);
 
-			BaseShort baseshort = new BaseShort(1870, 600);
-			AddChild(baseshort);
+			BaseShort baseshortmiddle = new BaseShort(1870, 600);
+			AddChild(baseshortmiddle);
 
 			BaseIntermediateCargo baseintermediatecargo = new BaseIntermediateCargo(2280, 600);
 			AddChild(baseintermediatecargo);
@@ -40,6 +43,12 @@ namespace GXPEngine
 
 			BaseIntermediateCeiling baseintermediateceiling = new BaseIntermediateCeiling(2890, 400);
 			AddChild(baseintermediateceiling);
+
+			BaseIntermediateCargo baseintermediatefront = new BaseIntermediateCargo(3500, 600);
+			AddChild(baseintermediatefront);
+
+			LongBackground longlocomotive = new LongBackground(4110, 400);
+			AddChild(longlocomotive);
 
 			Player player = new Player();
 			AddChild(player);

@@ -214,6 +214,24 @@ namespace GXPEngine
 
 			}
 
+			if (other is LongBackground)
+			{
+
+				LongBackground longbackgroundfront = other as LongBackground;
+
+				if (y >= longbackgroundfront.y)
+				{
+					y = longbackgroundfront.y;
+
+				}
+
+				if (_timer == 0)
+				{
+					_canJump = true;
+				}
+
+			}
+
 		}
 	}
 }
