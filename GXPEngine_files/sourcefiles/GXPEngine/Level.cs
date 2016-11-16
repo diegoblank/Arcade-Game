@@ -14,6 +14,9 @@ namespace GXPEngine
 			Background background = new Background();
 			AddChild(background);
 
+			Enemy enemy = new Enemy(300, 300);
+			AddChild(enemy);
+
 			BaseShort baseshort = new BaseShort(-160, 600);
 			AddChild(baseshort);
 
@@ -76,6 +79,14 @@ namespace GXPEngine
 			
 			}
 		
+		}
+
+		public float GetPlayerCoords()
+		{
+			float PlayerPosX = scrollTarget.x;
+			return PlayerPosX;
+
+
 		}
 
 		void Update() 
