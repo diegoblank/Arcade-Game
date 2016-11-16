@@ -51,11 +51,28 @@ namespace GXPEngine
 			LongBackgroundLocomotive longlocomotive = new LongBackgroundLocomotive(4110, 400);
 			AddChild(longlocomotive);
 
+			Wheel wheel1 = new Wheel(320, 650);
+			AddChild(wheel1);
+
+			Wheel wheel2 = new Wheel(410, 650);
+			AddChild(wheel2);
+
+			Wheel wheel3 = new Wheel(960, 650);
+			AddChild(wheel3);
+
+			Wheel wheel4 = new Wheel(870, 650);
+			AddChild(wheel4);
+
+			Crate crate1 = new Crate(380, 525);
+			AddChild(crate1);
+
 			Enemy enemy = new Enemy(3000, 300);
 			AddChild(enemy);
 
 			Player player = new Player();
 			AddChild(player);
+
+
 
 
 			scrollTarget = player;

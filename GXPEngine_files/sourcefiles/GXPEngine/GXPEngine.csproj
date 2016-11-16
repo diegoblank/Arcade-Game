@@ -74,6 +74,8 @@
     <Compile Include="IntermediateBackground.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="LongBackgroundLocomotive.cs" />
+    <Compile Include="Wheel.cs" />
+    <Compile Include="Crate.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GXPEngine\" />

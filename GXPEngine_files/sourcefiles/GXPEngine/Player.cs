@@ -8,6 +8,7 @@ namespace GXPEngine
 
 		private float _LastY;
 		private int _timer;
+		private int _crouchTimer;
 
 		private float _gravity;
 		private bool _canJump;
@@ -20,9 +21,10 @@ namespace GXPEngine
 		public Player() : base ("player.png")
 		{
 			state = 1;
+			_crouchTimer = 0;
 
 			SetOrigin(width / 2, height);
-			x = 640;
+			x = 400;
 			y = 300;
 			_LastY = 0;
 			_timer = 0;
@@ -40,10 +42,26 @@ namespace GXPEngine
 		void Update() 
 		{
 
+
+
 			PlayerPosX = this.x;
 
 			_timer = _timer - 1;
-				
+			_crouchTimer = _crouchTimer - 1;
+
+			if (_timer <= 0)
+			{
+
+				_timer = 0;
+
+			}
+
+			if (_crouchTimer <= 0) 
+			{
+				_crouchTimer = 0;
+				scaleY = 0.2f;
+			}
+
 			if (Input.GetKey(Key.D))
 				{
 					speedX = speedX + 2;
@@ -51,6 +69,15 @@ namespace GXPEngine
 					Mirror(true, false);
 					
 				}
+
+			if (Input.GetKeyDown(Key.S) && _crouchTimer == 0)
+			{
+				
+				state = 4;
+				scaleY = scaleY *(0.5f);
+				_crouchTimer = 50;
+
+			}
 
 			if (Input.GetKey(Key.A))
 				{
@@ -74,12 +101,7 @@ namespace GXPEngine
 
 				}
 
-				if (_timer <= 0) 
-				{ 
-
-					_timer = 0;
-
-				}
+				
 
 				speedX = speedX * 0.8f; 
 				speedY = speedY * 0.8f;
@@ -235,6 +257,32 @@ namespace GXPEngine
 				}
 
 			}
+
+
+			if (other is Crate)
+			{
+
+				Crate crate = other as Crate;
+
+
+				if (x > crate.x + 80) 
+				{
+					x = crate.x + 100;
+				}
+
+				if (x <= crate.x) 
+				{
+					x = crate.x-20;
+				}
+
+				if (_timer == 0)
+				{
+					_canJump = true;
+				}
+
+			}
+
+
 
 		}
 	}
