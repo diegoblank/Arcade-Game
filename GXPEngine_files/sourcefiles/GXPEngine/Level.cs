@@ -27,7 +27,7 @@ namespace GXPEngine
 			BaseLong baselong = new BaseLong(1060, 600);
 			AddChild(baselong);
 
-			BaseCeiling baselongceiling = new BaseCeiling(1060, 400);
+			LongCeiling baselongceiling = new LongCeiling(1060, 400);
 			AddChild(baselongceiling);
 
 			BaseShort baseshortmiddle = new BaseShort(1870, 600);
@@ -63,10 +63,10 @@ namespace GXPEngine
 			Wheel wheel4 = new Wheel(870, 650);
 			AddChild(wheel4);
 
-			Crate crate1 = new Crate(380, 525);
+			Crate crate1 = new Crate(380, 560);
 			AddChild(crate1);
 
-			Enemy enemy = new Enemy(3000, 300);
+			Enemy enemy = new Enemy(1000, 300);
 			AddChild(enemy);
 
 			Player player = new Player();

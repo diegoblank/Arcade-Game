@@ -154,9 +154,9 @@ namespace GXPEngine
 
 			}
 
-			if (other is BaseCeiling)
+			if (other is LongCeiling)
 			{
-				BaseCeiling baseceiling = other as BaseCeiling;
+				LongCeiling baseceiling = other as LongCeiling;
 
 				if (y >= baseceiling.y)
 				{
@@ -264,16 +264,29 @@ namespace GXPEngine
 
 				Crate crate = other as Crate;
 
+				if (y > crate.y) 
+				{ 
+				
+					if (x > crate.x)
+						{
+							x = crate.x + 65;
+							crate.x = crate.x - 4;
+						}
 
-				if (x > crate.x + 80) 
-				{
-					x = crate.x + 100;
+					if (x <= crate.x)
+						{
+							x = crate.x - 65;
+							crate.x = crate.x + 4;
+						}
+				
 				}
 
-				if (x <= crate.x) 
+
+				if (y <= crate.y + 40)
 				{
-					x = crate.x-20;
+					y = crate.y -40;
 				}
+
 
 				if (_timer == 0)
 				{

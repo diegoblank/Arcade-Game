@@ -3,12 +3,10 @@ namespace GXPEngine
 {
 	public class Crate : Sprite
 	{
-		public Crate(int PosX, int PosY) : base ("crate.png")
+		public Crate(int PosX, int PosY) : base ("cratescaled.png")
 		{
 			SetXY(PosX, PosY);
-
-
-			SetScaleXY(0.3f, 0.3f);
+			SetOrigin(width / 2, height / 2);
 
 		}
 	}
