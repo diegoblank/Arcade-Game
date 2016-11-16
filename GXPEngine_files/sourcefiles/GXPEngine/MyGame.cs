@@ -10,11 +10,8 @@ public class MyGame : Game //MyGame is a Game
 	public MyGame () : base(1280, 960, false)
 	{
 		
-
 		Level level = new Level();
 		AddChild(level);
-
-
 
 	}
 
