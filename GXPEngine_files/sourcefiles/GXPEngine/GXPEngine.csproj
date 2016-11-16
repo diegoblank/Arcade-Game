@@ -76,6 +76,7 @@
     <Compile Include="LongBackgroundLocomotive.cs" />
     <Compile Include="Wheel.cs" />
     <Compile Include="Crate.cs" />
+    <Compile Include="Bullet.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GXPEngine\" />

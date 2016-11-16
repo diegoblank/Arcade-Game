@@ -69,7 +69,7 @@ namespace GXPEngine
 			Enemy enemy = new Enemy(1000, 300);
 			AddChild(enemy);
 
-			Player player = new Player();
+			Player player = new Player(this);
 			AddChild(player);
 
 
@@ -106,7 +106,8 @@ namespace GXPEngine
 		{
 			PlayerPosX = scrollTarget.x;
 			scrollToTarget();
-
+			Console.WriteLine(Time.deltaTime);
+			
 		}
 	}
 }

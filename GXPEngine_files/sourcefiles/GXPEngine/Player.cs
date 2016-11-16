@@ -16,9 +16,11 @@ namespace GXPEngine
 		private float speedX;
 		private float speedY;
 
-		private int state; 
+		private int state;
 
-		public Player() : base ("player.png")
+		private Level _level;
+
+		public Player(Level level) : base ("player.png")
 		{
 			state = 1;
 			_crouchTimer = 0;
@@ -37,11 +39,12 @@ namespace GXPEngine
 
 			scaleX = scaleX * 0.2f;
 			scaleY = scaleY * 0.2f;
+
+			_level = level;
 		}
 
 		void Update() 
 		{
-
 
 
 			PlayerPosX = this.x;
@@ -81,30 +84,35 @@ namespace GXPEngine
 
 			if (Input.GetKey(Key.A))
 				{
-					speedX = speedX - 2;
+				speedX = speedX - 2;
 					state = 2;
 					Mirror(false, false);
 				}
 
 			if (Input.GetKeyDown(Key.SPACE) && _canJump == true)
 				{
-					speedY = speedY - 80;
+					speedY = speedY - 70;
 					_canJump = false;
 					_timer = 20;
 					state = 3;
 				}
 
+			if (Input.GetKeyDown(Key.LEFT_SHIFT))
+			{
+				Bullet bullet = new Bullet(x, y - height*0.7f, state);
+				_level.AddChild(bullet);
+			}
 
-				if (Input.GetKey(Key.SPACE) && _timer >= 0)
-				{
-					speedY = speedY * 1.1f;
-
-				}
+				//if (Input.GetKey(Key.SPACE) && _timer >= 0)
+				//{
+				//speedY = speedY * 1.1f;
+				//speedY += 1f;
+				//}
 
 				
 
 				speedX = speedX * 0.8f; 
-				speedY = speedY * 0.8f;
+				speedY = speedY * 0.9f;
 
 				_LastY = y;
 
