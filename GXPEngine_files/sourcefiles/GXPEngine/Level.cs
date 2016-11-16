@@ -7,15 +7,13 @@ namespace GXPEngine
 		private Sprite scrollTarget;
 		const int RightBoundary = 660;
 		const int LeftBoundary = 620;
+		private float PlayerPosX;
 
 		public Level()
 		{
 			
 			Background background = new Background();
 			AddChild(background);
-
-			Enemy enemy = new Enemy(300, 300);
-			AddChild(enemy);
 
 			BaseShort baseshort = new BaseShort(-160, 600);
 			AddChild(baseshort);
@@ -53,10 +51,15 @@ namespace GXPEngine
 			LongBackgroundLocomotive longlocomotive = new LongBackgroundLocomotive(4110, 400);
 			AddChild(longlocomotive);
 
+			Enemy enemy = new Enemy(3000, 300);
+			AddChild(enemy);
+
 			Player player = new Player();
 			AddChild(player);
 
+
 			scrollTarget = player;
+
 
 
 		}
@@ -81,17 +84,12 @@ namespace GXPEngine
 		
 		}
 
-		public float GetPlayerCoords()
+
+		void Update()
 		{
-			float PlayerPosX = scrollTarget.x;
-			return PlayerPosX;
-
-
-		}
-
-		void Update() 
-		{
+			PlayerPosX = scrollTarget.x;
 			scrollToTarget();
+
 		}
 	}
 }

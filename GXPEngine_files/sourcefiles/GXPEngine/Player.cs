@@ -4,6 +4,8 @@ namespace GXPEngine
 	public class Player : Sprite
 	{
 
+		public static float PlayerPosX;
+
 		private float _LastY;
 		private int _timer;
 
@@ -37,6 +39,8 @@ namespace GXPEngine
 
 		void Update() 
 		{
+
+			PlayerPosX = this.x;
 
 			_timer = _timer - 1;
 				

@@ -8,6 +8,7 @@ namespace GXPEngine
 
 		public Enemy(float PosX, float PosY) : base ("bandit.png")
 		{
+
 			SetXY(PosX, PosY);
 			_gravity = 1.05f;
 			SetScaleXY(0.5f, 0.5f);
@@ -21,16 +22,23 @@ namespace GXPEngine
 
 			y = y * _gravity;
 
-			ComparePostoPlayer();
+			if (this.x < Player.PlayerPosX) 
+			{
+				x = x + 5;
+				Mirror(false, false);
+			}
+
+			if (this.x > Player.PlayerPosX)
+			{
+				x = x - 5;
+				Mirror(true, false);
+
+			}
+
+
 		
 		}
 
-		private void ComparePostoPlayer()
-		{
-
-
-		
-		}
 
 		public void OnCollision(GameObject other)
 		{
@@ -44,8 +52,6 @@ namespace GXPEngine
 					y = baselongcargo.y;
 
 				}
-
-			
 
 			}
 
@@ -130,18 +136,16 @@ namespace GXPEngine
 
 			}
 
-			if (other is LongBackground)
+			if (other is LongBackgroundLocomotive)
 			{
 
-				LongBackground longbackgroundfront = other as LongBackground;
+				LongBackgroundLocomotive longbackgroundfront = other as LongBackgroundLocomotive;
 
 				if (y >= longbackgroundfront.y)
 				{
 					y = longbackgroundfront.y;
 
 				}
-
-			
 
 			}
 		}
