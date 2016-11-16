@@ -50,7 +50,7 @@ namespace GXPEngine
 			BaseIntermediateCargo baseintermediatefront = new BaseIntermediateCargo(3500, 600);
 			AddChild(baseintermediatefront);
 
-			LongBackground longlocomotive = new LongBackground(4110, 400);
+			LongBackgroundLocomotive longlocomotive = new LongBackgroundLocomotive(4110, 400);
 			AddChild(longlocomotive);
 
 			Player player = new Player();

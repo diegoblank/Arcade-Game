@@ -214,10 +214,10 @@ namespace GXPEngine
 
 			}
 
-			if (other is LongBackground)
+			if (other is LongBackgroundLocomotive)
 			{
 
-				LongBackground longbackgroundfront = other as LongBackground;
+				LongBackgroundLocomotive longbackgroundfront = other as LongBackgroundLocomotive;
 
 				if (y >= longbackgroundfront.y)
 				{

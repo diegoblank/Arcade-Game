@@ -73,6 +73,7 @@
     <Compile Include="BaseIntermediateCeiling.cs" />
     <Compile Include="IntermediateBackground.cs" />
     <Compile Include="Enemy.cs" />
+    <Compile Include="LongBackgroundLocomotive.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GXPEngine\" />
