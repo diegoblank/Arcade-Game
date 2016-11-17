@@ -78,7 +78,11 @@
     <Compile Include="Crate.cs" />
     <Compile Include="Bullet.cs" />
     <Compile Include="HUD.cs" />
+<<<<<<< HEAD
+    <Compile Include="Dynamite.cs" />
+=======
     <Compile Include="TallLongCargo.cs" />
+>>>>>>> bc63df55de70eeffdbc2b607622d3550eaa049ce
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GXPEngine\" />
