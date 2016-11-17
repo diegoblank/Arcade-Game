@@ -14,10 +14,5 @@ namespace GXPEngine
 		
 		}
 
-		public void DestroyItself() 
-		{
-			this.Destroy();
-		
-		}
 	}
 }

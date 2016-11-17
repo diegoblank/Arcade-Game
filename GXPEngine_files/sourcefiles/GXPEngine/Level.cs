@@ -84,9 +84,6 @@ namespace GXPEngine
 			AddChild(player);
 
 
-
-
-
 			scrollTarget = player;
 
 
