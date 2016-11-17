@@ -12,6 +12,7 @@ public class MyGame : Game //MyGame is a Game
 	private int _currentLevel;
 	private int _currentColumn;
 	private Level level;
+	private Station station;
 
 
 
@@ -68,6 +69,10 @@ public class MyGame : Game //MyGame is a Game
 	{
 		_currentColumn = 0;
 		_currentLevel = _currentLevel + 1;
+
+		station = new Station();
+		level.AddChild(station);
+
 		_waveTimer = 300;
 	}
 

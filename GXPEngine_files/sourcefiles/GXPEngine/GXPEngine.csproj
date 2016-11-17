@@ -79,6 +79,7 @@
     <Compile Include="Bullet.cs" />
     <Compile Include="HUD.cs" />
     <Compile Include="TallLongCargo.cs" />
+    <Compile Include="Station.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GXPEngine\" />
