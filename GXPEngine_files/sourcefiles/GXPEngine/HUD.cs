@@ -6,15 +6,14 @@ namespace GXPEngine
 	{
 
 
-		public HUD() : base(600, 300)
+		public HUD() : base(400, 200)
 		{
 		}
 
 		void Update()
 		{
-			
 			graphics.Clear(Color.Empty);
-			graphics.DrawString("Score: Lives:", SystemFonts.DefaultFont, Brushes.Black, 0, 0);
+			graphics.DrawString("Score:", SystemFonts.DefaultFont, Brushes.Blue, 0, 0);
 
 		}
 	}

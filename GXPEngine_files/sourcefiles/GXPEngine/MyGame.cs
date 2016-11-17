@@ -5,6 +5,7 @@ using GXPEngine;
 public class MyGame : Game //MyGame is a Game
 {
 	private int _score = 0;
+	private int _lives;
 
 	private int _waveTimer;
 	private bool _gameRunning;
@@ -18,9 +19,6 @@ public class MyGame : Game //MyGame is a Game
 	public MyGame () : base(1280, 960, false, false)
 	{
 
-<<<<<<< HEAD
-		Level level = new Level();
-=======
 		_currentLevel = 1;
 		_currentColumn = 0;
 		_gameRunning = true;
@@ -28,12 +26,12 @@ public class MyGame : Game //MyGame is a Game
 		level = new Level();
 
 
->>>>>>> bc63df55de70eeffdbc2b607622d3550eaa049ce
 		AddChild(level);
 
 		HUD hud;
 		hud = new HUD();
 		AddChild(hud);
+
 
 	}
 
