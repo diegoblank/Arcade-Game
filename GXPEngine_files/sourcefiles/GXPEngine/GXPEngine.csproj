@@ -77,6 +77,7 @@
     <Compile Include="Wheel.cs" />
     <Compile Include="Crate.cs" />
     <Compile Include="Bullet.cs" />
+    <Compile Include="HUD.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GXPEngine\" />

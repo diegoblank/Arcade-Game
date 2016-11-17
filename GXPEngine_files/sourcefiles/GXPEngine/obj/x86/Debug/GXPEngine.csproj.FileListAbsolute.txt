@@ -28,3 +28,4 @@ C:\School\TrainGame\GXPEngine_files\sourcefiles\GXPEngine\bin\Debug\normnfkc.nlp
 C:\School\TrainGame\GXPEngine_files\sourcefiles\GXPEngine\bin\Debug\normnfkd.nlp
 C:\School\TrainGame\GXPEngine_files\sourcefiles\GXPEngine\obj\x86\Debug\GXPEngine.exe
 C:\School\TrainGame\GXPEngine_files\sourcefiles\GXPEngine\obj\x86\Debug\GXPEngine.pdb
+C:\School\TrainGame\GXPEngine_files\sourcefiles\GXPEngine\obj\x86\Debug\GXPEngine.csprojResolveAssemblyReference.cache

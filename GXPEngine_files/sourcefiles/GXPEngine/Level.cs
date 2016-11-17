@@ -82,6 +82,7 @@ namespace GXPEngine
 
 
 
+
 			scrollTarget = player;
 
 

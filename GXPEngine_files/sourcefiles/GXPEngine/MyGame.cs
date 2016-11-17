@@ -4,11 +4,14 @@ using GXPEngine;
 
 public class MyGame : Game //MyGame is a Game
 {
+<<<<<<< HEAD
 	private int _waveTimer;
 	private bool _gameRunning;
 	private int _currentLevel;
 	private int _currentColumn;
 	private Level level;
+=======
+>>>>>>> master
 
 	//initialize game here
 	public MyGame () : base(1280, 960, false, false)
@@ -19,6 +22,10 @@ public class MyGame : Game //MyGame is a Game
 		
 		level = new Level();
 		AddChild(level);
+
+		HUD hud;
+		hud = new HUD();
+		AddChild(hud);
 
 	}
 
