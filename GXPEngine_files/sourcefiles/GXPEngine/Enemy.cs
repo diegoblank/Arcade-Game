@@ -206,12 +206,32 @@ namespace GXPEngine
 
 			if (other is LongBackgroundLocomotive)
 			{
-				_canJump = true;
-				LongBackgroundLocomotive longbackgroundfront = other as LongBackgroundLocomotive;
 
-				if (y >= longbackgroundfront.y)
+				LongBackgroundLocomotive longbackloco = other as LongBackgroundLocomotive;
+
+
+				if (y < longbackloco.y + 20)
 				{
-					y = longbackgroundfront.y;
+					y = longbackloco.y;
+
+				}
+
+
+				if (y > longbackloco.y + 10)
+				{
+					speedY = speedY - 20;
+
+					if (x > longbackloco.x)
+					{
+						x = longbackloco.x + 820;
+
+					}
+
+					if (x <= longbackloco.x)
+					{
+						x = longbackloco.x - 100;
+
+					}
 
 				}
 

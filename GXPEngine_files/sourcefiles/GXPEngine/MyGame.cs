@@ -18,17 +18,14 @@ public class MyGame : Game //MyGame is a Game
 	//initialize game here
 	public MyGame () : base(1280, 960, false, false)
 	{
-<<<<<<< HEAD
+
 		_currentLevel = 1;
 		_currentColumn = 0;
 		_gameRunning = true;
 		
 		level = new Level();
-=======
 
 
-		Level level = new Level();
->>>>>>> master
 		AddChild(level);
 
 		HUD hud;
@@ -47,7 +44,7 @@ public class MyGame : Game //MyGame is a Game
 	//update game here
 	void Update ()
 	{
-<<<<<<< HEAD
+
 
 		_waveTimer = _waveTimer - 1;
 		if (_waveTimer <= 0) 
@@ -63,9 +60,7 @@ public class MyGame : Game //MyGame is a Game
 		}
 
 		Console.WriteLine(_waveTimer);
-=======
-		
->>>>>>> master
+
 	}
 
 	public void EndOfWave() 
