@@ -25,7 +25,6 @@ namespace GXPEngine
 			}
 
 
-			//Mirror wanneer nodig
 		}
 
 		private void Update()
@@ -41,5 +40,15 @@ namespace GXPEngine
 				x += 10;
 			}
 		}
+			public void OnCollision(GameObject other)
+
+			{
+				if (other is Enemy)
+				{
+					Enemy enemy = other as Enemy;
+					enemy.Destroy();
+				}
+			}
+		}
 	}
-}
+
