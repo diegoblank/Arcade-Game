@@ -5,12 +5,10 @@ using GXPEngine;
 public class MyGame : Game //MyGame is a Game
 {
 	private int _score = 0;
-	private int _lives;
 
 	//initialize game here
 	public MyGame () : base(1280, 960, false, false)
 	{
-
 
 		Level level = new Level();
 		AddChild(level);
@@ -18,7 +16,6 @@ public class MyGame : Game //MyGame is a Game
 		HUD hud;
 		hud = new HUD();
 		AddChild(hud);
-
 
 	}
 
