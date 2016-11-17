@@ -103,7 +103,7 @@ namespace GXPEngine
 
 			if (Input.GetKeyDown(Key.LEFT_SHIFT))
 			{
-				Bullet bullet = new Bullet(x, y - height*0.7f, state);
+				Bullet bullet = new Bullet(x, y - height*0.6f, state);
 				_level.AddChild(bullet);
 			}
 

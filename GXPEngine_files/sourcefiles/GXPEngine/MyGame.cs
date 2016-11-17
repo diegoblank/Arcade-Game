@@ -4,6 +4,8 @@ using GXPEngine;
 
 public class MyGame : Game //MyGame is a Game
 {
+	private int _score = 0;
+	private int _lives;
 
 	private int _waveTimer;
 	private bool _gameRunning;
@@ -16,22 +18,36 @@ public class MyGame : Game //MyGame is a Game
 	//initialize game here
 	public MyGame () : base(1280, 960, false, false)
 	{
+<<<<<<< HEAD
 		_currentLevel = 1;
 		_currentColumn = 0;
 		_gameRunning = true;
 		
 		level = new Level();
+=======
+
+
+		Level level = new Level();
+>>>>>>> master
 		AddChild(level);
 
 		HUD hud;
 		hud = new HUD();
 		AddChild(hud);
 
+
+	}
+
+
+	public void AddScore() 
+	{
+		_score = _score + 1;
 	}
 
 	//update game here
 	void Update ()
 	{
+<<<<<<< HEAD
 
 		_waveTimer = _waveTimer - 1;
 		if (_waveTimer <= 0) 
@@ -47,6 +63,9 @@ public class MyGame : Game //MyGame is a Game
 		}
 
 		Console.WriteLine(_waveTimer);
+=======
+		
+>>>>>>> master
 	}
 
 	public void EndOfWave() 

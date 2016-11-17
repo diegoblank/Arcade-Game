@@ -6,6 +6,7 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workbench ActiveDocument="GXPEngine\Enemy.cs">
     <Files>
+<<<<<<< HEAD
       <File FileName="GXPEngine\MyGame.cs" Line="14" Column="1" />
       <File FileName="GXPEngine\Enemy.cs" Line="109" Column="5" />
       <File FileName="GXPEngine\Bullet.cs" Line="1" Column="1" />
@@ -14,6 +15,14 @@
       <File FileName="GXPEngine\TallLongCargo.cs" Line="6" Column="66" />
       <File FileName="GXPEngine\LongBackground.cs" Line="8" Column="4" />
       <File FileName="GXPEngine\Crate.cs" Line="21" Column="7" />
+=======
+      <File FileName="GXPEngine\Player.cs" Line="83" Column="23" />
+      <File FileName="GXPEngine\Level.cs" Line="15" Column="26" />
+      <File FileName="GXPEngine\MyGame.cs" Line="19" Column="11" />
+      <File FileName="GXPEngine\Bullet.cs" Line="55" Column="23" />
+      <File FileName="GXPEngine\Enemy.cs" Line="59" Column="4" />
+      <File FileName="GXPEngine\HUD.cs" Line="19" Column="3" />
+>>>>>>> master
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.GXPEngine PreferredExecutionTarget="MonoDevelop.Default" />
