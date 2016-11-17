@@ -8,6 +8,13 @@ namespace GXPEngine
 		const int RightBoundary = 660;
 		const int LeftBoundary = 620;
 		private float PlayerPosX;
+		private int _spawnTimer;
+
+		private int[] levelDataPointer = null;
+
+		private int[] level1 = new int[10] {1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+
+		private int[] level2 = new int[20] { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 
 		public Level()
 		{
@@ -69,9 +76,6 @@ namespace GXPEngine
 			Crate crate2 = new Crate(200, 560);
 			AddChild(crate2);
 
-			Enemy enemy = new Enemy(1000, 300);
-			AddChild(enemy);
-
 			Player player = new Player(this);
 			AddChild(player);
 
@@ -109,8 +113,62 @@ namespace GXPEngine
 		{
 			PlayerPosX = scrollTarget.x;
 			scrollToTarget();
-			Console.WriteLine(Time.deltaTime);
+
+			_spawnTimer = _spawnTimer - 1;
+			if (_spawnTimer <= 0) 
+			{
+				_spawnTimer = 60;
+			}
+
+
 			
 		}
+
+		public void CreateWave(int pCurrentLevel, int pCurrentColumn) 
+		{
+
+			if (pCurrentLevel == 1) 
+			{
+				levelDataPointer = level1;
+
+				int tile = levelDataPointer[pCurrentColumn];
+					if (pCurrentColumn < levelDataPointer.GetLength(0)) 
+					{ 
+						Enemy enemy = new Enemy(1000, 300);
+						AddChild(enemy);
+						
+					}
+
+					if (pCurrentColumn == levelDataPointer.GetLength(0) - 1) 
+					{
+						MyGame myGame = game as MyGame;
+						myGame.EndOfWave();
+					}
+
+
+
+			}
+
+			if (pCurrentLevel == 2)
+			{
+				levelDataPointer = level2;
+
+				int tile = levelDataPointer[pCurrentColumn];
+					if (pCurrentColumn < levelDataPointer.GetLength(0))
+					{
+						Enemy enemy = new Enemy(1000, 300);
+						AddChild(enemy);
+
+					}
+
+					if (pCurrentColumn == levelDataPointer.GetLength(0) - 1)
+					{
+						MyGame myGame = game as MyGame;
+						myGame.EndOfWave();
+					}
+
+			}
+		}
+
 	}
 }

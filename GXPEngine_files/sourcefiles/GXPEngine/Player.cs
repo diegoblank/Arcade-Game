@@ -9,6 +9,7 @@ namespace GXPEngine
 		private float _LastY;
 		private int _timer;
 		private int _crouchTimer;
+		private int _wagonNumber;
 
 		private float _gravity;
 		private bool _canJump;
@@ -122,7 +123,7 @@ namespace GXPEngine
 				y = y * _gravity;
 
 
-				Console.WriteLine(state);
+
 
 		}
 
@@ -130,9 +131,28 @@ namespace GXPEngine
 
 		public void OnCollision(GameObject other)
 		{
+
+			if (other is BaseShort)
+			{
+				_wagonNumber = 1;
+				BaseShort baseshort = other as BaseShort;
+
+				if (y >= baseshort.y)
+				{
+					y = baseshort.y;
+
+				}
+
+				if (_timer == 0)
+				{
+					_canJump = true;
+				}
+
+			}
+
 			if (other is BaseLongCargo)
 			{
-
+				_wagonNumber = 2;
 				BaseLongCargo baselongcargo = other as BaseLongCargo;
 
 				if (y >= baselongcargo.y)
@@ -148,8 +168,10 @@ namespace GXPEngine
 
 			}
 
+
 			if (other is BaseLong)
 			{
+				_wagonNumber = 3;
 				BaseLong baselong = other as BaseLong;
 
 
@@ -188,26 +210,9 @@ namespace GXPEngine
 
 			}
 
-			if (other is BaseShort)
-			{
-
-				BaseShort wagon3 = other as BaseShort;
-
-				if (y >= wagon3.y)
-				{
-					y = wagon3.y;
-
-				}
-
-				if (_timer == 0)
-				{
-					_canJump = true;
-				}
-
-			}
-
 			if (other is BaseIntermediateCargo)
 			{
+				_wagonNumber = 4;
 
 				BaseIntermediateCargo baseintermediatecargo = other as BaseIntermediateCargo;
 
@@ -226,6 +231,7 @@ namespace GXPEngine
 
 			if (other is BaseIntermediate)
 			{
+				_wagonNumber = 5;
 
 				BaseIntermediate baseintermediate = other as BaseIntermediate;
 
