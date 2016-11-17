@@ -7,8 +7,11 @@ namespace GXPEngine
 		private float _gravity;
 		private float speedY;
 		private float speedX;
+		private int _walkSpeed;
 
 		private bool _canJump;
+
+		private Random random;
 
 		public Enemy(float PosX, float PosY) : base ("bandit.png")
 		{
@@ -17,6 +20,8 @@ namespace GXPEngine
 			_gravity = 1.05f;
 			SetScaleXY(0.5f, 0.5f);
 
+			random = new Random();
+			_walkSpeed = random.Next(2, 6);
 
 			_canJump = true;
 
@@ -33,13 +38,13 @@ namespace GXPEngine
 
 			if (this.x < Player.PlayerPosX) 
 			{
-				x = x + 5;
+				x = x + _walkSpeed;
 				Mirror(false, false);
 			}
 
 			if (this.x > Player.PlayerPosX)
 			{
-				x = x - 5;
+				x = x - _walkSpeed;
 				Mirror(true, false);
 
 			}

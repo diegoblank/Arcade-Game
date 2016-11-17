@@ -80,7 +80,7 @@ namespace GXPEngine
 			if (Input.GetKeyDown(Key.S) && _crouchTimer == 0)
 			{
 				
-				state = 4;
+
 				scaleY = scaleY *(0.5f);
 				_crouchTimer = 50;
 
