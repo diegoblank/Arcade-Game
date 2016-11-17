@@ -34,6 +34,7 @@ namespace GXPEngine
 			_gravity = 1.05f;
 			_canJump = true;
 
+
 			speedX = 1.0f;
 			speedY = 0.95f;
 
@@ -110,7 +111,6 @@ namespace GXPEngine
 				//}
 
 				
-
 				speedX = speedX * 0.8f; 
 				speedY = speedY * 0.9f;
 
@@ -152,11 +152,13 @@ namespace GXPEngine
 			{
 				BaseLong baselong = other as BaseLong;
 
+
 				if (y >= baselong.y) 
 				{
 					y = baselong.y;
 				
 				}
+
 
 				_canJump = false;
 
@@ -166,11 +168,18 @@ namespace GXPEngine
 			{
 				LongCeiling baseceiling = other as LongCeiling;
 
-				if (y >= baseceiling.y)
+				if (y <= baseceiling.y + 120)
 				{
 					y = baseceiling.y;
 
 				}
+
+				if (y > baseceiling.y)
+				{
+					y = baseceiling.y + 170;
+
+				}
+
 
 				if (_timer == 0)
 				{
@@ -235,9 +244,15 @@ namespace GXPEngine
 
 				BaseIntermediateCeiling baseintermediateceiling = other as BaseIntermediateCeiling;
 
-				if (y >= baseintermediateceiling.y)
+				if (y <= baseintermediateceiling.y + 120)
 				{
 					y = baseintermediateceiling.y;
+
+				}
+
+				if (y > baseintermediateceiling.y)
+				{
+					y = baseintermediateceiling.y + 170;
 
 				}
 

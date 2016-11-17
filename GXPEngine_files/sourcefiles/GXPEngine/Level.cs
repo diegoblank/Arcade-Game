@@ -66,6 +66,9 @@ namespace GXPEngine
 			Crate crate1 = new Crate(380, 560);
 			AddChild(crate1);
 
+			Crate crate2 = new Crate(200, 560);
+			AddChild(crate2);
+
 			Enemy enemy = new Enemy(1000, 300);
 			AddChild(enemy);
 
