@@ -5,15 +5,16 @@ namespace GXPEngine
 	public class HUD : Canvas
 	{
 
-		public HUD() : base(384, 194)
+
+		public HUD() : base(400, 200)
 		{
-	
 		}
 
 		void Update()
 		{
 			graphics.Clear(Color.Empty);
-			graphics.DrawString("Score", SystemFonts.DefaultFont, Brushes.Blue, 0, 0);
+			graphics.DrawString("Score:", SystemFonts.DefaultFont, Brushes.Blue, 0, 0);
+
 		}
 	}
 }

@@ -6,7 +6,7 @@ namespace GXPEngine
 		public int _direction = -1;
 		public int _score = 0;
 
-		public Bullet(float spawnX, float spawnY, int direction) : base ("bullet.png")
+		public Bullet(float spawnX, float spawnY, int direction) : base("bullet.png")
 		{
 			scaleX = 0.1f;
 			scaleY = 0.1f;
@@ -31,7 +31,7 @@ namespace GXPEngine
 
 		private void Update()
 		{
-			
+
 			if (_direction == -1) //wrong, no direction
 				return;
 			if (_direction == 2) //left
@@ -44,18 +44,21 @@ namespace GXPEngine
 			}
 
 		}
-			public void OnCollision(GameObject other)
+		public void OnCollision(GameObject other)
 
+		{
+			if (other is Enemy)
 			{
-				if (other is Enemy)
-				{
-					Enemy enemy = other as Enemy;
-					enemy.Destroy();
-					_score = _score + 10;
-					
-				}
+				Enemy enemy = other as Enemy;
+				enemy.Destroy();
+				MyGame myGame = game as MyGame;
+				myGame.AddScore();
 			}
-
+			else if (other is Crate)
+			{
+				Destroy();
+			}
 		}
 	}
+}
 
