@@ -98,7 +98,7 @@ namespace GXPEngine
 					speedY = speedY - 70;
 					_canJump = false;
 					_timer = 20;
-					state = 3;
+					
 				}
 
 			if (Input.GetKeyDown(Key.LEFT_SHIFT))
@@ -230,6 +230,41 @@ namespace GXPEngine
 
 			}
 
+			if (other is TallLongCargo)
+			{
+				_wagonNumber = 2;
+				TallLongCargo talllongcargo = other as TallLongCargo;
+
+				if (y < talllongcargo.y + 20)
+				{
+					y = talllongcargo.y;
+
+				}
+
+				if (_timer == 0)
+				{
+					_canJump = true;
+				}
+
+				if (y > talllongcargo.y)
+				{
+
+					if (x > talllongcargo.x)
+					{
+						x = talllongcargo.x + 820;
+
+					}
+
+					if (x <= talllongcargo.x)
+					{
+						x = talllongcargo.x - 20;
+					
+					}
+
+				}
+
+			}
+
 			if (other is BaseIntermediate)
 			{
 				_wagonNumber = 5;
@@ -324,6 +359,8 @@ namespace GXPEngine
 				}
 
 			}
+
+
 
 
 

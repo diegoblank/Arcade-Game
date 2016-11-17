@@ -44,7 +44,7 @@ namespace GXPEngine
 		//------------------------------------------------------------------------------------------------------------------------
 		public void Step() {
 			for (int i=activeColliderList.Count-1; i>= 0; i--) {
-d				ColliderInfo info = activeColliderList[i];
+				ColliderInfo info = activeColliderList[i];
 				for (int j=colliderList.Count-1; j>=0; j--) {
 					if (j >= colliderList.Count) continue; //fix for removal in loop
 					GameObject other = colliderList[j];

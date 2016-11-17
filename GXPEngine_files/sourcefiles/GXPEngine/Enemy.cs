@@ -95,6 +95,37 @@ namespace GXPEngine
 
 			}
 
+			if (other is TallLongCargo)
+			{
+				
+				TallLongCargo talllongcargo = other as TallLongCargo;
+
+				if (y < talllongcargo.y + 20)
+				{
+					y = talllongcargo.y;
+
+				}
+
+
+				if (y > talllongcargo.y)
+				{
+
+					if (x > talllongcargo.x)
+					{
+						x = talllongcargo.x + 920;
+
+					}
+
+					if (x <= talllongcargo.x)
+					{
+						x = talllongcargo.x - 100;
+
+					}
+
+				}
+
+			}
+
 			if (other is LongBackground)
 			{
 				LongBackground longback = other as LongBackground;

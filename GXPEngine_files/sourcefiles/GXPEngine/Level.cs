@@ -40,22 +40,25 @@ namespace GXPEngine
 			BaseShort baseshortmiddle = new BaseShort(1870, 600);
 			AddChild(baseshortmiddle);
 
-			BaseIntermediateCargo baseintermediatecargo = new BaseIntermediateCargo(2280, 600);
+			TallLongCargo talllongcargo = new TallLongCargo(2280, 400);
+			AddChild(talllongcargo);
+
+			BaseIntermediateCargo baseintermediatecargo = new BaseIntermediateCargo(3090, 600);
 			AddChild(baseintermediatecargo);
 
-			IntermediateBackground intermediatebackground = new IntermediateBackground(2890, 400);
+			IntermediateBackground intermediatebackground = new IntermediateBackground(3700, 400);
 			AddChild(intermediatebackground);
 
-			BaseIntermediate baseintermediate = new BaseIntermediate(2890, 600);
+			BaseIntermediate baseintermediate = new BaseIntermediate(3700, 600);
 			AddChild(baseintermediate);
 
-			BaseIntermediateCeiling baseintermediateceiling = new BaseIntermediateCeiling(2890, 400);
+			BaseIntermediateCeiling baseintermediateceiling = new BaseIntermediateCeiling(3700, 400);
 			AddChild(baseintermediateceiling);
 
-			BaseIntermediateCargo baseintermediatefront = new BaseIntermediateCargo(3500, 600);
+			BaseIntermediateCargo baseintermediatefront = new BaseIntermediateCargo(4310, 600);
 			AddChild(baseintermediatefront);
 
-			LongBackgroundLocomotive longlocomotive = new LongBackgroundLocomotive(4110, 400);
+			LongBackgroundLocomotive longlocomotive = new LongBackgroundLocomotive(4920, 400);
 			AddChild(longlocomotive);
 
 			Wheel wheel1 = new Wheel(320, 650);
