@@ -16,6 +16,7 @@ namespace GXPEngine
 
 		public static int Lives;
 		public static int Score;
+		public static int Ammo;
 
 		private float _gravity;
 		private bool _canJump;
@@ -23,7 +24,7 @@ namespace GXPEngine
 		private float speedX;
 		private float speedY;
 
-		private int _ammo;
+
 		private int _gunReloadTimer;
 
 		private int state;
@@ -41,7 +42,7 @@ namespace GXPEngine
 			Lives = 5;
 			Score = 0;
 
-			_ammo = 6;
+			Ammo = 6;
 
 			SetOrigin(width / 2, height);
 			x = 400;
@@ -80,6 +81,7 @@ namespace GXPEngine
 
 		}
 
+
 		private void SetBlinkTrue() 
 		{
 			_blink = true;
@@ -117,7 +119,7 @@ namespace GXPEngine
 
 			if (_gunReloadTimer <= 0)
 			{
-
+				
 				_gunReloadTimer = 0;
 
 			}
@@ -165,12 +167,12 @@ namespace GXPEngine
 
 				MyGame myGame = game as MyGame;
 				myGame.CallBulletSpawn(x, y - height, state);
-				_ammo = _ammo - 1;
+				Ammo = Ammo - 1;
 
-				if (_ammo <= 0) 
+				if (Ammo <= 0) 
 				{
 					_gunReloadTimer = 100;
-					_ammo = 6;
+					Ammo = 6;
 				}
 
 			}
