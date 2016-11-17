@@ -36,11 +36,11 @@ namespace GXPEngine
 				return;
 			if (_direction == 2) //left
 			{
-				x -= 10;
+				x -= 20;
 			}
 			else if (_direction == 1) //right
 			{
-				x += 10;
+				x += 20;
 			}
 
 		}

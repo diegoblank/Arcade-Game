@@ -21,7 +21,7 @@ namespace GXPEngine
 
 		public Level() //TRAIN SETUP
 		{
-
+			
 			background = new Background();
 			AddChild(background);
 
@@ -107,7 +107,7 @@ namespace GXPEngine
 				if (this.x + scrollTarget.x > RightBoundary) 
 				{
 					this.x = RightBoundary - scrollTarget.x;
-				
+
 				}
 
 				if (this.x + scrollTarget.x < LeftBoundary)
@@ -138,8 +138,20 @@ namespace GXPEngine
 				background.x = -1280;
 			
 			}
-			
+
+			if (Input.GetKey(Key.A))
+			{
+				background.x = background.x - 3;
+			}
+
+			if (Input.GetKey(Key.D))
+			{
+				background.x = background.x + 3;
+			}
 		}
+
+
+
 
 		public void CreateWave(int pCurrentLevel, int pCurrentColumn) 
 		{
