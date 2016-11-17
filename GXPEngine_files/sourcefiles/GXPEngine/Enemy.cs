@@ -100,6 +100,7 @@ namespace GXPEngine
 				
 				TallLongCargo talllongcargo = other as TallLongCargo;
 
+
 				if (y < talllongcargo.y + 20)
 				{
 					y = talllongcargo.y;
@@ -107,12 +108,13 @@ namespace GXPEngine
 				}
 
 
-				if (y > talllongcargo.y)
+				if (y > talllongcargo.y + 10)
 				{
+					speedY = speedY - 20;
 
 					if (x > talllongcargo.x)
 					{
-						x = talllongcargo.x + 920;
+						x = talllongcargo.x + 820;
 
 					}
 
