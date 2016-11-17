@@ -7,8 +7,11 @@ namespace GXPEngine
 		private float _gravity;
 		private float speedY;
 		private float speedX;
+		private int _walkSpeed;
 
 		private bool _canJump;
+
+		private Random random;
 
 		public Enemy(float PosX, float PosY) : base ("bandit.png")
 		{
@@ -17,6 +20,8 @@ namespace GXPEngine
 			_gravity = 1.05f;
 			SetScaleXY(0.5f, 0.5f);
 
+			random = new Random();
+			_walkSpeed = random.Next(2, 6);
 
 			_canJump = true;
 
@@ -33,13 +38,13 @@ namespace GXPEngine
 
 			if (this.x < Player.PlayerPosX) 
 			{
-				x = x + 5;
+				x = x + _walkSpeed;
 				Mirror(false, false);
 			}
 
 			if (this.x > Player.PlayerPosX)
 			{
-				x = x - 5;
+				x = x - _walkSpeed;
 				Mirror(true, false);
 
 			}
@@ -85,6 +90,39 @@ namespace GXPEngine
 				if (y >= baselong.y)
 				{
 					y = baselong.y;
+
+				}
+
+			}
+
+			if (other is TallLongCargo)
+			{
+				
+				TallLongCargo talllongcargo = other as TallLongCargo;
+
+
+				if (y < talllongcargo.y + 20)
+				{
+					y = talllongcargo.y;
+
+				}
+
+
+				if (y > talllongcargo.y + 10)
+				{
+					speedY = speedY - 20;
+
+					if (x > talllongcargo.x)
+					{
+						x = talllongcargo.x + 820;
+
+					}
+
+					if (x <= talllongcargo.x)
+					{
+						x = talllongcargo.x - 100;
+
+					}
 
 				}
 
@@ -168,12 +206,32 @@ namespace GXPEngine
 
 			if (other is LongBackgroundLocomotive)
 			{
-				_canJump = true;
-				LongBackgroundLocomotive longbackgroundfront = other as LongBackgroundLocomotive;
 
-				if (y >= longbackgroundfront.y)
+				LongBackgroundLocomotive longbackloco = other as LongBackgroundLocomotive;
+
+
+				if (y < longbackloco.y + 20)
 				{
-					y = longbackgroundfront.y;
+					y = longbackloco.y;
+
+				}
+
+
+				if (y > longbackloco.y + 10)
+				{
+					speedY = speedY - 20;
+
+					if (x > longbackloco.x)
+					{
+						x = longbackloco.x + 820;
+
+					}
+
+					if (x <= longbackloco.x)
+					{
+						x = longbackloco.x - 100;
+
+					}
 
 				}
 
@@ -197,7 +255,7 @@ namespace GXPEngine
 
 					if (x < crate.x)
 					{
-						x = crate.x - 130;
+						x = crate.x - 140;
 						crate.x = crate.x + 1;
 						Jump();
 					}

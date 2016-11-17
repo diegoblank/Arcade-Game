@@ -9,6 +9,7 @@ namespace GXPEngine
 		private float _LastY;
 		private int _timer;
 		private int _crouchTimer;
+		private int _wagonNumber;
 
 		private float _gravity;
 		private bool _canJump;
@@ -33,6 +34,7 @@ namespace GXPEngine
 
 			_gravity = 1.05f;
 			_canJump = true;
+
 
 			speedX = 1.0f;
 			speedY = 0.95f;
@@ -77,7 +79,7 @@ namespace GXPEngine
 			if (Input.GetKeyDown(Key.S) && _crouchTimer == 0)
 			{
 				
-				state = 4;
+
 				scaleY = scaleY *(0.5f);
 				_crouchTimer = 50;
 
@@ -85,7 +87,7 @@ namespace GXPEngine
 
 			if (Input.GetKey(Key.A))
 				{
-				speedX = speedX - 2;
+					speedX = speedX - 2;
 					state = 2;
 					Mirror(false, false);
 				}
@@ -95,7 +97,7 @@ namespace GXPEngine
 					speedY = speedY - 70;
 					_canJump = false;
 					_timer = 20;
-					state = 3;
+					
 				}
 
 			if (Input.GetKeyDown(Key.LEFT_SHIFT))
@@ -116,7 +118,6 @@ namespace GXPEngine
 				//}
 
 				
-
 				speedX = speedX * 0.8f; 
 				speedY = speedY * 0.9f;
 
@@ -128,16 +129,35 @@ namespace GXPEngine
 				y = y * _gravity;
 
 
-				Console.WriteLine(state);
+
 
 		}
 
 
 		public void OnCollision(GameObject other)
 		{
+
+			if (other is BaseShort)
+			{
+				_wagonNumber = 1;
+				BaseShort baseshort = other as BaseShort;
+
+				if (y >= baseshort.y)
+				{
+					y = baseshort.y;
+
+				}
+
+				if (_timer == 0)
+				{
+					_canJump = true;
+				}
+
+			}
+
 			if (other is BaseLongCargo)
 			{
-
+				_wagonNumber = 2;
 				BaseLongCargo baselongcargo = other as BaseLongCargo;
 
 				if (y >= baselongcargo.y)
@@ -153,15 +173,19 @@ namespace GXPEngine
 
 			}
 
+
 			if (other is BaseLong)
 			{
+				_wagonNumber = 3;
 				BaseLong baselong = other as BaseLong;
+
 
 				if (y >= baselong.y) 
 				{
 					y = baselong.y;
 				
 				}
+
 
 				_canJump = false;
 
@@ -171,29 +195,18 @@ namespace GXPEngine
 			{
 				LongCeiling baseceiling = other as LongCeiling;
 
-				if (y >= baseceiling.y)
+				if (y <= baseceiling.y + 120)
 				{
 					y = baseceiling.y;
 
 				}
 
-				if (_timer == 0)
+				if (y > baseceiling.y)
 				{
-					_canJump = true;
+					y = baseceiling.y + 170;
+
 				}
 
-			}
-
-			if (other is BaseShort)
-			{
-
-				BaseShort wagon3 = other as BaseShort;
-
-				if (y >= wagon3.y)
-				{
-					y = wagon3.y;
-
-				}
 
 				if (_timer == 0)
 				{
@@ -204,6 +217,7 @@ namespace GXPEngine
 
 			if (other is BaseIntermediateCargo)
 			{
+				_wagonNumber = 4;
 
 				BaseIntermediateCargo baseintermediatecargo = other as BaseIntermediateCargo;
 
@@ -220,8 +234,44 @@ namespace GXPEngine
 
 			}
 
+			if (other is TallLongCargo)
+			{
+				_wagonNumber = 2;
+				TallLongCargo talllongcargo = other as TallLongCargo;
+
+				if (y < talllongcargo.y + 20)
+				{
+					y = talllongcargo.y;
+
+				}
+
+				if (_timer == 0)
+				{
+					_canJump = true;
+				}
+
+				if (y > talllongcargo.y)
+				{
+
+					if (x > talllongcargo.x)
+					{
+						x = talllongcargo.x + 820;
+
+					}
+
+					if (x <= talllongcargo.x)
+					{
+						x = talllongcargo.x - 20;
+					
+					}
+
+				}
+
+			}
+
 			if (other is BaseIntermediate)
 			{
+				_wagonNumber = 5;
 
 				BaseIntermediate baseintermediate = other as BaseIntermediate;
 
@@ -240,9 +290,15 @@ namespace GXPEngine
 
 				BaseIntermediateCeiling baseintermediateceiling = other as BaseIntermediateCeiling;
 
-				if (y >= baseintermediateceiling.y)
+				if (y <= baseintermediateceiling.y + 120)
 				{
 					y = baseintermediateceiling.y;
+
+				}
+
+				if (y > baseintermediateceiling.y)
+				{
+					y = baseintermediateceiling.y + 170;
 
 				}
 
@@ -254,19 +310,36 @@ namespace GXPEngine
 			}
 
 			if (other is LongBackgroundLocomotive)
-			{
+{
+				_wagonNumber = 2;
+				LongBackgroundLocomotive longbackloco = other as LongBackgroundLocomotive;
 
-				LongBackgroundLocomotive longbackgroundfront = other as LongBackgroundLocomotive;
-
-				if (y >= longbackgroundfront.y)
+				if (y < longbackloco.y + 20)
 				{
-					y = longbackgroundfront.y;
+					y = longbackloco.y;
 
 				}
 
 				if (_timer == 0)
 				{
 					_canJump = true;
+				}
+
+				if (y > longbackloco.y)
+				{
+
+					if (x > longbackloco.x)
+					{
+						x = longbackloco.x + 820;
+
+					}
+
+					if (x <= longbackloco.x)
+					{
+						x = longbackloco.x - 20;
+
+					}
+
 				}
 
 			}
@@ -307,6 +380,8 @@ namespace GXPEngine
 				}
 
 			}
+
+
 
 
 

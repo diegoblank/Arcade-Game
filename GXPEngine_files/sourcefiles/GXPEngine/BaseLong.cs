@@ -3,7 +3,7 @@ namespace GXPEngine
 {
 	public class BaseLong : Sprite
 	{
-		public BaseLong(int PosX, int PosY): base ("baselong.png")
+		public BaseLong(int PosX, int PosY): base ("wagonplatform800.png")
 		{
 			SetXY(PosX, PosY);
 		}

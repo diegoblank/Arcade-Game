@@ -3,11 +3,21 @@ namespace GXPEngine
 {
 	public class Background : Sprite
 	{
-		public Background() : base ("backgrid.png")
+		public Background() : base ("backgroundscroll.png")
 		{
+			x = x - 1280;
+		}
 
-			scaleY = scaleY * 2.0f;
-			scaleX = scaleX * 2.0f;
+		void Update() 
+		{
+			x = x - 15;
+		
+		}
+
+		public void DestroyItself() 
+		{
+			this.Destroy();
+		
 		}
 	}
 }
