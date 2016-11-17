@@ -41,6 +41,12 @@ public class MyGame : Game //MyGame is a Game
 		_score = _score + 1;
 	}
 
+	public void CallBulletSpawn(float pX, float pY, int pState) 
+	{
+		level.CreateBullet(pX, pY, pState);
+	
+	}
+
 	//update game here
 	void Update ()
 	{

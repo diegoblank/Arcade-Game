@@ -17,6 +17,8 @@ namespace GXPEngine
 
 		private int[] level2 = new int[20] { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 
+		private int[] level3 = new int[20] { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
+
 		public Level() //TRAIN SETUP
 		{
 
@@ -80,7 +82,7 @@ namespace GXPEngine
 			Crate crate2 = new Crate(200, 560);
 			AddChild(crate2);
 
-			Player player = new Player(this);
+			Player player = new Player();
 			AddChild(player);
 
 
@@ -88,6 +90,14 @@ namespace GXPEngine
 
 
 
+		}
+
+		public void CreateBullet(float pX, float pY, int pState) 
+		{ 
+			Bullet bullet = new Bullet(pX, pY + 40, pState);
+			AddChild(bullet);
+		
+		
 		}
 
 		private void scrollToTarget() 
@@ -173,6 +183,32 @@ namespace GXPEngine
 						MyGame myGame = game as MyGame;
 						myGame.EndOfWave();
 					}
+
+			}
+
+			if (pCurrentLevel == 3)
+			{
+				levelDataPointer = level3;
+
+				int tile = levelDataPointer[pCurrentColumn];
+				if (pCurrentColumn < levelDataPointer.GetLength(0))
+				{
+					Enemy enemy = new Enemy(1000, 300);
+					AddChild(enemy);
+
+				}
+
+				if (pCurrentColumn == levelDataPointer.GetLength(0) - 1)
+				{
+					MyGame myGame = game as MyGame;
+					myGame.EndOfWave();
+				}
+
+			}
+
+			if (pCurrentLevel == 4)
+			{
+				levelDataPointer = null;
 
 			}
 		}

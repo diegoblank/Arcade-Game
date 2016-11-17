@@ -20,9 +20,7 @@ namespace GXPEngine
 		private int state;
 
 
-		private Level _level;
-
-		public Player(Level level) : base ("player.png")
+		public Player() : base ("player.png")
 		{
 			state = 1;
 			_crouchTimer = 0;
@@ -38,12 +36,11 @@ namespace GXPEngine
 
 
 			speedX = 1.0f;
-			speedY = 0.95f;
+			speedY = 1.0f;
 
 			scaleX = scaleX * 0.2f;
 			scaleY = scaleY * 0.2f;
 
-			_level = level;
 
 		}
 
@@ -103,15 +100,11 @@ namespace GXPEngine
 
 			if (Input.GetKeyDown(Key.LEFT_SHIFT))
 			{
-				Bullet bullet = new Bullet(x, y - height*0.6f, state);
-				_level.AddChild(bullet);
+				
+				MyGame myGame = game as MyGame;
+				myGame.CallBulletSpawn(x, y - height, state);
 			}
 
-				//if (Input.GetKey(Key.SPACE) && _timer >= 0)
-				//{
-				//speedY = speedY * 1.1f;
-				//speedY += 1f;
-				//}
 
 				
 				speedX = speedX * 0.8f; 

@@ -47,12 +47,16 @@ namespace GXPEngine
 		public void OnCollision(GameObject other)
 
 		{
+
 			if (other is Enemy)
 			{
-				Enemy enemy = other as Enemy;
-				enemy.Destroy();
+				
 				MyGame myGame = game as MyGame;
 				myGame.AddScore();
+				Enemy enemy = other as Enemy;
+				enemy.Destroy();
+				this.Destroy();
+
 			}
 			else if (other is Crate)
 			{
