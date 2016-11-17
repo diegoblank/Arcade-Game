@@ -19,6 +19,7 @@ namespace GXPEngine
 
 		private int state;
 
+
 		private Level _level;
 
 		public Player(Level level) : base ("player.png")
@@ -106,11 +107,6 @@ namespace GXPEngine
 				_level.AddChild(bullet);
 			}
 
-			if (Input.GetKeyDown(Key.F))
-			{
-				Dynamite dynamite = new Dynamite(x, y - height*0.2f);
-				_level.AddChild(dynamite);
-			}
 				//if (Input.GetKey(Key.SPACE) && _timer >= 0)
 				//{
 				//speedY = speedY * 1.1f;
