@@ -17,6 +17,9 @@ namespace GXPEngine
 		private float speedX;
 		private float speedY;
 
+		private int _ammo;
+		private int _gunReloadTimer;
+
 		private int state;
 
 
@@ -24,6 +27,9 @@ namespace GXPEngine
 		{
 			state = 1;
 			_crouchTimer = 0;
+			_gunReloadTimer = 0;
+
+			_ammo = 6;
 
 			SetOrigin(width / 2, height);
 			x = 400;
@@ -50,6 +56,7 @@ namespace GXPEngine
 
 			PlayerPosX = this.x;
 
+			_gunReloadTimer =_gunReloadTimer - 1;
 			_timer = _timer - 1;
 			_crouchTimer = _crouchTimer - 1;
 
@@ -57,6 +64,13 @@ namespace GXPEngine
 			{
 
 				_timer = 0;
+
+			}
+
+			if (_gunReloadTimer <= 0)
+			{
+
+				_gunReloadTimer = 0;
 
 			}
 
@@ -98,11 +112,20 @@ namespace GXPEngine
 					
 				}
 
-			if (Input.GetKeyDown(Key.LEFT_SHIFT))
+			if (Input.GetKeyDown(Key.LEFT_SHIFT) && _gunReloadTimer <= 0)
 			{
-				
+
+
 				MyGame myGame = game as MyGame;
 				myGame.CallBulletSpawn(x, y - height, state);
+				_ammo = _ammo - 1;
+
+				if (_ammo <= 0) 
+				{
+					_gunReloadTimer = 100;
+					_ammo = 6;
+				}
+
 			}
 
 
