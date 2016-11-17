@@ -18,6 +18,7 @@ namespace GXPEngine
 
 		private int state;
 
+
 		private Level _level;
 
 		public Player(Level level) : base ("player.png")
@@ -41,6 +42,7 @@ namespace GXPEngine
 			scaleY = scaleY * 0.2f;
 
 			_level = level;
+
 		}
 
 		void Update() 
@@ -125,7 +127,6 @@ namespace GXPEngine
 				Console.WriteLine(state);
 
 		}
-
 
 
 		public void OnCollision(GameObject other)

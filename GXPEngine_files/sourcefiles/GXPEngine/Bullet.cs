@@ -3,7 +3,9 @@ namespace GXPEngine
 {
 	public class Bullet : Sprite
 	{
-		int _direction = -1;
+		public int _direction = -1;
+		public int _score = 0;
+
 		public Bullet(float spawnX, float spawnY, int direction) : base ("bullet.png")
 		{
 			scaleX = 0.1f;
@@ -29,6 +31,7 @@ namespace GXPEngine
 
 		private void Update()
 		{
+			
 			if (_direction == -1) //wrong, no direction
 				return;
 			if (_direction == 2) //left
@@ -39,6 +42,7 @@ namespace GXPEngine
 			{
 				x += 10;
 			}
+
 		}
 			public void OnCollision(GameObject other)
 
@@ -47,8 +51,11 @@ namespace GXPEngine
 				{
 					Enemy enemy = other as Enemy;
 					enemy.Destroy();
+					_score = _score + 10;
+					
 				}
 			}
+
 		}
 	}
 
