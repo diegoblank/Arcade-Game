@@ -18,7 +18,7 @@ public class MyGame : Game //MyGame is a Game
 	//initialize game here
 	public MyGame () : base(1280, 960, false, false)
 	{
-
+		_lives = 5;
 		_currentLevel = 1;
 		_currentColumn = 0;
 		_gameRunning = true;
@@ -36,11 +36,6 @@ public class MyGame : Game //MyGame is a Game
 	}
 
 
-	public void AddScore() 
-	{
-		_score = _score + 1;
-	}
-
 	public void CallBulletSpawn(float pX, float pY, int pState) 
 	{
 		level.CreateBullet(pX, pY, pState);
@@ -55,7 +50,7 @@ public class MyGame : Game //MyGame is a Game
 		_waveTimer = _waveTimer - 1;
 		if (_waveTimer <= 0) 
 		{
-			_waveTimer = 60;
+			_waveTimer = 100;
 		}
 
 		if (_gameRunning == true && _waveTimer == 1)
@@ -73,7 +68,7 @@ public class MyGame : Game //MyGame is a Game
 	{
 		_currentColumn = 0;
 		_currentLevel = _currentLevel + 1;
-		_waveTimer = 200;
+		_waveTimer = 300;
 	}
 
 	//system starts here

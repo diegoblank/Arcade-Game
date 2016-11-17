@@ -50,9 +50,8 @@ namespace GXPEngine
 
 			if (other is Enemy)
 			{
-				
-				MyGame myGame = game as MyGame;
-				myGame.AddScore();
+
+				Player.AddScore();
 				Enemy enemy = other as Enemy;
 				enemy.Destroy();
 				this.Destroy();

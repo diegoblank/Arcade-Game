@@ -11,6 +11,12 @@ namespace GXPEngine
 		private int _crouchTimer;
 		private int _wagonNumber;
 
+		private bool _blink;
+		private int _blinkTimer;
+
+		public static int Lives;
+		public static int Score;
+
 		private float _gravity;
 		private bool _canJump;
 
@@ -28,6 +34,12 @@ namespace GXPEngine
 			state = 1;
 			_crouchTimer = 0;
 			_gunReloadTimer = 0;
+
+			_blinkTimer = 0;
+			_blink = false;
+
+			Lives = 5;
+			Score = 0;
 
 			_ammo = 6;
 
@@ -50,9 +62,45 @@ namespace GXPEngine
 
 		}
 
+		public static void AddScore() 
+		{
+			Score = Score + 10;
+		
+		}
+
+		public static void AddLife()
+		{
+			Lives = Lives + 1;
+
+		}
+
+		public static void LoseLife()
+		{
+			Lives = Lives - 1;
+
+		}
+
+		private void SetBlinkTrue() 
+		{
+			_blink = true;
+		}
+
 		void Update() 
 		{
 
+			_blinkTimer = _blinkTimer - 1;
+			if (_blinkTimer <= 0) 
+			{
+				alpha = 1;
+				_blinkTimer = 0;
+				_blink = false;
+			}
+
+			if (_blink == true) 
+			{
+				alpha = _blinkTimer / 10.0f;;
+			
+			}
 
 			PlayerPosX = this.x;
 
@@ -115,7 +163,6 @@ namespace GXPEngine
 			if (Input.GetKeyDown(Key.LEFT_SHIFT) && _gunReloadTimer <= 0)
 			{
 
-
 				MyGame myGame = game as MyGame;
 				myGame.CallBulletSpawn(x, y - height, state);
 				_ammo = _ammo - 1;
@@ -128,8 +175,6 @@ namespace GXPEngine
 
 			}
 
-
-				
 				speedX = speedX * 0.8f; 
 				speedY = speedY * 0.9f;
 
@@ -140,15 +185,19 @@ namespace GXPEngine
 
 				y = y * _gravity;
 
-
-
-
 		}
 
 
 		public void OnCollision(GameObject other)
 		{
 
+			if (other is Enemy && _blinkTimer <= 0) 
+			{
+				LoseLife();
+				_blinkTimer = 100;
+				SetBlinkTrue();
+			}
+				
 			if (other is BaseShort)
 			{
 				_wagonNumber = 1;

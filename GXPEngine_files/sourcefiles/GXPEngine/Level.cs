@@ -10,6 +10,7 @@ namespace GXPEngine
 		private float PlayerPosX;
 		private int _spawnTimer;
 		private Background background;
+		private Random random;
 
 		private int[] levelDataPointer = null;
 
@@ -21,6 +22,8 @@ namespace GXPEngine
 
 		public Level() //TRAIN SETUP
 		{
+
+			random = new Random();
 			
 			background = new Background();
 			AddChild(background);
@@ -163,7 +166,7 @@ namespace GXPEngine
 				int tile = levelDataPointer[pCurrentColumn];
 					if (pCurrentColumn < levelDataPointer.GetLength(0)) 
 					{ 
-						Enemy enemy = new Enemy(1000, 300);
+					Enemy enemy = new Enemy(random.Next(-160, 4310), 0);
 						AddChild(enemy);
 						
 					}
@@ -185,7 +188,7 @@ namespace GXPEngine
 				int tile = levelDataPointer[pCurrentColumn];
 					if (pCurrentColumn < levelDataPointer.GetLength(0))
 					{
-						Enemy enemy = new Enemy(1000, 300);
+					Enemy enemy = new Enemy(random.Next(-160, 4310), 0);
 						AddChild(enemy);
 
 					}
@@ -205,7 +208,7 @@ namespace GXPEngine
 				int tile = levelDataPointer[pCurrentColumn];
 				if (pCurrentColumn < levelDataPointer.GetLength(0))
 				{
-					Enemy enemy = new Enemy(1000, 300);
+					Enemy enemy = new Enemy(random.Next(-160, 4310), 0);
 					AddChild(enemy);
 
 				}
