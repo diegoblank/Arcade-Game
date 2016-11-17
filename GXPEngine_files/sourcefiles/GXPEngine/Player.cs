@@ -88,7 +88,7 @@ namespace GXPEngine
 
 			if (Input.GetKey(Key.A))
 				{
-				speedX = speedX - 2;
+					speedX = speedX - 2;
 					state = 2;
 					Mirror(false, false);
 				}

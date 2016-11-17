@@ -9,6 +9,7 @@ namespace GXPEngine
 		const int LeftBoundary = 620;
 		private float PlayerPosX;
 		private int _spawnTimer;
+		private Background background;
 
 		private int[] levelDataPointer = null;
 
@@ -16,10 +17,10 @@ namespace GXPEngine
 
 		private int[] level2 = new int[20] { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 
-		public Level()
+		public Level() //TRAIN SETUP
 		{
-			
-			Background background = new Background();
+
+			background = new Background();
 			AddChild(background);
 
 			BaseShort baseshort = new BaseShort(-160, 600);
@@ -61,16 +62,16 @@ namespace GXPEngine
 			LongBackgroundLocomotive longlocomotive = new LongBackgroundLocomotive(4920, 400);
 			AddChild(longlocomotive);
 
-			Wheel wheel1 = new Wheel(320, 650);
+			Wheel wheel1 = new Wheel(320, 670);
 			AddChild(wheel1);
 
-			Wheel wheel2 = new Wheel(410, 650);
+			Wheel wheel2 = new Wheel(410, 670);
 			AddChild(wheel2);
 
-			Wheel wheel3 = new Wheel(960, 650);
+			Wheel wheel3 = new Wheel(960, 670);
 			AddChild(wheel3);
 
-			Wheel wheel4 = new Wheel(870, 650);
+			Wheel wheel4 = new Wheel(870, 670);
 			AddChild(wheel4);
 
 			Crate crate1 = new Crate(380, 560);
@@ -125,6 +126,11 @@ namespace GXPEngine
 			}
 
 
+			if (background.x < -8960) 
+			{
+				background.x = -1280;
+			
+			}
 			
 		}
 
