@@ -8,7 +8,6 @@ namespace GXPEngine
 		const int RightBoundary = 660;
 		const int LeftBoundary = 620;
 		private float PlayerPosX;
-		private int _spawnTimer;
 		private Background background;
 
 		private int[] levelDataPointer = null;
@@ -16,6 +15,8 @@ namespace GXPEngine
 		private int[] level1 = new int[10] {1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 
 		private int[] level2 = new int[20] { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+
+		private int[] level3 = new int[20] { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
 
 		public Level() //TRAIN SETUP
 		{
@@ -83,13 +84,7 @@ namespace GXPEngine
 			Player player = new Player(this);
 			AddChild(player);
 
-
-
-
-
 			scrollTarget = player;
-
-
 
 		}
 
@@ -118,12 +113,6 @@ namespace GXPEngine
 		{
 			PlayerPosX = scrollTarget.x;
 			scrollToTarget();
-
-			_spawnTimer = _spawnTimer - 1;
-			if (_spawnTimer <= 0) 
-			{
-				_spawnTimer = 60;
-			}
 
 
 			if (background.x < -8960) 
@@ -176,6 +165,32 @@ namespace GXPEngine
 						MyGame myGame = game as MyGame;
 						myGame.EndOfWave();
 					}
+
+			}
+
+			if (pCurrentLevel == 3)
+			{
+				levelDataPointer = level3;
+
+				int tile = levelDataPointer[pCurrentColumn];
+				if (pCurrentColumn < levelDataPointer.GetLength(0))
+				{
+					Enemy enemy = new Enemy(1000, 300);
+					AddChild(enemy);
+
+				}
+
+				if (pCurrentColumn == levelDataPointer.GetLength(0) - 1)
+				{
+					MyGame myGame = game as MyGame;
+					myGame.EndOfWave();
+				}
+
+			}
+
+			if (pCurrentLevel == 4)
+			{
+				levelDataPointer = null;
 
 			}
 		}

@@ -49,7 +49,7 @@ public class MyGame : Game //MyGame is a Game
 		_waveTimer = _waveTimer - 1;
 		if (_waveTimer <= 0) 
 		{
-			_waveTimer = 60;
+			_waveTimer = 200;
 		}
 
 		if (_gameRunning == true && _waveTimer == 1)
@@ -67,7 +67,7 @@ public class MyGame : Game //MyGame is a Game
 	{
 		_currentColumn = 0;
 		_currentLevel = _currentLevel + 1;
-		_waveTimer = 200;
+		_waveTimer = 600;
 	}
 
 	//system starts here
