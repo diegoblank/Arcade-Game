@@ -4,12 +4,12 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="GXPEngine\Dynamite.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GXPEngine\Player.cs">
     <Files>
       <File FileName="GXPEngine\MyGame.cs" Line="45" Column="27" />
       <File FileName="GXPEngine\Enemy.cs" Line="58" Column="4" />
       <File FileName="GXPEngine\HUD.cs" Line="21" Column="122" />
-      <File FileName="GXPEngine\Player.cs" Line="462" Column="21" />
+      <File FileName="GXPEngine\Player.cs" Line="404" Column="2" />
       <File FileName="GXPEngine\Level.cs" Line="94" Column="4" />
       <File FileName="GXPEngine\Background.cs" Line="16" Column="3" />
       <File FileName="GXPEngine\Bullet.cs" Line="15" Column="15" />

@@ -28,6 +28,8 @@ namespace GXPEngine
 			if (_detonationTimer <= 0)
 			{
 				_detonationTimer = 0;
+				MyGame myGame = game as MyGame;
+				myGame.CallExplosionSpawn(x, y);
 				Destroy();
 
 			}
@@ -87,6 +89,7 @@ namespace GXPEngine
 
 				}
 
+			}
 				if (other is BaseIntermediateCargo)
 				{
 
@@ -104,57 +107,40 @@ namespace GXPEngine
 
 					TallLongCargo talllongcargo = other as TallLongCargo;
 
-					if (y < talllongcargo.y + 20)
+					if (y <= talllongcargo.y + 20)
 					{
-						y = talllongcargo.y;
+						y = talllongcargo.y - 20;
 
-
-						if (y > talllongcargo.y)
-						{
-
-							if (x > talllongcargo.x)
-							{
-								x = talllongcargo.x + 820;
-
-							}
-
-							if (x <= talllongcargo.x)
-							{
-								x = talllongcargo.x - 20;
-
-							}
-
-						}
-
-					}
-
-					if (other is BaseIntermediate)
-					{
-
-						BaseIntermediate baseintermediate = other as BaseIntermediate;
-
-						if (y >= baseintermediate.y)
-						{
-							y = baseintermediate.y;
-
-						}
 
 
 					}
+				}
 
-					if (other is BaseIntermediateCeiling)
+				if (other is BaseIntermediate)
+				{
+
+					BaseIntermediate baseintermediate = other as BaseIntermediate;
+
+					if (y >= baseintermediate.y)
 					{
+						y = baseintermediate.y;
 
-						BaseIntermediateCeiling baseintermediateceiling = other as BaseIntermediateCeiling;
+					}
 
-						if (y <= baseintermediateceiling.y + 120)
-						{
+
+				}
+
+				if (other is BaseIntermediateCeiling)
+				{
+
+					BaseIntermediateCeiling baseintermediateceiling = other as BaseIntermediateCeiling;
+					if (y <= baseintermediateceiling.y + 120)
+					{
 							y = baseintermediateceiling.y;
-
-						}
-
-
 					}
+
+
+				}
 
 					if (other is LongBackgroundLocomotive)
 					{
@@ -163,7 +149,7 @@ namespace GXPEngine
 
 						if (y < longbackloco.y + 20)
 						{
-							y = longbackloco.y;
+							y = longbackloco.y - 20;
 
 						}
 
@@ -189,6 +175,4 @@ namespace GXPEngine
 
 				}
 			}
-		}
-	}
 }
