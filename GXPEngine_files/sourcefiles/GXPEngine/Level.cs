@@ -35,6 +35,18 @@ namespace GXPEngine
 			BaseLongCargo baselongcargo = new BaseLongCargo(250, 600);
 			AddChild(baselongcargo);
 
+			Wheel wheel1 = new Wheel(320, 700);
+			AddChild(wheel1);
+
+			Wheel wheel2 = new Wheel(400, 700);
+			AddChild(wheel2);
+
+			Wheel wheel3 = new Wheel(980, 700);
+			AddChild(wheel3);
+
+			Wheel wheel4 = new Wheel(900, 700);
+			AddChild(wheel4);
+
 			TrainBottom trainbottom = new TrainBottom(250, 620);
 			AddChild(trainbottom);
 
@@ -71,17 +83,6 @@ namespace GXPEngine
 			LongBackgroundLocomotive longlocomotive = new LongBackgroundLocomotive(4920, 400);
 			AddChild(longlocomotive);
 
-			Wheel wheel1 = new Wheel(320, 670);
-			AddChild(wheel1);
-
-			Wheel wheel2 = new Wheel(410, 670);
-			AddChild(wheel2);
-
-			Wheel wheel3 = new Wheel(960, 670);
-			AddChild(wheel3);
-
-			Wheel wheel4 = new Wheel(870, 670);
-			AddChild(wheel4);
 
 			Crate crate1 = new Crate(380, 560);
 			AddChild(crate1);
