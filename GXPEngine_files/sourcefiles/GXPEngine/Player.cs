@@ -11,12 +11,15 @@ namespace GXPEngine
 		private int _crouchTimer;
 		private int _wagonNumber;
 
+		private int _TNTcooldown;
+
 		private bool _blink;
 		private int _blinkTimer;
 
 		public static int Lives;
 		public static int Score;
 		public static int Ammo;
+		public static int DynamiteCount;
 
 		private float _gravity;
 		private bool _canJump;
@@ -35,6 +38,8 @@ namespace GXPEngine
 			state = 1;
 			_crouchTimer = 0;
 			_gunReloadTimer = 0;
+
+			DynamiteCount = 2;
 
 			_blinkTimer = 0;
 			_blink = false;
@@ -89,6 +94,18 @@ namespace GXPEngine
 
 		void Update() 
 		{
+			_TNTcooldown = _TNTcooldown - 1;
+
+			if (_TNTcooldown <= 0) 
+			{
+				_TNTcooldown = 0;
+			
+			}
+
+			if (DynamiteCount <= 0) 
+			{
+				DynamiteCount = 0;
+			}
 
 			_blinkTimer = _blinkTimer - 1;
 			if (_blinkTimer <= 0) 
@@ -174,6 +191,17 @@ namespace GXPEngine
 					_gunReloadTimer = 100;
 					Ammo = 6;
 				}
+
+			}
+
+			if (Input.GetKeyDown(Key.LEFT_CTRL) && _TNTcooldown <= 0 && DynamiteCount >= 1)
+			{
+
+				MyGame myGame = game as MyGame;
+				myGame.CallTNTSpawn(x, y - height);
+				DynamiteCount = DynamiteCount - 1;
+				_TNTcooldown = 200;
+
 
 			}
 

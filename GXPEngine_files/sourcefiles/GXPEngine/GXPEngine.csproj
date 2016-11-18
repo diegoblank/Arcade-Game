@@ -80,6 +80,7 @@
     <Compile Include="HUD.cs" />
     <Compile Include="TallLongCargo.cs" />
     <Compile Include="Station.cs" />
+    <Compile Include="Dynamite.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GXPEngine\" />

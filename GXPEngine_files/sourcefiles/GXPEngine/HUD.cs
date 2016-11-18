@@ -18,6 +18,7 @@ namespace GXPEngine
 			graphics.DrawString("Score:" + Player.Score, SystemFonts.DefaultFont, Brushes.Blue, 0, 0);
 			graphics.DrawString("                      Lives:" + Player.Lives, SystemFonts.DefaultFont, Brushes.Blue, 0, 0);
 			graphics.DrawString("                                              Ammo:" + Player.Ammo, SystemFonts.DefaultFont, Brushes.Blue, 0, 0);
+			graphics.DrawString("                                                                TNT Ammo:" + Player.DynamiteCount, SystemFonts.DefaultFont, Brushes.Blue, 0, 0);
 
 		}
 	}

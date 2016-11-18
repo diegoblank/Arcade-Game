@@ -4,8 +4,6 @@ using GXPEngine;
 
 public class MyGame : Game //MyGame is a Game
 {
-	private int _score = 0;
-	private int _lives;
 
 	private int _waveTimer;
 	private bool _gameRunning;
@@ -15,11 +13,10 @@ public class MyGame : Game //MyGame is a Game
 	private Station station;
 
 
-
 	//initialize game here
 	public MyGame () : base(1280, 960, false, false)
 	{
-		_lives = 5;
+
 		_currentLevel = 1;
 		_currentColumn = 0;
 		_gameRunning = true;
@@ -41,6 +38,12 @@ public class MyGame : Game //MyGame is a Game
 	{
 		level.CreateBullet(pX, pY, pState);
 	
+	}
+
+	public void CallTNTSpawn(float pX, float pY)
+	{
+		level.CreateTNT(pX, pY);
+
 	}
 
 	//update game here
@@ -73,7 +76,7 @@ public class MyGame : Game //MyGame is a Game
 		station = new Station();
 		level.AddChild(station);
 
-		_waveTimer = 300;
+		_waveTimer = 400;
 	}
 
 	//system starts here

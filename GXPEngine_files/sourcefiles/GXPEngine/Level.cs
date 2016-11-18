@@ -103,6 +103,14 @@ namespace GXPEngine
 		
 		}
 
+		public void CreateTNT(float pX, float pY)
+		{
+			Dynamite tnt = new Dynamite(pX, pY + 100);
+			AddChild(tnt);
+
+
+		}
+
 		private void scrollToTarget() 
 		{
 			if (scrollTarget != null) 
