@@ -11,6 +11,7 @@ namespace GXPEngine
 		private int _spawnTimer;
 		private Background background;
 		private Random random;
+		private Explosion explosion;
 
 		private int[] levelDataPointer = null;
 
@@ -33,6 +34,9 @@ namespace GXPEngine
 
 			BaseLongCargo baselongcargo = new BaseLongCargo(250, 600);
 			AddChild(baselongcargo);
+
+			TrainBottom trainbottom = new TrainBottom(250, 620);
+			AddChild(trainbottom);
 
 			LongBackground longbackground = new LongBackground(1060, 400);
 			AddChild(longbackground);
@@ -107,6 +111,14 @@ namespace GXPEngine
 		{
 			Dynamite tnt = new Dynamite(pX, pY + 100);
 			AddChild(tnt);
+
+
+		}
+
+		public void CreateExplosion(float pX, float pY)
+		{
+			explosion = new Explosion(pX, pY);
+			AddChild(explosion);
 
 
 		}
