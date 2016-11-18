@@ -38,3 +38,4 @@ C:\Users\Diego Blank\Documents\Coding\GXPEngine_files\sourcefiles\GXPEngine\bin\
 C:\Users\Diego Blank\Documents\Coding\GXPEngine_files\sourcefiles\GXPEngine\obj\x86\Debug\GXPEngine.csprojResolveAssemblyReference.cache
 C:\Users\Diego Blank\Documents\Coding\GXPEngine_files\sourcefiles\GXPEngine\obj\x86\Debug\GXPEngine.exe
 C:\Users\Diego Blank\Documents\Coding\GXPEngine_files\sourcefiles\GXPEngine\obj\x86\Debug\GXPEngine.pdb
+C:\School\TrainGame\GXPEngine_files\sourcefiles\GXPEngine\obj\x86\Debug\GXPEngine.csprojResolveAssemblyReference.cache
