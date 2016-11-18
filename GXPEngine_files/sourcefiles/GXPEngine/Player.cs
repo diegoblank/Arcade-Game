@@ -94,6 +94,16 @@ namespace GXPEngine
 
 		void Update() 
 		{
+			if (Lives <= 0)
+			{
+				this.Destroy();
+			}
+
+			if (y >= 800)
+			{
+				LoseLife();
+			}
+
 			_TNTcooldown = _TNTcooldown - 1;
 
 			if (_TNTcooldown <= 0) 
