@@ -99,6 +99,11 @@ namespace GXPEngine
 				this.Destroy();
 			}
 
+			if (y <= 100) 
+			{
+				speedY = speedY + 2;
+			}
+
 			if (y >= 800)
 			{
 				LoseLife();
@@ -340,7 +345,7 @@ namespace GXPEngine
 				_wagonNumber = 2;
 				TallLongCargo talllongcargo = other as TallLongCargo;
 
-				if (y < talllongcargo.y + 20)
+				if (y < talllongcargo.y + 20 || y <= talllongcargo.y + 50)
 				{
 					y = talllongcargo.y;
 
@@ -415,7 +420,7 @@ namespace GXPEngine
 				_wagonNumber = 2;
 				LongBackgroundLocomotive longbackloco = other as LongBackgroundLocomotive;
 
-				if (y < longbackloco.y + 20)
+				if (y < longbackloco.y + 20 || y <= longbackloco.y + 50)
 				{
 					y = longbackloco.y;
 
