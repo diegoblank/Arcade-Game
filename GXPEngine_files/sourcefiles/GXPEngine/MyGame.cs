@@ -46,12 +46,6 @@ public class MyGame : Game //MyGame is a Game
 
 	}
 
-	public void CallExplosionSpawn(float pX, float pY)
-	{
-		level.CreateExplosion(pX, pY);
-
-	}
-
 	//update game here
 	void Update ()
 	{

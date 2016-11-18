@@ -81,8 +81,6 @@
     <Compile Include="TallLongCargo.cs" />
     <Compile Include="Station.cs" />
     <Compile Include="Dynamite.cs" />
-    <Compile Include="TrainBottom.cs" />
-    <Compile Include="Explosion.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GXPEngine\" />

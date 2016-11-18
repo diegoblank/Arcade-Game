@@ -272,15 +272,6 @@ namespace GXPEngine
 
 			}
 
-			if (other is Explosion)
-			{
-
-				Explosion explosion = other as Explosion;
-				this.Destroy();
-				Player.AddScore();
-
-			}
-
 
 		}
 	}

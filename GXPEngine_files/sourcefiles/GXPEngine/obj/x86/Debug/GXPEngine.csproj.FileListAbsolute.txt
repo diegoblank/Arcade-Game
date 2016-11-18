@@ -39,4 +39,3 @@ C:\Users\Diego Blank\Documents\Coding\GXPEngine_files\sourcefiles\GXPEngine\obj\
 C:\Users\Diego Blank\Documents\Coding\GXPEngine_files\sourcefiles\GXPEngine\obj\x86\Debug\GXPEngine.exe
 C:\Users\Diego Blank\Documents\Coding\GXPEngine_files\sourcefiles\GXPEngine\obj\x86\Debug\GXPEngine.pdb
 C:\School\TrainGame\GXPEngine_files\sourcefiles\GXPEngine\obj\x86\Debug\GXPEngine.csprojResolveAssemblyReference.cache
-C:\Users\snaky\Desktop\traingame-20161116T102607Z\traingame\GXPEngine_files\sourcefiles\GXPEngine\obj\x86\Debug\GXPEngine.csprojResolveAssemblyReference.cache
