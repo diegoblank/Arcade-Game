@@ -1,10 +1,12 @@
 ﻿using System;
 namespace GXPEngine
 {
-	public class TrainBottom
+	public class TrainBottom : Sprite
 	{
-		public TrainBottom()
+		public TrainBottom(float PosX, float PosY) : base("trainbottom.png")
 		{
+			SetXY(PosX, PosY);
+
 		}
 	}
 }
