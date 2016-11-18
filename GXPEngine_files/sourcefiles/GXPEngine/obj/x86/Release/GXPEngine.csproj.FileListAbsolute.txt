@@ -1,8 +1,0 @@
-C:\School\TrainGame\GXPEngine_files\sourcefiles\GXPEngine\bin\Release\GXPEngine.exe
-C:\School\TrainGame\GXPEngine_files\sourcefiles\GXPEngine\bin\Release\mscorlib.dll
-C:\School\TrainGame\GXPEngine_files\sourcefiles\GXPEngine\bin\Release\normidna.nlp
-C:\School\TrainGame\GXPEngine_files\sourcefiles\GXPEngine\bin\Release\normnfc.nlp
-C:\School\TrainGame\GXPEngine_files\sourcefiles\GXPEngine\bin\Release\normnfd.nlp
-C:\School\TrainGame\GXPEngine_files\sourcefiles\GXPEngine\bin\Release\normnfkc.nlp
-C:\School\TrainGame\GXPEngine_files\sourcefiles\GXPEngine\bin\Release\normnfkd.nlp
-C:\School\TrainGame\GXPEngine_files\sourcefiles\GXPEngine\obj\x86\Release\GXPEngine.exe
