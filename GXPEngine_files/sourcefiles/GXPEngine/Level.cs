@@ -12,6 +12,7 @@ namespace GXPEngine
 		private Background background;
 		private Random random;
 		private Explosion explosion;
+		private ParallaxLayer parallaxlayer;
 
 		private int[] levelDataPointer = null;
 
@@ -28,6 +29,9 @@ namespace GXPEngine
 			
 			background = new Background();
 			AddChild(background);
+
+			parallaxlayer = new ParallaxLayer();
+			AddChild(parallaxlayer);
 
 			BaseShort baseshort = new BaseShort(-160, 600);
 			AddChild(baseshort);
@@ -157,10 +161,16 @@ namespace GXPEngine
 			}
 
 
-			if (background.x < -8960) 
+			if (background.x < -6400) 
 			{
 				background.x = -1280;
 			
+			}
+
+			if (parallaxlayer.x < -6400)
+			{
+				parallaxlayer.x = -1280;
+
 			}
 
 			if (Input.GetKey(Key.A))
