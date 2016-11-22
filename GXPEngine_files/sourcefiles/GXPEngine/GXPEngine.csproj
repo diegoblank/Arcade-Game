@@ -83,15 +83,13 @@
     <Compile Include="Dynamite.cs" />
     <Compile Include="Explosion.cs" />
     <Compile Include="TrainBottom.cs" />
-
     <Compile Include="Enemy2.cs" />
     <Compile Include="Bullet2.cs" />
-
     <Compile Include="ParallaxLayer.cs" />
-
+    <Compile Include="Enemy2.cs" />
+    <Compile Include="Bullet2.cs" />
+    <Compile Include="ParallaxLayer.cs" />
     <Compile Include="PlayerAnimation.cs" />
-
-
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GXPEngine\" />

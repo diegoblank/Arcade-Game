@@ -96,7 +96,7 @@ namespace GXPEngine
 			{
 				MyGame myGame = game as MyGame;
 				myGame.CallBulletSpawn2(x, y - height, state);
-				_timer = 100;
+				_timer = 150;
 			}
 		}
 

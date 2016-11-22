@@ -1,9 +1,10 @@
-﻿<Properties StartupConfiguration="{B5126D4C-7FE0-4552-BC8C-E68D529C22B2}|Default">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="GXPEngine\Level.cs">
     <Files>
       <File FileName="GXPEngine\Station.cs" Line="1" Column="1" />
@@ -16,7 +17,25 @@
       <File FileName="GXPEngine\Bullet2.cs" Line="50" Column="4" />
       <File FileName="GXPEngine\TallLongCargo.cs" Line="14" Column="1" />
       <File FileName="GXPEngine\TrainBottom.cs" Line="6" Column="70" />
+=======
+<<<<<<< HEAD
+  <MonoDevelop.Ide.Workbench ActiveDocument="GXPEngine\Level.cs">
+    <Files>
+      <File FileName="GXPEngine\MyGame.cs" Line="45" Column="27" />
+      <File FileName="GXPEngine\Enemy.cs" Line="58" Column="4" />
+      <File FileName="GXPEngine\HUD.cs" Line="1" Column="1" />
+      <File FileName="GXPEngine\Player.cs" Line="1" Column="1" />
+      <File FileName="GXPEngine\Level.cs" Line="3" Column="2" />
+      <File FileName="GXPEngine\Bullet.cs" Line="15" Column="15" />
+      <File FileName="GXPEngine\Enemy2.cs" Line="100" Column="5" />
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="GXPEngine\MyGame.cs">
+    <Files>
+      <File FileName="GXPEngine\Station.cs" Line="1" Column="1" />
+      <File FileName="GXPEngine\Enemy2.cs" Line="1" Column="1" />
+      <File FileName="GXPEngine\MyGame.cs" Line="1" Column="1" />
+>>>>>>> 787ec625ca441736d29a41079a3a9b5d687d6a95
+>>>>>>> 116e98ad32a5c833f1edc7a759c48c23aab5f8bc
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.GXPEngine PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>
