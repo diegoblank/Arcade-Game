@@ -86,9 +86,6 @@
     <Compile Include="Enemy2.cs" />
     <Compile Include="Bullet2.cs" />
     <Compile Include="ParallaxLayer.cs" />
-    <Compile Include="Enemy2.cs" />
-    <Compile Include="Bullet2.cs" />
-    <Compile Include="ParallaxLayer.cs" />
     <Compile Include="PlayerAnimation.cs" />
   </ItemGroup>
   <ItemGroup>
