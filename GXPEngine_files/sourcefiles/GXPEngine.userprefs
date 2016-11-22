@@ -4,28 +4,12 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench ActiveDocument="GXPEngine\ParallaxLayer2.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GXPEngine\Player.cs">
     <Files>
+      <File FileName="GXPEngine\Level.cs" Line="1" Column="1" />
       <File FileName="GXPEngine\MyGame.cs" Line="1" Column="1" />
-      <File FileName="GXPEngine\Enemy2.cs" Line="1" Column="1" />
-      <File FileName="GXPEngine\Level.cs" Line="37" Column="29" />
-      <File FileName="GXPEngine\ParallaxLayer2.cs" Line="11" Column="4" />
-      <File FileName="GXPEngine\ParallaxLayer.cs" Line="24" Column="3" />
-=======
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench ActiveDocument="GXPEngine\Enemy2.cs">
-    <Files>
-      <File FileName="GXPEngine\Background.cs" Line="1" Column="1" />
-      <File FileName="GXPEngine\Enemy2.cs" Line="1" Column="1" />
-=======
-  <MonoDevelop.Ide.Workbench ActiveDocument="GXPEngine\Level.cs">
-    <Files>
-      <File FileName="GXPEngine\MyGame.cs" Line="1" Column="1" />
-      <File FileName="GXPEngine\Enemy2.cs" Line="1" Column="1" />
-      <File FileName="GXPEngine\Level.cs" Line="32" Column="34" />
->>>>>>> 804fab0ba2118868f83b9e2fcf12ec6ff5f76864
->>>>>>> 94df1521f074c333226ad12ee69a20555189e7b2
+      <File FileName="GXPEngine\Player.cs" Line="198" Column="6" />
+      <File FileName="GXPEngine\PlayerAnimation.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.GXPEngine PreferredExecutionTarget="MonoDevelop.Default" />

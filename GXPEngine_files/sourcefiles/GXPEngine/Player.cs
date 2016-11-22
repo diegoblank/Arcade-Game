@@ -22,6 +22,8 @@ namespace GXPEngine
 		public static int Ammo;
 		public static int DynamiteCount;
 
+		private PlayerAnimation playeranimation;
+
 		private float _gravity;
 		private bool _canJump;
 
@@ -36,8 +38,8 @@ namespace GXPEngine
 
 		public Player() : base ("playerhitbox.png")
 		{
-			PlayerAnimation playeranim = new PlayerAnimation();
-			AddChild(playeranim);
+			playeranimation = new PlayerAnimation();
+			AddChild(playeranimation);
 
 			state = 1;
 			_animState = 0;
@@ -129,14 +131,14 @@ namespace GXPEngine
 			_blinkTimer = _blinkTimer - 1;
 			if (_blinkTimer <= 0) 
 			{
-				alpha = 1;
+				playeranimation.alpha = 1;
 				_blinkTimer = 0;
 				_blink = false;
 			}
 
 			if (_blink == true) 
 			{
-				alpha = _blinkTimer / 10.0f;;
+				playeranimation.alpha = _blinkTimer / 10.0f;;
 			
 			}
 
@@ -171,7 +173,7 @@ namespace GXPEngine
 					speedX = speedX + 2;
 					state = 1;
 					_animState = 1;
-					Mirror(true, false);
+					playeranimation.Mirror(false, false);
 					
 				}
 
@@ -189,7 +191,7 @@ namespace GXPEngine
 					speedX = speedX - 2;
 					state = 2;
 					_animState = 2;
-					Mirror(false, false);
+					playeranimation.Mirror(true, false);
 				}
 
 			if (Input.GetKeyDown(Key.SPACE) && _canJump == true)
