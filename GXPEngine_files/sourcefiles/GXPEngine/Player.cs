@@ -248,6 +248,15 @@ namespace GXPEngine
 				_blinkTimer = 100;
 				SetBlinkTrue();
 			}
+
+			if (other is Bullet2 && _blinkTimer <= 0)
+			{
+				Bullet2 bullet2 = other as Bullet2;
+				bullet2.Destroy();
+				LoseLife();
+				_blinkTimer = 100;
+				SetBlinkTrue();
+			}
 				
 			if (other is BaseShort)
 			{

@@ -47,11 +47,7 @@ namespace GXPEngine
 				Destroy();
 			}
 
-			if (other is Player)
-			{
-				Player.LoseLife();
-				this.Destroy();
-			}
+
 		}
 	}
 }
