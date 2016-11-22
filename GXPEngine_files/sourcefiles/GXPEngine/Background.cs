@@ -12,7 +12,7 @@ namespace GXPEngine
 
 		void Update() 
 		{
-			x = x - 10;
+			x = x - 3;
 		
 		}
 

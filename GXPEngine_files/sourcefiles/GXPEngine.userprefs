@@ -8,10 +8,10 @@
     <Files>
       <File FileName="GXPEngine\MyGame.cs" Line="45" Column="27" />
       <File FileName="GXPEngine\Enemy.cs" Line="58" Column="4" />
-      <File FileName="GXPEngine\HUD.cs" Line="21" Column="122" />
-      <File FileName="GXPEngine\Player.cs" Line="33" Column="21" />
-      <File FileName="GXPEngine\Level.cs" Line="166" Column="20" />
-      <File FileName="GXPEngine\Background.cs" Line="4" Column="34" />
+      <File FileName="GXPEngine\HUD.cs" Line="26" Column="1" />
+      <File FileName="GXPEngine\Player.cs" Line="49" Column="21" />
+      <File FileName="GXPEngine\Level.cs" Line="215" Column="50" />
+      <File FileName="GXPEngine\Background.cs" Line="15" Column="13" />
       <File FileName="GXPEngine\Bullet.cs" Line="15" Column="15" />
       <File FileName="GXPEngine\Station.cs" Line="15" Column="4" />
       <File FileName="GXPEngine\Dynamite.cs" Line="179" Column="1" />
