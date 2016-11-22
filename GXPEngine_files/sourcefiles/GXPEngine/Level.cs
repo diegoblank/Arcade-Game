@@ -16,7 +16,7 @@ namespace GXPEngine
 
 		private int[] levelDataPointer = null;
 
-		private int[] level1 = new int[10] {1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+		private int[] level1 = new int[10] {1, 2, 1, 2, 1, 2, 1, 2, 1, 2};
 
 		private int[] level2 = new int[20] { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 
@@ -39,16 +39,16 @@ namespace GXPEngine
 			BaseLongCargo baselongcargo = new BaseLongCargo(250, 600);
 			AddChild(baselongcargo);
 
-			Wheel wheel1 = new Wheel(320, 700);
+			Wheel wheel1 = new Wheel(320, 690);
 			AddChild(wheel1);
 
-			Wheel wheel2 = new Wheel(400, 700);
+			Wheel wheel2 = new Wheel(400, 690);
 			AddChild(wheel2);
 
-			Wheel wheel3 = new Wheel(980, 700);
+			Wheel wheel3 = new Wheel(980, 690);
 			AddChild(wheel3);
 
-			Wheel wheel4 = new Wheel(900, 700);
+			Wheel wheel4 = new Wheel(900, 690);
 			AddChild(wheel4);
 
 			TrainBottom trainbottom = new TrainBottom(250, 620);
@@ -233,6 +233,13 @@ namespace GXPEngine
 						{
 							Enemy enemy = new Enemy(random.Next(-160, 4310), 0);
 							AddChild(enemy);
+
+						}
+
+						if (tile == 2)
+						{
+							Enemy2 enemy2 = new Enemy2(random.Next(-160, 4310), 0);
+							AddChild(enemy2);
 
 						}
 

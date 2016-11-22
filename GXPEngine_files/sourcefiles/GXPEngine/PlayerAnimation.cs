@@ -11,7 +11,7 @@ namespace GXPEngine
 		{
 
 			SetOrigin(width / 2, height);
-			_timer = 20;
+			_timer = 10;
 			_frameTimer = 3;
 
 			SetScaleXY(6.0f, 6.0f);

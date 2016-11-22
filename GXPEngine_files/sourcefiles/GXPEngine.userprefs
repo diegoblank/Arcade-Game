@@ -4,11 +4,18 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="GXPEngine\MyGame.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GXPEngine\Level.cs">
     <Files>
       <File FileName="GXPEngine\Station.cs" Line="1" Column="1" />
-      <File FileName="GXPEngine\Enemy2.cs" Line="1" Column="1" />
-      <File FileName="GXPEngine\MyGame.cs" Line="1" Column="1" />
+      <File FileName="GXPEngine\Enemy2.cs" Line="329" Column="1" />
+      <File FileName="GXPEngine\MyGame.cs" Line="23" Column="3" />
+      <File FileName="GXPEngine\Player.cs" Line="258" Column="20" />
+      <File FileName="GXPEngine\PlayerAnimation.cs" Line="27" Column="21" />
+      <File FileName="GXPEngine\Level.cs" Line="36" Column="51" />
+      <File FileName="GXPEngine\Enemy.cs" Line="1" Column="1" />
+      <File FileName="GXPEngine\Bullet2.cs" Line="50" Column="4" />
+      <File FileName="GXPEngine\TallLongCargo.cs" Line="14" Column="1" />
+      <File FileName="GXPEngine\TrainBottom.cs" Line="6" Column="70" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.GXPEngine PreferredExecutionTarget="MonoDevelop.Default" />
