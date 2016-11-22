@@ -112,6 +112,12 @@ namespace GXPEngine
 		
 		}
 
+		public void CreateBullet2(float pX, float pY, int pState)
+		{
+			Bullet2 bullet2 = new Bullet2(pX, pY + 40, pState);
+			AddChild(bullet2);
+		}
+
 		public void CreateTNT(float pX, float pY)
 		{
 			Dynamite tnt = new Dynamite(pX, pY + 100);

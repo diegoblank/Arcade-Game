@@ -1,12 +1,11 @@
 ﻿using System;
 namespace GXPEngine
 {
-	public class Bullet : Sprite
+	public class Bullet2 : Sprite
 	{
 		public int _direction = -1;
-		public int _score = 0;
 
-		public Bullet(float spawnX, float spawnY, int direction) : base("bullet.png")
+		public Bullet2(float spawnX, float spawnY, int direction) : base ("bullet.png")
 		{
 			scaleX = 0.1f;
 			scaleY = 0.1f;
@@ -25,13 +24,10 @@ namespace GXPEngine
 			{
 				x += 50;
 			}
-
-
 		}
 
 		private void Update()
 		{
-
 			if (_direction == -1) //wrong, no direction
 				return;
 			if (_direction == 2) //left
@@ -42,32 +38,13 @@ namespace GXPEngine
 			{
 				x += 20;
 			}
-
 		}
 		public void OnCollision(GameObject other)
 
 		{
-
-			if (other is Enemy)
-			{
-
-				Player.AddScore();
-				Enemy enemy = other as Enemy;
-				enemy.Destroy();
-				this.Destroy();
-
-			}
-			else if (other is Crate)
+			if (other is Crate)
 			{
 				Destroy();
-			}
-
-			if (other is Enemy2)
-			{
-				Player.AddScore();
-				Enemy2 enemy2 = other as Enemy2;
-				enemy2.Destroy();
-				this.Destroy();
 			}
 
 			if (other is Player)
@@ -78,4 +55,3 @@ namespace GXPEngine
 		}
 	}
 }
-
