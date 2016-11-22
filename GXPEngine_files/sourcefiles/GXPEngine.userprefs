@@ -4,6 +4,7 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="GXPEngine\Level.cs">
     <Files>
       <File FileName="GXPEngine\MyGame.cs" Line="45" Column="27" />
@@ -13,6 +14,13 @@
       <File FileName="GXPEngine\Level.cs" Line="3" Column="2" />
       <File FileName="GXPEngine\Bullet.cs" Line="15" Column="15" />
       <File FileName="GXPEngine\Enemy2.cs" Line="100" Column="5" />
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="GXPEngine\MyGame.cs">
+    <Files>
+      <File FileName="GXPEngine\Station.cs" Line="1" Column="1" />
+      <File FileName="GXPEngine\Enemy2.cs" Line="1" Column="1" />
+      <File FileName="GXPEngine\MyGame.cs" Line="1" Column="1" />
+>>>>>>> 787ec625ca441736d29a41079a3a9b5d687d6a95
     </Files>
   </MonoDevelop.Ide.Workbench>
 </Properties>

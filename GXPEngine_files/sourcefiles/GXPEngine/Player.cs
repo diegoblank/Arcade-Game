@@ -10,6 +10,7 @@ namespace GXPEngine
 		private int _timer;
 		private int _crouchTimer;
 		private int _wagonNumber;
+		private int _animState;
 
 		private int _TNTcooldown;
 
@@ -33,9 +34,13 @@ namespace GXPEngine
 		private int state;
 
 
-		public Player() : base ("player.png")
+		public Player() : base ("playerhitbox.png")
 		{
+			PlayerAnimation playeranim = new PlayerAnimation();
+			AddChild(playeranim);
+
 			state = 1;
+			_animState = 0;
 			_crouchTimer = 0;
 			_gunReloadTimer = 0;
 
@@ -165,6 +170,7 @@ namespace GXPEngine
 				{
 					speedX = speedX + 2;
 					state = 1;
+					_animState = 1;
 					Mirror(true, false);
 					
 				}
@@ -182,6 +188,7 @@ namespace GXPEngine
 				{
 					speedX = speedX - 2;
 					state = 2;
+					_animState = 2;
 					Mirror(false, false);
 				}
 
