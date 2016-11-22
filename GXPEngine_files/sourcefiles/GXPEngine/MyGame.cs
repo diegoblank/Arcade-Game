@@ -40,6 +40,12 @@ public class MyGame : Game //MyGame is a Game
 	
 	}
 
+	public void CallBulletSpawn2(float pX, float pY, int pState)
+	{
+		level.CreateBullet2(pX, pY, pState);
+
+	}
+
 	public void CallTNTSpawn(float pX, float pY)
 	{
 		level.CreateTNT(pX, pY);
