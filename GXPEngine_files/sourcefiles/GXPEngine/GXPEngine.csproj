@@ -83,12 +83,9 @@
     <Compile Include="Dynamite.cs" />
     <Compile Include="Explosion.cs" />
     <Compile Include="TrainBottom.cs" />
-<<<<<<< HEAD
     <Compile Include="Enemy2.cs" />
     <Compile Include="Bullet2.cs" />
-=======
     <Compile Include="ParallaxLayer.cs" />
->>>>>>> 0ad8fcb9ba0ea25d837885d247d15d31093a4fb8
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GXPEngine\" />

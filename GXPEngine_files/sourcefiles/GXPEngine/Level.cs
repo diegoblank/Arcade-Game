@@ -16,11 +16,11 @@ namespace GXPEngine
 
 		private int[] levelDataPointer = null;
 
-		private int[] level1 = new int[10] {1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+		private int[] level1 = new int[10] {1, 1, 1, 1, 1, 1, 2, 1, 2, 1};
 
-		private int[] level2 = new int[20] { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+		private int[] level2 = new int[20] { 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1};
 
-		private int[] level3 = new int[20] { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
+		private int[] level3 = new int[20] { 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 2, 1, 1, 1, 2, 1, 2, 1, 1 };
 
 		public Level() //TRAIN SETUP
 		{
@@ -235,7 +235,11 @@ namespace GXPEngine
 							AddChild(enemy);
 
 						}
-
+					if (tile == 2)
+					{
+						Enemy2 enemy2 = new Enemy2(random.Next(-160, 4310), 0);
+						AddChild(enemy2);
+					}
 					}
 
 			}
