@@ -12,6 +12,7 @@ namespace GXPEngine
 		private Background background;
 		private Random random;
 		private Explosion explosion;
+		private ParallaxLayer parallaxlayer;
 
 		private int[] levelDataPointer = null;
 
@@ -28,6 +29,9 @@ namespace GXPEngine
 			
 			background = new Background();
 			AddChild(background);
+
+			parallaxlayer = new ParallaxLayer();
+			AddChild(parallaxlayer);
 
 			BaseShort baseshort = new BaseShort(-160, 600);
 			AddChild(baseshort);
@@ -163,10 +167,16 @@ namespace GXPEngine
 			}
 
 
-			if (background.x < -8960) 
+			if (background.x < -6400) 
 			{
 				background.x = -1280;
 			
+			}
+
+			if (parallaxlayer.x < -6400)
+			{
+				parallaxlayer.x = -1280;
+
 			}
 
 			if (Input.GetKey(Key.A))
@@ -185,18 +195,31 @@ namespace GXPEngine
 
 		public void CreateWave(int pCurrentLevel, int pCurrentColumn) 
 		{
-
 			if (pCurrentLevel == 1) 
 			{
 				levelDataPointer = level1;
+			}
 
-				int tile = levelDataPointer[pCurrentColumn];
-					if (pCurrentColumn < levelDataPointer.GetLength(0)) 
-					{ 
-					Enemy enemy = new Enemy(random.Next(-160, 4310), 0);
-						AddChild(enemy);
-						
-					}
+			if (pCurrentLevel == 2)
+			{
+				levelDataPointer = level2;
+			}
+
+			if (pCurrentLevel == 3)
+			{
+				levelDataPointer = level3;
+			}
+
+			if (pCurrentLevel == 4)
+			{
+				levelDataPointer = null;
+			}
+
+			if (levelDataPointer != null) 
+			{
+
+					int tile = levelDataPointer[pCurrentColumn];
+					
 
 					if (pCurrentColumn == levelDataPointer.GetLength(0) - 1) 
 					{
@@ -204,55 +227,20 @@ namespace GXPEngine
 						myGame.EndOfWave();
 					}
 
-
-
-			}
-
-			if (pCurrentLevel == 2)
-			{
-				levelDataPointer = level2;
-
-				int tile = levelDataPointer[pCurrentColumn];
 					if (pCurrentColumn < levelDataPointer.GetLength(0))
 					{
-					Enemy enemy = new Enemy(random.Next(-160, 4310), 0);
-						AddChild(enemy);
+						if (tile == 1)
+						{
+							Enemy enemy = new Enemy(random.Next(-160, 4310), 0);
+							AddChild(enemy);
+
+						}
 
 					}
 
-					if (pCurrentColumn == levelDataPointer.GetLength(0) - 1)
-					{
-						MyGame myGame = game as MyGame;
-						myGame.EndOfWave();
-					}
-
 			}
 
-			if (pCurrentLevel == 3)
-			{
-				levelDataPointer = level3;
-
-				int tile = levelDataPointer[pCurrentColumn];
-				if (pCurrentColumn < levelDataPointer.GetLength(0))
-				{
-					Enemy enemy = new Enemy(random.Next(-160, 4310), 0);
-					AddChild(enemy);
-
-				}
-
-				if (pCurrentColumn == levelDataPointer.GetLength(0) - 1)
-				{
-					MyGame myGame = game as MyGame;
-					myGame.EndOfWave();
-				}
-
-			}
-
-			if (pCurrentLevel == 4)
-			{
-				levelDataPointer = null;
-
-			}
+	
 		}
 
 	}

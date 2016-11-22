@@ -3,14 +3,16 @@ namespace GXPEngine
 {
 	public class Background : Sprite
 	{
-		public Background() : base ("backgroundscroll.png")
+		public Background() : base ("backgroundgood.png")
 		{
 			x = x - 1280;
+			y = y - 200;
+			scaleY = scaleY * 0.9f;
 		}
 
 		void Update() 
 		{
-			x = x - 15;
+			x = x - 3;
 		
 		}
 

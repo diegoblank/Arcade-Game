@@ -39,8 +39,6 @@ namespace GXPEngine
 			_crouchTimer = 0;
 			_gunReloadTimer = 0;
 
-			DynamiteCount = 2;
-
 			_blinkTimer = 0;
 			_blink = false;
 
@@ -48,6 +46,7 @@ namespace GXPEngine
 			Score = 0;
 
 			Ammo = 6;
+			DynamiteCount = 8;
 
 			SetOrigin(width / 2, height);
 			x = 400;
