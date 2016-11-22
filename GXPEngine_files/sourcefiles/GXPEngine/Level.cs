@@ -16,11 +16,9 @@ namespace GXPEngine
 
 		private int[] levelDataPointer = null;
 
-<<<<<<< HEAD
+
 		private int[] level1 = new int[10] {1, 2, 1, 2, 1, 2, 1, 2, 1, 2};
-=======
-		private int[] level1 = new int[10] {1, 1, 1, 1, 1, 1, 2, 1, 2, 1};
->>>>>>> 116e98ad32a5c833f1edc7a759c48c23aab5f8bc
+
 
 		private int[] level2 = new int[20] { 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1};
 
@@ -239,7 +237,7 @@ namespace GXPEngine
 							AddChild(enemy);
 
 						}
-<<<<<<< HEAD
+
 
 						if (tile == 2)
 						{
@@ -248,13 +246,13 @@ namespace GXPEngine
 
 						}
 
-=======
+
 					if (tile == 2)
 					{
 						Enemy2 enemy2 = new Enemy2(random.Next(-160, 4310), 0);
 						AddChild(enemy2);
 					}
->>>>>>> 116e98ad32a5c833f1edc7a759c48c23aab5f8bc
+
 					}
 
 			}
