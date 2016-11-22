@@ -4,11 +4,13 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="GXPEngine\Level.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GXPEngine\ParallaxLayer2.cs">
     <Files>
       <File FileName="GXPEngine\MyGame.cs" Line="1" Column="1" />
       <File FileName="GXPEngine\Enemy2.cs" Line="1" Column="1" />
-      <File FileName="GXPEngine\Level.cs" Line="32" Column="34" />
+      <File FileName="GXPEngine\Level.cs" Line="37" Column="29" />
+      <File FileName="GXPEngine\ParallaxLayer2.cs" Line="11" Column="4" />
+      <File FileName="GXPEngine\ParallaxLayer.cs" Line="24" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.GXPEngine PreferredExecutionTarget="MonoDevelop.Default" />

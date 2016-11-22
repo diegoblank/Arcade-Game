@@ -87,6 +87,7 @@
     <Compile Include="Bullet2.cs" />
     <Compile Include="ParallaxLayer.cs" />
     <Compile Include="PlayerAnimation.cs" />
+    <Compile Include="ParallaxLayer2.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GXPEngine\" />

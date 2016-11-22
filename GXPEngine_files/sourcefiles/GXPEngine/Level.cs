@@ -13,6 +13,7 @@ namespace GXPEngine
 		private Random random;
 		private Explosion explosion;
 		private ParallaxLayer parallaxlayer;
+		private ParallaxLayer2 parallaxlayer2;
 
 		private int[] levelDataPointer = null;
 
@@ -32,8 +33,13 @@ namespace GXPEngine
 			background = new Background();
 			AddChild(background);
 
+			parallaxlayer2 = new ParallaxLayer2();
+			AddChild(parallaxlayer2);
+
 			parallaxlayer = new ParallaxLayer();
 			AddChild(parallaxlayer);
+
+		
 
 			BaseShort baseshort = new BaseShort(-160, 600);
 			AddChild(baseshort);
@@ -178,6 +184,12 @@ namespace GXPEngine
 			if (parallaxlayer.x < -6400)
 			{
 				parallaxlayer.x = -1280;
+
+			}
+
+			if (parallaxlayer2.x < -6400)
+			{
+				parallaxlayer2.x = -1280;
 
 			}
 
