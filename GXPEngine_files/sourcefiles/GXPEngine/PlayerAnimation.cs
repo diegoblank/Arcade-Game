@@ -8,10 +8,10 @@ namespace GXPEngine
 		public int AnimState;
 
 
-		public PlayerAnimation() : base ("playeranimation.png", 6, 4, 20)
+		public PlayerAnimation() : base ("playeranim.png", 6, 4, 16)
 		{
 
-			SetOrigin(width / 2, height);
+			SetOrigin((width/2), height);
 			step = 0;
 
 			SetScaleXY(6.0f, 6.0f);
@@ -49,14 +49,14 @@ namespace GXPEngine
 			{
 				case 0:
 					if (currentFrame < 19 && step <= 0) {currentFrame++;} 
-					else currentFrame = 15;
+					else currentFrame = 16;
 					break;
 				case 1:
-					if (currentFrame < 15 && step <= 0) { currentFrame++;}
+					if (currentFrame < 12 && step <= 0) { currentFrame++;}
 					else currentFrame = 0;
 					break;
 				case 2:
-					if (currentFrame < 15 && step <= 0) { currentFrame++;}
+					if (currentFrame < 12 && step <= 0) { currentFrame++;}
 					else currentFrame = 0;
 					break;
 				default:

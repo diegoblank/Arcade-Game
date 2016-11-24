@@ -38,42 +38,36 @@ namespace GXPEngine
 			parallaxlayer = new ParallaxLayer();
 			AddChild(parallaxlayer);
 
-		
-			BaseShort baseshort = new BaseShort(-160, 600);
-			AddChild(baseshort);
 
-			BaseLongCargo baselongcargo = new BaseLongCargo(250, 600);
-			AddChild(baselongcargo);
 
-			Wheel wheel1 = new Wheel(320, 690);
-			AddChild(wheel1);
 
-			Wheel wheel2 = new Wheel(400, 690);
-			AddChild(wheel2);
 
-			Wheel wheel3 = new Wheel(980, 690);
-			AddChild(wheel3);
 
-			Wheel wheel4 = new Wheel(900, 690);
-			AddChild(wheel4);
+			// wagon 1
 
-			TrainBottom trainbottom = new TrainBottom(250, 620);
-			AddChild(trainbottom);
+			Wagon1 wagon1 = new Wagon1();
+			AddChild(wagon1);
 
-			LongBackground longbackground = new LongBackground(1060, 400);
-			AddChild(longbackground);
 
-			BaseLong baselong = new BaseLong(1060, 600);
-			AddChild(baselong);
+			//wagon 2
 
-			LongCeiling baselongceiling = new LongCeiling(1060, 400);
-			AddChild(baselongceiling);
+			Wagon2 wagon2 = new Wagon2();
+			AddChild(wagon2);
 
-			BaseShort baseshortmiddle = new BaseShort(1870, 600);
-			AddChild(baseshortmiddle);
+			//train bottoms
 
-			TallLongCargo talllongcargo = new TallLongCargo(2280, 400);
-			AddChild(talllongcargo);
+			Wagon3 wagon3 = new Wagon3();
+			AddChild(wagon3);
+
+
+			Wagon4 wagon4 = new Wagon4();
+			AddChild(wagon4);
+
+			Wagon5 wagon5 = new Wagon5();
+			AddChild(wagon5);
+
+
+
 
 			BaseIntermediateCargo baseintermediatecargo = new BaseIntermediateCargo(3090, 600);
 			AddChild(baseintermediatecargo);
@@ -105,7 +99,7 @@ namespace GXPEngine
 			Crate crate2 = new Crate(200, 560);
 			AddChild(crate2);
 
-			Player player = new Player();
+			Player player = new Player(1200, 300);
 			AddChild(player);
 
 
@@ -198,7 +192,7 @@ namespace GXPEngine
 
 			if (Input.GetKey(Key.A))
 			{
-				background.x = background.x - 3;
+				background.x = background.x - 2;
 			}
 
 			if (Input.GetKey(Key.D))

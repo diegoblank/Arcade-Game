@@ -34,11 +34,11 @@ namespace GXPEngine
 		private int state;
 
 
-		public Player() : base ("playerhitbox.png")
+		public Player(int PosX, int PosY) : base ("playerhitbox.png")
 		{
 			playeranimation = new PlayerAnimation();
 			AddChild(playeranimation);
-
+			alpha = 0;
 			state = 1;
 			_crouchTimer = 0;
 			_gunReloadTimer = 0;
@@ -53,8 +53,8 @@ namespace GXPEngine
 			DynamiteCount = 8;
 
 			SetOrigin(width / 2, height);
-			x = 4000;
-			y = 300;
+			x = PosX;
+			y = PosY;
 			_LastY = 0;
 			_timer = 0;
 

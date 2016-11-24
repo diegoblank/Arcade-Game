@@ -101,6 +101,11 @@
     <Compile Include="TrainBottomShort.cs" />
     <Compile Include="TrainBottomIntermediate.cs" />
     <Compile Include="LocomotiveWheelAnim.cs" />
+    <Compile Include="Wagon2.cs" />
+    <Compile Include="Wagon1.cs" />
+    <Compile Include="Wagon3.cs" />
+    <Compile Include="Wagon4.cs" />
+    <Compile Include="Wagon5.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GXPEngine\" />

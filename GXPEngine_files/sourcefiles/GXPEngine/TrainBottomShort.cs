@@ -3,8 +3,9 @@ namespace GXPEngine
 {
 	public class TrainBottomShort : Sprite
 	{
-		public TrainBottomShort() : base ("trainbottomshort.png")
+		public TrainBottomShort(float PosX, float PosY) : base ("trainbottomshort.png")
 		{
+			SetXY(PosX, PosY);
 		}
 	}
 }
