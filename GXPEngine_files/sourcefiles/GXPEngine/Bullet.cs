@@ -7,10 +7,11 @@ namespace GXPEngine
 		public int _score = 0;
 		Sound _bullitsound;
 
-		public Bullet(float spawnX, float spawnY, int direction) : base("bullet.png")
+		public Bullet(float spawnX, float spawnY, int direction) : base("bulletgrey.png")
 		{
-			scaleX = 0.1f;
-			scaleY = 0.1f;
+			scaleX = 0.8f;
+			scaleY = 0.8f;
+
 			SetOrigin(width, height / 2);
 			x = spawnX;
 			y = spawnY;
@@ -22,12 +23,13 @@ namespace GXPEngine
 			//Check direction
 			if (_direction == 2)
 			{
-				Mirror(true, false);
+				Mirror(false, false);
 				x -= 80;
 			}
 			else if (_direction == 1)
 			{
-				x += 50;
+				Mirror(true, false);
+				x += 80;
 			}
 
 
@@ -77,6 +79,17 @@ namespace GXPEngine
 			if (other is Player)
 			{
 				Player.LoseLife();
+				this.Destroy();
+			}
+
+			if (other is TallLongCargo)
+			{
+				this.Destroy();
+			}
+
+
+			if (other is Station)
+			{
 				this.Destroy();
 			}
 		}

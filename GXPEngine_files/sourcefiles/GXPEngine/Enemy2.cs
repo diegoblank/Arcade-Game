@@ -14,16 +14,22 @@ namespace GXPEngine
 		private bool _canJump;
 		private bool _isAttacking;
 
+		private EnemyAnimationType2 enemyAnim2;
+
 		private Random random;
 		private int state;
 
-		public Enemy2(float PosX, float PosY) : base("bandit2.png")
+		public Enemy2(float PosX, float PosY) : base("playerhitbox.png")
 		{
 			state = 1;
 			speedY = 1.0f;
 			SetXY(PosX, PosY);
 			_gravity = 1.05f;
-			SetScaleXY(0.5f, 0.5f);
+			scaleX = scaleX * 0.2f;
+			scaleY = scaleY * 0.2f;
+
+			alpha = 0.0f;
+
 			_timer = 0;
 
 			random = new Random();
@@ -36,7 +42,10 @@ namespace GXPEngine
 			speedX = 1.0f;
 			speedY = 0.95f;
 
-			SetOrigin(width / 2, height * 2);
+			enemyAnim2 = new EnemyAnimationType2();
+			AddChild(enemyAnim2);
+
+			SetOrigin(width / 2, height * 5);
 
 		}
 		void Update()
@@ -67,6 +76,7 @@ namespace GXPEngine
 				x = x + _walkSpeed;
 				Mirror(false, false);
 				state = 1;
+				enemyAnim2.Enemy2AnimState = 1;
 			}
 
 			if (this.x > Player.PlayerPosX)
@@ -74,6 +84,7 @@ namespace GXPEngine
 				x = x - _walkSpeed;
 				Mirror(true, false);
 				state = 2;
+				enemyAnim2.Enemy2AnimState = 2;
 
 			}
 
@@ -112,7 +123,7 @@ namespace GXPEngine
 		{
 			if (other is BaseLongCargo)
 			{
-				_canJump = true;
+
 				BaseLongCargo baselongcargo = other as BaseLongCargo;
 
 				if (y >= baselongcargo.y)
@@ -121,11 +132,16 @@ namespace GXPEngine
 
 				}
 
+				_canJump = true;
+
 			}
+
 
 			if (other is BaseLong)
 			{
+
 				BaseLong baselong = other as BaseLong;
+
 
 				if (y >= baselong.y)
 				{
@@ -133,34 +149,38 @@ namespace GXPEngine
 
 				}
 
+				_canJump = false;
+
 			}
+
 
 			if (other is TallLongCargo)
 			{
 
 				TallLongCargo talllongcargo = other as TallLongCargo;
 
-
-				if (y < talllongcargo.y + 20)
+				if (y < talllongcargo.y + 20 || y <= talllongcargo.y + 50)
 				{
 					y = talllongcargo.y;
 
 				}
 
+				_canJump = true;
 
-				if (y > talllongcargo.y + 10)
+
+				if (y > talllongcargo.y)
 				{
-					speedY = speedY - 20;
 
 					if (x > talllongcargo.x)
 					{
-						x = talllongcargo.x + 820;
-
+						x = talllongcargo.x + 800;
+						Jump();
 					}
 
 					if (x <= talllongcargo.x)
 					{
-						x = talllongcargo.x - 100;
+						x = talllongcargo.x - 50;
+						Jump();
 
 					}
 
@@ -179,13 +199,21 @@ namespace GXPEngine
 
 			if (other is LongCeiling)
 			{
-				LongCeiling longceiling = other as LongCeiling;
-				_canJump = true;
-				if (y >= longceiling.y)
+				LongCeiling baseceiling = other as LongCeiling;
+
+				if (y <= baseceiling.y + 120)
 				{
-					y = longceiling.y;
+					y = baseceiling.y;
 
 				}
+
+				if (y > baseceiling.y)
+				{
+					y = baseceiling.y + 170;
+
+				}
+
+				_canJump = true;
 
 			}
 
@@ -205,7 +233,8 @@ namespace GXPEngine
 
 			if (other is BaseIntermediateCargo)
 			{
-				_canJump = true;
+
+
 				BaseIntermediateCargo baseintermediatecargo = other as BaseIntermediateCargo;
 
 				if (y >= baseintermediatecargo.y)
@@ -213,6 +242,9 @@ namespace GXPEngine
 					y = baseintermediatecargo.y;
 
 				}
+
+
+				_canJump = true;
 
 
 			}
@@ -228,6 +260,7 @@ namespace GXPEngine
 
 				}
 
+				_canJump = false;
 
 			}
 
@@ -235,12 +268,21 @@ namespace GXPEngine
 			{
 
 				BaseIntermediateCeiling baseintermediateceiling = other as BaseIntermediateCeiling;
-				_canJump = true;
-				if (y >= baseintermediateceiling.y)
+
+				if (y <= baseintermediateceiling.y + 120)
 				{
 					y = baseintermediateceiling.y;
 
 				}
+
+				if (y > baseintermediateceiling.y)
+				{
+					y = baseintermediateceiling.y + 170;
+
+				}
+
+				_canJump = true;
+
 
 			}
 
@@ -249,17 +291,17 @@ namespace GXPEngine
 
 				LongBackgroundLocomotive longbackloco = other as LongBackgroundLocomotive;
 
-
-				if (y < longbackloco.y + 20)
+				if (y < longbackloco.y - 20 || y <= longbackloco.y + 50)
 				{
 					y = longbackloco.y;
 
 				}
 
+				_canJump = true;
 
-				if (y > longbackloco.y + 10)
+
+				if (y > longbackloco.y)
 				{
-					speedY = speedY - 20;
 
 					if (x > longbackloco.x)
 					{
@@ -269,8 +311,8 @@ namespace GXPEngine
 
 					if (x <= longbackloco.x)
 					{
-						x = longbackloco.x - 100;
-
+						x = longbackloco.x - 50;
+						Jump();
 					}
 
 				}
@@ -287,16 +329,15 @@ namespace GXPEngine
 
 					if (x > crate.x)
 					{
-						x = crate.x + 70;
-						crate.x = crate.x - 1;
+						x = crate.x + 40;
+						crate.x = crate.x - 4;
 						Jump();
-
 					}
 
-					if (x < crate.x)
+					if (x <= crate.x)
 					{
-						x = crate.x - 140;
-						crate.x = crate.x + 1;
+						x = crate.x - 80;
+						crate.x = crate.x + 4;
 						Jump();
 					}
 
@@ -307,7 +348,6 @@ namespace GXPEngine
 				{
 					y = crate.y - 40;
 				}
-
 
 
 			}

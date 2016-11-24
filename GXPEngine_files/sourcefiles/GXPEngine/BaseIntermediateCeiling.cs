@@ -3,7 +3,7 @@ namespace GXPEngine
 {
 	public class BaseIntermediateCeiling : Sprite
 	{
-		public BaseIntermediateCeiling(int PosX, int PosY) : base ("baseintermediateceiling.png")
+		public BaseIntermediateCeiling(int PosX, int PosY) : base ("passengerceilingintermediate.png")
 		{
 			SetXY(PosX, PosY);
 		}

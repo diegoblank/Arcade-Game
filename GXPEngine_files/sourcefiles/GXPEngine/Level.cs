@@ -14,6 +14,9 @@ namespace GXPEngine
 		private Explosion explosion;
 		private ParallaxLayer parallaxlayer;
 		private ParallaxLayer2 parallaxlayer2;
+		private Rails rails;
+
+		public static int EnemiesLeft;
 
 		private int[] levelDataPointer = null;
 
@@ -38,83 +41,70 @@ namespace GXPEngine
 			parallaxlayer = new ParallaxLayer();
 			AddChild(parallaxlayer);
 
+			//train
 		
-			BaseShort baseshort = new BaseShort(-160, 600);
-			AddChild(baseshort);
+			Wagon1 wagon1 = new Wagon1();
+			AddChild(wagon1);
 
-			BaseLongCargo baselongcargo = new BaseLongCargo(250, 600);
-			AddChild(baselongcargo);
+			Wagon2 wagon2 = new Wagon2();
+			AddChild(wagon2);
 
-			Wheel wheel1 = new Wheel(320, 690);
-			AddChild(wheel1);
+			Wagon3 wagon3 = new Wagon3();
+			AddChild(wagon3);
 
-			Wheel wheel2 = new Wheel(400, 690);
-			AddChild(wheel2);
+			Wagon4 wagon4 = new Wagon4();
+			AddChild(wagon4);
 
-			Wheel wheel3 = new Wheel(980, 690);
-			AddChild(wheel3);
+			Wagon5 wagon5 = new Wagon5();
+			AddChild(wagon5);
 
-			Wheel wheel4 = new Wheel(900, 690);
-			AddChild(wheel4);
+			Wagon6 wagon6 = new Wagon6();
+			AddChild(wagon6);
 
-			TrainBottom trainbottom = new TrainBottom(250, 620);
-			AddChild(trainbottom);
+			Wagon7 wagon7 = new Wagon7();
+			AddChild(wagon7);
 
-			LongBackground longbackground = new LongBackground(1060, 400);
-			AddChild(longbackground);
+			Wagon8 wagon8 = new Wagon8();
+			AddChild(wagon8);
 
-			BaseLong baselong = new BaseLong(1060, 600);
-			AddChild(baselong);
+			//locomotive
 
-			LongCeiling baselongceiling = new LongCeiling(1060, 400);
-			AddChild(baselongceiling);
-
-			BaseShort baseshortmiddle = new BaseShort(1870, 600);
-			AddChild(baseshortmiddle);
-
-			TallLongCargo talllongcargo = new TallLongCargo(2280, 400);
-			AddChild(talllongcargo);
-
-			BaseIntermediateCargo baseintermediatecargo = new BaseIntermediateCargo(3090, 600);
-			AddChild(baseintermediatecargo);
-
-			IntermediateBackground intermediatebackground = new IntermediateBackground(3700, 400);
-			AddChild(intermediatebackground);
-
-			BaseIntermediate baseintermediate = new BaseIntermediate(3700, 600);
-			AddChild(baseintermediate);
-
-			BaseIntermediateCeiling baseintermediateceiling = new BaseIntermediateCeiling(3700, 400);
-			AddChild(baseintermediateceiling);
-
-			BaseIntermediateCargo baseintermediatefront = new BaseIntermediateCargo(4310, 600);
-			AddChild(baseintermediatefront);
-
-			LongBackgroundLocomotive longlocomotive = new LongBackgroundLocomotive(4920, 400);
+			LongBackgroundLocomotive longlocomotive = new LongBackgroundLocomotive(5120, 400);
 			AddChild(longlocomotive);
+
+			LocomotiveWheelAnim wheelanim = new LocomotiveWheelAnim();
+			AddChild(wheelanim);
+
+			//smoke
 
 			Smoke smoke = new Smoke();
 			AddChild(smoke);
 
+<<<<<<< HEAD
+=======
+			//train objects
+
+
+>>>>>>> 19e908bf2c323b253f005dcc37cfc8fd6827ee88
 			Crate crate1 = new Crate(380, 560);
 			AddChild(crate1);
 
 			Crate crate2 = new Crate(200, 560);
 			AddChild(crate2);
 
-			Player player = new Player();
+			Player player = new Player(400, -100);
 			AddChild(player);
 
+			rails = new Rails();
+			AddChild(rails);
 
 			scrollTarget = player;
-
-
 
 		}
 
 		public void CreateBullet(float pX, float pY, int pState) 
 		{ 
-			Bullet bullet = new Bullet(pX, pY + 40, pState);
+			Bullet bullet = new Bullet(pX + 20, pY + 55, pState);
 			AddChild(bullet);
 		
 		
@@ -171,14 +161,13 @@ namespace GXPEngine
 			_spawnTimer = _spawnTimer - 1;
 			if (_spawnTimer <= 0) 
 			{
-				_spawnTimer = 60;
+				_spawnTimer = 100;
 			}
 
-
-			if (background.x < -6400) 
+			if (background.x < -6400)
 			{
 				background.x = -1280;
-			
+
 			}
 
 			if (parallaxlayer.x < -6400)
@@ -193,18 +182,13 @@ namespace GXPEngine
 
 			}
 
-			if (Input.GetKey(Key.A))
+			if (rails.x < -6400)
 			{
-				background.x = background.x - 3;
+				rails.x = -1280;
+
 			}
 
-			if (Input.GetKey(Key.D))
-			{
-				background.x = background.x + 3;
-			}
 		}
-
-
 
 
 		public void CreateWave(int pCurrentLevel, int pCurrentColumn) 
@@ -259,17 +243,10 @@ namespace GXPEngine
 						}
 
 
-					if (tile == 2)
-					{
-						Enemy2 enemy2 = new Enemy2(random.Next(-160, 4310), 0);
-						AddChild(enemy2);
-					}
-
 					}
 
 			}
 
-	
 		}
 
 	}

@@ -18,7 +18,6 @@ public class MyGame : Game //MyGame is a Game
 	Sound _music;
 	SoundChannel _musicChannel;
 
-
 	//initialize game here
 	public MyGame () : base(1280, 960, false, false)
 	{
@@ -30,6 +29,7 @@ public class MyGame : Game //MyGame is a Game
 		SetMenu();
 		StartMusic();
 
+<<<<<<< HEAD
 	}
 
 	public void StartMusic()
@@ -37,6 +37,19 @@ public class MyGame : Game //MyGame is a Game
 		_music = new Sound("music.ogg", true, true);
 		_musicChannel = _music.Play();
 	}
+=======
+
+		Menu menu;
+		menu = new Menu();
+		AddChild(menu);
+	}
+
+	//public void ShowMenu()
+	//{
+ 	//	_button.visible = true;
+	//}
+
+>>>>>>> 19e908bf2c323b253f005dcc37cfc8fd6827ee88
 
 	public void CreateHud()
 	{
@@ -106,8 +119,6 @@ public class MyGame : Game //MyGame is a Game
 		
 		}
 
-		Console.WriteLine(_waveTimer);
-
 	}
 
 	public void EndOfWave() 
@@ -118,7 +129,9 @@ public class MyGame : Game //MyGame is a Game
 		station = new Station();
 		level.AddChild(station);
 
-		_waveTimer = 400;
+		Player.DynamiteCount = Player.DynamiteCount + 1;
+
+		_waveTimer = 800;
 	}
 
 	//system starts here

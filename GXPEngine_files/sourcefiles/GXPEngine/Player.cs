@@ -9,13 +9,12 @@ namespace GXPEngine
 		private float _LastY;
 		private int _timer;
 		private int _crouchTimer;
-		private int _wagonNumber;
-		private int _animState;
 
 		private int _TNTcooldown;
 
 		private bool _blink;
 		private int _blinkTimer;
+		private int _idleTimer;
 
 		public static int Lives;
 		public static int Score;
@@ -36,15 +35,15 @@ namespace GXPEngine
 		private int state;
 
 
-		public Player() : base ("playerhitbox.png")
+		public Player(int PosX, int PosY) : base ("playerhitbox.png")
 		{
 			playeranimation = new PlayerAnimation();
 			AddChild(playeranimation);
-
+			alpha = 0;
 			state = 1;
-			_animState = 0;
 			_crouchTimer = 0;
 			_gunReloadTimer = 0;
+			_idleTimer = 20;
 
 			_blinkTimer = 0;
 			_blink = false;
@@ -56,8 +55,8 @@ namespace GXPEngine
 			DynamiteCount = 8;
 
 			SetOrigin(width / 2, height);
-			x = 400;
-			y = 300;
+			x = PosX;
+			y = PosY;
 			_LastY = 0;
 			_timer = 0;
 
@@ -101,10 +100,15 @@ namespace GXPEngine
 		void Update() 
 		{
 
-			if (speedX < 0.1f) 
-			{
-				playeranimation.SetFrame(17);
+			Console.WriteLine(playeranimation.AnimState);
 
+
+			_idleTimer = _idleTimer - 1;
+			if (_idleTimer <= 0) 
+			{
+				playeranimation.AnimState = 0;
+				_idleTimer = 0;
+			
 			}
 
 			if (Lives <= 0)
@@ -177,44 +181,55 @@ namespace GXPEngine
 				scaleY = 0.2f;
 			}
 
-			if (Input.GetKey(Key.D))
+
+
+			if (Input.GetKey(Key.D) && _crouchTimer == 0)
 				{
 					speedX = speedX + 2;
 					state = 1;
-					_animState = 1;
-					playeranimation.Mirror(false, false);
+					playeranimation.AnimState = 1;
+					_idleTimer = 10;
+					
 					
 				}
+
+				if (Input.GetKey(Key.A) && _crouchTimer == 0)
+				{
+					speedX = speedX - 2;
+					state = 2;
+					playeranimation.AnimState = 2;
+					_idleTimer = 10;
+				}
+
 
 			if (Input.GetKeyDown(Key.S) && _crouchTimer == 0)
 			{
 				scaleY = scaleY *(0.5f);
 				_crouchTimer = 50;
-
+				playeranimation.AnimState = 3;
+				_idleTimer = 50;
 			}
 
-			if (Input.GetKey(Key.A))
-				{
-					speedX = speedX - 2;
-					state = 2;
-					_animState = 2;
-					playeranimation.Mirror(true, false);
-				}
 
-			if (Input.GetKeyDown(Key.SPACE) && _canJump == true)
+
+			if (Input.GetKeyDown(Key.SPACE) && _canJump == true && _crouchTimer == 0)
 				{
 					speedY = speedY - 70;
 					_canJump = false;
 					_timer = 20;
+					playeranimation.AnimState = 4;
+					_idleTimer = 40;
 					
 				}
 
-			if (Input.GetKeyDown(Key.LEFT_SHIFT) && _gunReloadTimer <= 0)
+			if (Input.GetKeyDown(Key.LEFT_SHIFT) && _gunReloadTimer <= 0 && _crouchTimer == 0)
 			{
 
 				MyGame myGame = game as MyGame;
 				myGame.CallBulletSpawn(x, y - height, state);
 				Ammo = Ammo - 1;
+				playeranimation.AnimState = 5;
+				_idleTimer = 20;
 
 				if (Ammo <= 0) 
 				{
@@ -269,7 +284,7 @@ namespace GXPEngine
 				
 			if (other is BaseShort)
 			{
-				_wagonNumber = 1;
+				
 				BaseShort baseshort = other as BaseShort;
 
 				if (y >= baseshort.y)
@@ -287,7 +302,7 @@ namespace GXPEngine
 
 			if (other is BaseLongCargo)
 			{
-				_wagonNumber = 2;
+				
 				BaseLongCargo baselongcargo = other as BaseLongCargo;
 
 				if (y >= baselongcargo.y)
@@ -306,7 +321,7 @@ namespace GXPEngine
 
 			if (other is BaseLong)
 			{
-				_wagonNumber = 3;
+				
 				BaseLong baselong = other as BaseLong;
 
 
@@ -347,7 +362,7 @@ namespace GXPEngine
 
 			if (other is BaseIntermediateCargo)
 			{
-				_wagonNumber = 4;
+				
 
 				BaseIntermediateCargo baseintermediatecargo = other as BaseIntermediateCargo;
 
@@ -366,7 +381,7 @@ namespace GXPEngine
 
 			if (other is TallLongCargo)
 			{
-				_wagonNumber = 2;
+				
 				TallLongCargo talllongcargo = other as TallLongCargo;
 
 				if (y < talllongcargo.y + 20 || y <= talllongcargo.y + 50)
@@ -401,7 +416,7 @@ namespace GXPEngine
 
 			if (other is BaseIntermediate)
 			{
-				_wagonNumber = 5;
+				
 
 				BaseIntermediate baseintermediate = other as BaseIntermediate;
 
@@ -440,8 +455,8 @@ namespace GXPEngine
 			}
 
 			if (other is LongBackgroundLocomotive)
-{
-				_wagonNumber = 2;
+			{
+				
 				LongBackgroundLocomotive longbackloco = other as LongBackgroundLocomotive;
 
 				if (y < longbackloco.y + 20 || y <= longbackloco.y + 50)
