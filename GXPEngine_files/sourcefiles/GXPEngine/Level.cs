@@ -93,12 +93,12 @@ namespace GXPEngine
 			LongBackgroundLocomotive longlocomotive = new LongBackgroundLocomotive(4920, 400);
 			AddChild(longlocomotive);
 
-<<<<<<< HEAD
-=======
+			LocomotiveWheelAnim wheelanim = new LocomotiveWheelAnim();
+			AddChild(wheelanim);
+
 			Smoke smoke = new Smoke();
 			AddChild(smoke);
 
->>>>>>> 479de626e62bf68dd2f44e5c34511e09cb3e6cca
 			Crate crate1 = new Crate(380, 560);
 			AddChild(crate1);
 

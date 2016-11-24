@@ -56,7 +56,7 @@ namespace GXPEngine
 			DynamiteCount = 8;
 
 			SetOrigin(width / 2, height);
-			x = 400;
+			x = 4000;
 			y = 300;
 			_LastY = 0;
 			_timer = 0;

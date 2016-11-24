@@ -26,7 +26,7 @@ public class MyGame : Game //MyGame is a Game
 		_gameRunning = false;
 		_timer = 0;
 
-<<<<<<< HEAD
+
 		Menu menu;
 		menu = new Menu();
 		AddChild(menu);
@@ -36,9 +36,7 @@ public class MyGame : Game //MyGame is a Game
 	//{
  	//	_button.visible = true;
 	//}
-=======
-		AddChild(level);
->>>>>>> 479de626e62bf68dd2f44e5c34511e09cb3e6cca
+
 
 	public void CreateHud()
 	{

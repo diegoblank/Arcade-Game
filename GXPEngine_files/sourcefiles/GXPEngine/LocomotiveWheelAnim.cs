@@ -1,34 +1,30 @@
 ﻿using System;
 namespace GXPEngine
 {
-	public class PlayerAnimation : AnimationSprite
+	public class LocomotiveWheelAnim : AnimationSprite
 	{
 
 		private int _timer;
 		private int _frameTimer;
 		private int _state;
 
-		public static int State;
-
-		public PlayerAnimation() : base ("playeranimation.png", 6, 4, 15)
+		public LocomotiveWheelAnim() : base ("wheelanimation2.png", 3, 4, 12)
 		{
-
-			_state = 1;
-
+			
 			SetOrigin(width / 2, height);
 			_timer = 10;
 			_frameTimer = 3;
 
-			State = 0;
+			x = 5367;
+			y = 719;
 
-			SetScaleXY(6.0f, 6.0f);
 
 		}
 
 		void Update()
 		{
 
-			if (_frameTimer <= 0 && State != 0)
+			if (_frameTimer <= 0)
 			{
 				NextFrame();
 				_frameTimer = 2;
@@ -48,3 +44,5 @@ namespace GXPEngine
 
 	}
 }
+
+

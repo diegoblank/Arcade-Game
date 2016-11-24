@@ -4,12 +4,12 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="GXPEngine\SmokeCloud1.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GXPEngine\Enemy.cs">
     <Files>
       <File FileName="GXPEngine\Level.cs" Line="93" Column="75" />
-      <File FileName="GXPEngine\MyGame.cs" Line="17" Column="48" />
-      <File FileName="GXPEngine\Player.cs" Line="214" Column="5" />
-      <File FileName="GXPEngine\PlayerAnimation.cs" Line="35" Column="4" />
+      <File FileName="GXPEngine\MyGame.cs" Line="38" Column="5" />
+      <File FileName="GXPEngine\Player.cs" Line="59" Column="12" />
+      <File FileName="GXPEngine\PlayerAnimation.cs" Line="9" Column="22" />
       <File FileName="GXPEngine\TrainBottom.cs" Line="6" Column="75" />
       <File FileName="GXPEngine\LongBackground.cs" Line="6" Column="67" />
       <File FileName="GXPEngine\LongCeiling.cs" Line="12" Column="1" />
@@ -19,6 +19,11 @@
       <File FileName="GXPEngine\SmokeCloud1.cs" Line="26" Column="18" />
       <File FileName="GXPEngine\SmokeCloud3.cs" Line="24" Column="20" />
       <File FileName="GXPEngine\SmokeCloud2.cs" Line="23" Column="4" />
+      <File FileName="GXPEngine\TrainBottomShort.cs" Line="6" Column="58" />
+      <File FileName="GXPEngine\TrainBottomIntermediate.cs" Line="8" Column="4" />
+      <File FileName="GXPEngine\LongBackgroundLocomotive.cs" Line="6" Column="73" />
+      <File FileName="GXPEngine\LocomotiveWheelAnim.cs" Line="11" Column="56" />
+      <File FileName="GXPEngine\Enemy.cs" Line="218" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.GXPEngine PreferredExecutionTarget="MonoDevelop.Default" />
