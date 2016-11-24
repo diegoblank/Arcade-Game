@@ -45,7 +45,12 @@ namespace GXPEngine
 
 		void Update() 
 		{
+			if ((this.x - Player.PlayerPosX) < 30) 
+			{
+				enemyAnim1.Enemy1AnimState = 3;
 			
+			}
+
 			if (this.x < Player.PlayerPosX) 
 			{
 				x = x + _walkSpeed;

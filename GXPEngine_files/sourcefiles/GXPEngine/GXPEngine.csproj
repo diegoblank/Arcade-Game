@@ -112,6 +112,7 @@
     <Compile Include="Rails.cs" />
     <Compile Include="EnemyAnimationType1.cs" />
     <Compile Include="EnemyAnimationType2.cs" />
+    <Compile Include="HealthPickup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GXPEngine\" />
