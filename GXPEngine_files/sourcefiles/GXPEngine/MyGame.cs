@@ -23,7 +23,6 @@ public class MyGame : Game //MyGame is a Game
 		
 		level = new Level();
 
-
 		AddChild(level);
 
 		HUD hud;
@@ -61,7 +60,6 @@ public class MyGame : Game //MyGame is a Game
 	//update game here
 	void Update ()
 	{
-
 
 		_waveTimer = _waveTimer - 1;
 		if (_waveTimer <= 0) 

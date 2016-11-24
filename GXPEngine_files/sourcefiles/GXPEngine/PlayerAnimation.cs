@@ -7,12 +7,16 @@ namespace GXPEngine
 		private int _timer;
 		private int _frameTimer;
 
+		public static int State;
+
 		public PlayerAnimation() : base ("playeranimation.png", 6, 4, 15)
 		{
 
 			SetOrigin(width / 2, height);
 			_timer = 10;
 			_frameTimer = 3;
+
+			State = 0;
 
 			SetScaleXY(6.0f, 6.0f);
 
@@ -21,7 +25,7 @@ namespace GXPEngine
 		void Update()
 		{
 
-			if (_frameTimer <= 0)
+			if (_frameTimer <= 0 && State != 0)
 			{
 				NextFrame();
 				_frameTimer = 2;

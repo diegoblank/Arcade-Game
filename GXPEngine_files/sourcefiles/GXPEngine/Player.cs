@@ -100,6 +100,13 @@ namespace GXPEngine
 
 		void Update() 
 		{
+
+			if (speedX < 0.1f) 
+			{
+				playeranimation.SetFrame(17);
+
+			}
+
 			if (Lives <= 0)
 			{
 				this.Destroy();
@@ -179,8 +186,6 @@ namespace GXPEngine
 
 			if (Input.GetKeyDown(Key.S) && _crouchTimer == 0)
 			{
-				
-
 				scaleY = scaleY *(0.5f);
 				_crouchTimer = 50;
 

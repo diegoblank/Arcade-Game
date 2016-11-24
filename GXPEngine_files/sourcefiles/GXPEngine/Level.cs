@@ -20,7 +20,6 @@ namespace GXPEngine
 
 		private int[] level1 = new int[10] {1, 2, 1, 2, 1, 2, 1, 2, 1, 2};
 
-
 		private int[] level2 = new int[20] { 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1};
 
 		private int[] level3 = new int[20] { 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 2, 1, 1, 1, 2, 1, 2, 1, 1 };
@@ -40,7 +39,6 @@ namespace GXPEngine
 			AddChild(parallaxlayer);
 
 		
-
 			BaseShort baseshort = new BaseShort(-160, 600);
 			AddChild(baseshort);
 
