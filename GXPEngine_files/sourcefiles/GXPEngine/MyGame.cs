@@ -107,7 +107,9 @@ public class MyGame : Game //MyGame is a Game
 		station = new Station();
 		level.AddChild(station);
 
-		_waveTimer = 400;
+		Player.DynamiteCount = Player.DynamiteCount + 1;
+
+		_waveTimer = 800;
 	}
 
 	//system starts here

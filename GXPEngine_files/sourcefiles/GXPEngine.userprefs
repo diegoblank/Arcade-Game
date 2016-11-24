@@ -6,25 +6,26 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workbench ActiveDocument="GXPEngine\Enemy2.cs">
     <Files>
-      <File FileName="GXPEngine\MyGame.cs" Line="87" Column="31" />
-      <File FileName="GXPEngine\Player.cs" Line="40" Column="4" />
-      <File FileName="GXPEngine\Enemy.cs" Line="14" Column="41" />
-      <File FileName="GXPEngine\Enemy2.cs" Line="24" Column="14" />
+      <File FileName="GXPEngine\MyGame.cs" Line="96" Column="40" />
+      <File FileName="GXPEngine\Player.cs" Line="137" Column="4" />
+      <File FileName="GXPEngine\Enemy.cs" Line="10" Column="26" />
+      <File FileName="GXPEngine\Enemy2.cs" Line="31" Column="17" />
       <File FileName="GXPEngine\EnemyAnimationType1.cs" Line="65" Column="3" />
       <File FileName="GXPEngine\EnemyAnimationType2.cs" Line="25" Column="5" />
       <File FileName="GXPEngine\PlayerAnimation.cs" Line="17" Column="27" />
       <File FileName="GXPEngine\Smoke.cs" Line="30" Column="3" />
-      <File FileName="GXPEngine\Bullet.cs" Line="28" Column="12" />
-      <File FileName="GXPEngine\Bullet2.cs" Line="23" Column="13" />
+      <File FileName="GXPEngine\Bullet.cs" Line="85" Column="4" />
+      <File FileName="GXPEngine\Bullet2.cs" Line="53" Column="4" />
       <File FileName="GXPEngine\LongBackground.cs" Line="8" Column="22" />
       <File FileName="GXPEngine\LongCeiling.cs" Line="6" Column="57" />
-      <File FileName="GXPEngine\Level.cs" Line="90" Column="34" />
+      <File FileName="GXPEngine\Level.cs" Line="217" Column="6" />
       <File FileName="GXPEngine\LocomotiveWheelAnim.cs" Line="38" Column="20" />
       <File FileName="GXPEngine\Rails.cs" Line="17" Column="3" />
       <File FileName="GXPEngine\ParallaxLayer2.cs" Line="15" Column="4" />
       <File FileName="GXPEngine\SmokeCloud1.cs" Line="23" Column="18" />
       <File FileName="GXPEngine\SmokeCloud2.cs" Line="23" Column="18" />
       <File FileName="GXPEngine\SmokeCloud3.cs" Line="29" Column="16" />
+      <File FileName="GXPEngine\HUD.cs" Line="20" Column="69" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.GXPEngine PreferredExecutionTarget="MonoDevelop.Default" />

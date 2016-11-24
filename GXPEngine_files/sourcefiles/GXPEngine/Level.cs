@@ -16,6 +16,8 @@ namespace GXPEngine
 		private ParallaxLayer2 parallaxlayer2;
 		private Rails rails;
 
+		public static int EnemiesLeft;
+
 		private int[] levelDataPointer = null;
 
 

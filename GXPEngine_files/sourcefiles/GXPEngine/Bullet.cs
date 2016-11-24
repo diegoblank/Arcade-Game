@@ -77,6 +77,17 @@ namespace GXPEngine
 				Player.LoseLife();
 				this.Destroy();
 			}
+
+			if (other is TallLongCargo)
+			{
+				this.Destroy();
+			}
+
+
+			if (other is Station)
+			{
+				this.Destroy();
+			}
 		}
 	}
 }

@@ -26,6 +26,8 @@ namespace GXPEngine
 			scaleY = scaleY * 0.2f;
 			Enemy1AnimState = 0;
 
+			alpha = 0.0f;
+
 			random = new Random();
 			_walkSpeed = random.Next(2, 6);
 

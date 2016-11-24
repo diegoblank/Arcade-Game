@@ -28,6 +28,8 @@ namespace GXPEngine
 			scaleX = scaleX * 0.2f;
 			scaleY = scaleY * 0.2f;
 
+			alpha = 0.0f;
+
 			_timer = 0;
 
 			random = new Random();
