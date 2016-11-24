@@ -15,7 +15,7 @@ namespace GXPEngine
 			_timer = 10;
 			_frameTimer = 3;
 
-			x = 5367;
+			x = 5567;
 			y = 719;
 
 

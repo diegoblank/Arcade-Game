@@ -66,25 +66,16 @@ namespace GXPEngine
 			Wagon5 wagon5 = new Wagon5();
 			AddChild(wagon5);
 
+			Wagon6 wagon6 = new Wagon6();
+			AddChild(wagon6);
 
+			Wagon7 wagon7 = new Wagon7();
+			AddChild(wagon7);
 
+			Wagon8 wagon8 = new Wagon8();
+			AddChild(wagon8);
 
-			BaseIntermediateCargo baseintermediatecargo = new BaseIntermediateCargo(3090, 600);
-			AddChild(baseintermediatecargo);
-
-			IntermediateBackground intermediatebackground = new IntermediateBackground(3700, 400);
-			AddChild(intermediatebackground);
-
-			BaseIntermediate baseintermediate = new BaseIntermediate(3700, 600);
-			AddChild(baseintermediate);
-
-			BaseIntermediateCeiling baseintermediateceiling = new BaseIntermediateCeiling(3700, 400);
-			AddChild(baseintermediateceiling);
-
-			BaseIntermediateCargo baseintermediatefront = new BaseIntermediateCargo(4310, 600);
-			AddChild(baseintermediatefront);
-
-			LongBackgroundLocomotive longlocomotive = new LongBackgroundLocomotive(4920, 400);
+			LongBackgroundLocomotive longlocomotive = new LongBackgroundLocomotive(5120, 400);
 			AddChild(longlocomotive);
 
 			LocomotiveWheelAnim wheelanim = new LocomotiveWheelAnim();
@@ -99,7 +90,7 @@ namespace GXPEngine
 			Crate crate2 = new Crate(200, 560);
 			AddChild(crate2);
 
-			Player player = new Player(1200, 300);
+			Player player = new Player(3850, 300);
 			AddChild(player);
 
 
@@ -171,11 +162,10 @@ namespace GXPEngine
 				_spawnTimer = 60;
 			}
 
-
-			if (background.x < -6400) 
+			if (background.x < -6400)
 			{
 				background.x = -1280;
-			
+
 			}
 
 			if (parallaxlayer.x < -6400)
@@ -190,15 +180,8 @@ namespace GXPEngine
 
 			}
 
-			if (Input.GetKey(Key.A))
-			{
-				background.x = background.x - 2;
-			}
 
-			if (Input.GetKey(Key.D))
-			{
-				background.x = background.x + 3;
-			}
+
 		}
 
 

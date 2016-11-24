@@ -19,7 +19,6 @@ namespace GXPEngine
 			AddChild(wheel4);
 
 
-
 			TrainBottom trainbottom = new TrainBottom(250, 620);
 			AddChild(trainbottom);
 

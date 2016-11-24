@@ -16,7 +16,6 @@ public class MyGame : Game //MyGame is a Game
 	private Button _button;
 
 
-
 	//initialize game here
 	public MyGame () : base(1280, 960, false, false)
 	{
@@ -97,7 +96,6 @@ public class MyGame : Game //MyGame is a Game
 			_currentColumn = _currentColumn + 1;
 		
 		}
-
 
 	}
 

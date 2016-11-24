@@ -106,6 +106,9 @@
     <Compile Include="Wagon3.cs" />
     <Compile Include="Wagon4.cs" />
     <Compile Include="Wagon5.cs" />
+    <Compile Include="Wagon6.cs" />
+    <Compile Include="Wagon7.cs" />
+    <Compile Include="Wagon8.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GXPEngine\" />
