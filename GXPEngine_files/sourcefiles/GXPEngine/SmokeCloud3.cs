@@ -20,8 +20,8 @@ namespace GXPEngine
 			SpeedY = -3.0f;
 			SpeedX = -1.0f;
 
-			StartPosX = 5550;
-			StartPosY = 300;
+			StartPosX = 5650;
+			StartPosY = 330;
 
 			_timer = 1000;
 
