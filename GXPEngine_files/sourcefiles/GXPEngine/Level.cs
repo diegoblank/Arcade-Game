@@ -14,6 +14,7 @@ namespace GXPEngine
 		private Explosion explosion;
 		private ParallaxLayer parallaxlayer;
 		private ParallaxLayer2 parallaxlayer2;
+		private Rails rails;
 
 		private int[] levelDataPointer = null;
 
@@ -38,27 +39,16 @@ namespace GXPEngine
 			parallaxlayer = new ParallaxLayer();
 			AddChild(parallaxlayer);
 
-
-
-
-
-
-			// wagon 1
-
+			//train
+		
 			Wagon1 wagon1 = new Wagon1();
 			AddChild(wagon1);
-
-
-			//wagon 2
 
 			Wagon2 wagon2 = new Wagon2();
 			AddChild(wagon2);
 
-			//train bottoms
-
 			Wagon3 wagon3 = new Wagon3();
 			AddChild(wagon3);
-
 
 			Wagon4 wagon4 = new Wagon4();
 			AddChild(wagon4);
@@ -75,14 +65,21 @@ namespace GXPEngine
 			Wagon8 wagon8 = new Wagon8();
 			AddChild(wagon8);
 
+			//locomotive
+
 			LongBackgroundLocomotive longlocomotive = new LongBackgroundLocomotive(5120, 400);
 			AddChild(longlocomotive);
 
 			LocomotiveWheelAnim wheelanim = new LocomotiveWheelAnim();
 			AddChild(wheelanim);
 
+			//smoke
+
 			Smoke smoke = new Smoke();
 			AddChild(smoke);
+
+			//train objects
+
 
 			Crate crate1 = new Crate(380, 560);
 			AddChild(crate1);
@@ -90,19 +87,19 @@ namespace GXPEngine
 			Crate crate2 = new Crate(200, 560);
 			AddChild(crate2);
 
-			Player player = new Player(3850, 300);
+			Player player = new Player(400, -100);
 			AddChild(player);
 
+			rails = new Rails();
+			AddChild(rails);
 
 			scrollTarget = player;
-
-
 
 		}
 
 		public void CreateBullet(float pX, float pY, int pState) 
 		{ 
-			Bullet bullet = new Bullet(pX, pY + 40, pState);
+			Bullet bullet = new Bullet(pX + 20, pY + 55, pState);
 			AddChild(bullet);
 		
 		
@@ -159,7 +156,7 @@ namespace GXPEngine
 			_spawnTimer = _spawnTimer - 1;
 			if (_spawnTimer <= 0) 
 			{
-				_spawnTimer = 60;
+				_spawnTimer = 100;
 			}
 
 			if (background.x < -6400)
@@ -180,11 +177,13 @@ namespace GXPEngine
 
 			}
 
+			if (rails.x < -6400)
+			{
+				rails.x = -1280;
 
+			}
 
 		}
-
-
 
 
 		public void CreateWave(int pCurrentLevel, int pCurrentColumn) 
@@ -239,17 +238,10 @@ namespace GXPEngine
 						}
 
 
-					if (tile == 2)
-					{
-						Enemy2 enemy2 = new Enemy2(random.Next(-160, 4310), 0);
-						AddChild(enemy2);
-					}
-
 					}
 
 			}
 
-	
 		}
 
 	}

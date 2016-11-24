@@ -109,6 +109,9 @@
     <Compile Include="Wagon6.cs" />
     <Compile Include="Wagon7.cs" />
     <Compile Include="Wagon8.cs" />
+    <Compile Include="Rails.cs" />
+    <Compile Include="EnemyAnimationType1.cs" />
+    <Compile Include="EnemyAnimationType2.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GXPEngine\" />

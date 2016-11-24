@@ -14,6 +14,7 @@ namespace GXPEngine
 
 		private bool _blink;
 		private int _blinkTimer;
+		private int _idleTimer;
 
 		public static int Lives;
 		public static int Score;
@@ -42,6 +43,7 @@ namespace GXPEngine
 			state = 1;
 			_crouchTimer = 0;
 			_gunReloadTimer = 0;
+			_idleTimer = 20;
 
 			_blinkTimer = 0;
 			_blink = false;
@@ -100,6 +102,14 @@ namespace GXPEngine
 
 			Console.WriteLine(playeranimation.AnimState);
 
+
+			_idleTimer = _idleTimer - 1;
+			if (_idleTimer <= 0) 
+			{
+				playeranimation.AnimState = 0;
+				_idleTimer = 0;
+			
+			}
 
 			if (Lives <= 0)
 			{
@@ -172,26 +182,24 @@ namespace GXPEngine
 				scaleY = 0.2f;
 			}
 
-			if (speedX <= 0.1f) 
-			{
-				playeranimation.AnimState = 0;
-			}
 
-			if (Input.GetKey(Key.D))
+
+			if (Input.GetKey(Key.D) && _crouchTimer == 0)
 				{
 					speedX = speedX + 2;
 					state = 1;
 					playeranimation.AnimState = 1;
+					_idleTimer = 10;
 					
 					
 				}
 
-				if (Input.GetKey(Key.A))
+				if (Input.GetKey(Key.A) && _crouchTimer == 0)
 				{
 					speedX = speedX - 2;
 					state = 2;
 					playeranimation.AnimState = 2;
-
+					_idleTimer = 10;
 				}
 
 
@@ -199,25 +207,30 @@ namespace GXPEngine
 			{
 				scaleY = scaleY *(0.5f);
 				_crouchTimer = 50;
-
+				playeranimation.AnimState = 3;
+				_idleTimer = 50;
 			}
 
 
 
-			if (Input.GetKeyDown(Key.SPACE) && _canJump == true)
+			if (Input.GetKeyDown(Key.SPACE) && _canJump == true && _crouchTimer == 0)
 				{
 					speedY = speedY - 70;
 					_canJump = false;
 					_timer = 20;
+					playeranimation.AnimState = 4;
+					_idleTimer = 40;
 					
 				}
 
-			if (Input.GetKeyDown(Key.LEFT_SHIFT) && _gunReloadTimer <= 0)
+			if (Input.GetKeyDown(Key.LEFT_SHIFT) && _gunReloadTimer <= 0 && _crouchTimer == 0)
 			{
 
 				MyGame myGame = game as MyGame;
 				myGame.CallBulletSpawn(x, y - height, state);
 				Ammo = Ammo - 1;
+				playeranimation.AnimState = 5;
+				_idleTimer = 20;
 
 				if (Ammo <= 0) 
 				{
@@ -443,7 +456,7 @@ namespace GXPEngine
 			}
 
 			if (other is LongBackgroundLocomotive)
-{
+			{
 				
 				LongBackgroundLocomotive longbackloco = other as LongBackgroundLocomotive;
 

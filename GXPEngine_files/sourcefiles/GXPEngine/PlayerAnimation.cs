@@ -43,8 +43,6 @@ namespace GXPEngine
 			}
 
 
-
-
 			switch (AnimState)
 			{
 				case 0:
@@ -58,6 +56,19 @@ namespace GXPEngine
 				case 2:
 					if (currentFrame < 12 && step <= 0) { currentFrame++;}
 					else currentFrame = 0;
+					break;
+				case 3:
+				 if (step <= 0) {currentFrame = 14;}
+					else currentFrame = 0;
+					break;
+				case 4:
+					if (step <= 0) { currentFrame = 7;}
+					else currentFrame = 0;
+					break;
+				case 5:
+					currentFrame = 16;
+					if (currentFrame < 18  && step <= 0) { currentFrame++; }
+					else currentFrame = 16;
 					break;
 				default:
 					break;
@@ -79,6 +90,15 @@ namespace GXPEngine
 					currentFrame = 0;
 					break;
 				case 2:
+					currentFrame = 0;
+					break;
+				case 3:
+					currentFrame = 0;
+					break;
+				case 4:
+					currentFrame = 0;
+					break;
+				case 5:
 					currentFrame = 0;
 					break;
 				default:
