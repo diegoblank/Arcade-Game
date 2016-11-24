@@ -87,9 +87,17 @@
     <Compile Include="Bullet2.cs" />
     <Compile Include="ParallaxLayer.cs" />
     <Compile Include="PlayerAnimation.cs" />
+<<<<<<< HEAD
     <Compile Include="Menu.cs" />
     <Compile Include="Button.cs" />
     <Compile Include="Gameover.cs" />
+=======
+    <Compile Include="ParallaxLayer2.cs" />
+    <Compile Include="Smoke.cs" />
+    <Compile Include="SmokeCloud1.cs" />
+    <Compile Include="SmokeCloud2.cs" />
+    <Compile Include="SmokeCloud3.cs" />
+>>>>>>> 479de626e62bf68dd2f44e5c34511e09cb3e6cca
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GXPEngine\" />

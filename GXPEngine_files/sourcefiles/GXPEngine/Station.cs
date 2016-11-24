@@ -3,7 +3,7 @@ namespace GXPEngine
 {
 	public class Station : Sprite
 	{
-		public Station() : base ("station.png")
+		public Station() : base ("stationfinal.png")
 		{
 			x = 7000;
 

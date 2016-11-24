@@ -13,12 +13,12 @@ namespace GXPEngine
 		private Random random;
 		private Explosion explosion;
 		private ParallaxLayer parallaxlayer;
+		private ParallaxLayer2 parallaxlayer2;
 
 		private int[] levelDataPointer = null;
 
 
 		private int[] level1 = new int[10] {1, 2, 1, 2, 1, 2, 1, 2, 1, 2};
-
 
 		private int[] level2 = new int[20] { 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1};
 
@@ -32,9 +32,13 @@ namespace GXPEngine
 			background = new Background();
 			AddChild(background);
 
+			parallaxlayer2 = new ParallaxLayer2();
+			AddChild(parallaxlayer2);
+
 			parallaxlayer = new ParallaxLayer();
 			AddChild(parallaxlayer);
 
+		
 			BaseShort baseshort = new BaseShort(-160, 600);
 			AddChild(baseshort);
 
@@ -89,6 +93,12 @@ namespace GXPEngine
 			LongBackgroundLocomotive longlocomotive = new LongBackgroundLocomotive(4920, 400);
 			AddChild(longlocomotive);
 
+<<<<<<< HEAD
+=======
+			Smoke smoke = new Smoke();
+			AddChild(smoke);
+
+>>>>>>> 479de626e62bf68dd2f44e5c34511e09cb3e6cca
 			Crate crate1 = new Crate(380, 560);
 			AddChild(crate1);
 
@@ -177,6 +187,12 @@ namespace GXPEngine
 			if (parallaxlayer.x < -6400)
 			{
 				parallaxlayer.x = -1280;
+
+			}
+
+			if (parallaxlayer2.x < -6400)
+			{
+				parallaxlayer2.x = -1280;
 
 			}
 
