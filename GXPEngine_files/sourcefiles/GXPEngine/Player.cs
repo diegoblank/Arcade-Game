@@ -9,8 +9,6 @@ namespace GXPEngine
 		private float _LastY;
 		private int _timer;
 		private int _crouchTimer;
-		private int _wagonNumber;
-		private int _animState;
 
 		private int _TNTcooldown;
 
@@ -42,7 +40,6 @@ namespace GXPEngine
 			AddChild(playeranimation);
 
 			state = 1;
-			_animState = 0;
 			_crouchTimer = 0;
 			_gunReloadTimer = 0;
 
@@ -101,11 +98,8 @@ namespace GXPEngine
 		void Update() 
 		{
 
-			if (speedX < 0.1f) 
-			{
-				playeranimation.SetFrame(17);
+			Console.WriteLine(playeranimation.AnimState);
 
-			}
 
 			if (Lives <= 0)
 			{
@@ -178,14 +172,28 @@ namespace GXPEngine
 				scaleY = 0.2f;
 			}
 
+			if (speedX <= 0.1f) 
+			{
+				playeranimation.AnimState = 0;
+			}
+
 			if (Input.GetKey(Key.D))
 				{
 					speedX = speedX + 2;
 					state = 1;
-					_animState = 1;
-					playeranimation.Mirror(false, false);
+					playeranimation.AnimState = 1;
+					
 					
 				}
+
+				if (Input.GetKey(Key.A))
+				{
+					speedX = speedX - 2;
+					state = 2;
+					playeranimation.AnimState = 2;
+
+				}
+
 
 			if (Input.GetKeyDown(Key.S) && _crouchTimer == 0)
 			{
@@ -194,13 +202,7 @@ namespace GXPEngine
 
 			}
 
-			if (Input.GetKey(Key.A))
-				{
-					speedX = speedX - 2;
-					state = 2;
-					_animState = 2;
-					playeranimation.Mirror(true, false);
-				}
+
 
 			if (Input.GetKeyDown(Key.SPACE) && _canJump == true)
 				{
@@ -270,7 +272,7 @@ namespace GXPEngine
 				
 			if (other is BaseShort)
 			{
-				_wagonNumber = 1;
+				
 				BaseShort baseshort = other as BaseShort;
 
 				if (y >= baseshort.y)
@@ -288,7 +290,7 @@ namespace GXPEngine
 
 			if (other is BaseLongCargo)
 			{
-				_wagonNumber = 2;
+				
 				BaseLongCargo baselongcargo = other as BaseLongCargo;
 
 				if (y >= baselongcargo.y)
@@ -307,7 +309,7 @@ namespace GXPEngine
 
 			if (other is BaseLong)
 			{
-				_wagonNumber = 3;
+				
 				BaseLong baselong = other as BaseLong;
 
 
@@ -348,7 +350,7 @@ namespace GXPEngine
 
 			if (other is BaseIntermediateCargo)
 			{
-				_wagonNumber = 4;
+				
 
 				BaseIntermediateCargo baseintermediatecargo = other as BaseIntermediateCargo;
 
@@ -367,7 +369,7 @@ namespace GXPEngine
 
 			if (other is TallLongCargo)
 			{
-				_wagonNumber = 2;
+				
 				TallLongCargo talllongcargo = other as TallLongCargo;
 
 				if (y < talllongcargo.y + 20 || y <= talllongcargo.y + 50)
@@ -402,7 +404,7 @@ namespace GXPEngine
 
 			if (other is BaseIntermediate)
 			{
-				_wagonNumber = 5;
+				
 
 				BaseIntermediate baseintermediate = other as BaseIntermediate;
 
@@ -442,7 +444,7 @@ namespace GXPEngine
 
 			if (other is LongBackgroundLocomotive)
 {
-				_wagonNumber = 2;
+				
 				LongBackgroundLocomotive longbackloco = other as LongBackgroundLocomotive;
 
 				if (y < longbackloco.y + 20 || y <= longbackloco.y + 50)

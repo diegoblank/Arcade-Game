@@ -98,7 +98,6 @@ public class MyGame : Game //MyGame is a Game
 		
 		}
 
-		Console.WriteLine(_waveTimer);
 
 	}
 

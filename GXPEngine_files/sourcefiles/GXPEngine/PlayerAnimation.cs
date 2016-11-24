@@ -4,22 +4,15 @@ namespace GXPEngine
 	public class PlayerAnimation : AnimationSprite
 	{
 
-		private int _timer;
-		private int _frameTimer;
-		private int _state;
+		private int step;
+		public int AnimState;
 
-		public static int State;
 
-		public PlayerAnimation() : base ("playeranimation.png", 6, 4, 15)
+		public PlayerAnimation() : base ("playeranimation.png", 6, 4, 20)
 		{
 
-			_state = 1;
-
 			SetOrigin(width / 2, height);
-			_timer = 10;
-			_frameTimer = 3;
-
-			State = 0;
+			step = 0;
 
 			SetScaleXY(6.0f, 6.0f);
 
@@ -28,23 +21,37 @@ namespace GXPEngine
 		void Update()
 		{
 
-			if (_frameTimer <= 0 && State != 0)
+			step = step + 1;
+
+			if (step > 2 && AnimState == 1)
 			{
 				NextFrame();
-				_frameTimer = 2;
+				step = 0;
+				Mirror(false, false);
 
 			}
 
-
-			_timer = _timer - 1;
-			_frameTimer = _frameTimer - 1;
-
-			if (_timer <= 0)
+			if (step > 2 && AnimState == 2)
 			{
-				_timer = 0;
+				NextFrame();
+				step = 0;
+				Mirror(true, false);
+
 			}
+
+			if (step > 2 && AnimState == 0)
+			{
+				
+				NextFrame();
+				step = 0;
+			}
+
+	
+	
 
 		}
+
+
 
 	}
 }
