@@ -4,17 +4,20 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="GXPEngine\PlayerAnimation.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GXPEngine\SmokeCloud3.cs">
     <Files>
-      <File FileName="GXPEngine\Level.cs" Line="74" Column="4" />
+      <File FileName="GXPEngine\Level.cs" Line="93" Column="75" />
       <File FileName="GXPEngine\MyGame.cs" Line="17" Column="48" />
       <File FileName="GXPEngine\Player.cs" Line="214" Column="5" />
-      <File FileName="GXPEngine\PlayerAnimation.cs" Line="28" Column="39" />
+      <File FileName="GXPEngine\PlayerAnimation.cs" Line="35" Column="4" />
       <File FileName="GXPEngine\TrainBottom.cs" Line="6" Column="75" />
       <File FileName="GXPEngine\LongBackground.cs" Line="6" Column="67" />
       <File FileName="GXPEngine\LongCeiling.cs" Line="12" Column="1" />
       <File FileName="GXPEngine\Station.cs" Line="5" Column="3" />
       <File FileName="GXPEngine\Wheel.cs" Line="8" Column="37" />
+      <File FileName="GXPEngine\Smoke.cs" Line="47" Column="23" />
+      <File FileName="GXPEngine\SmokeCloud1.cs" Line="16" Column="43" />
+      <File FileName="GXPEngine\SmokeCloud3.cs" Line="17" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.GXPEngine PreferredExecutionTarget="MonoDevelop.Default" />

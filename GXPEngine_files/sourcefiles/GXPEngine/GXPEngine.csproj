@@ -88,6 +88,10 @@
     <Compile Include="ParallaxLayer.cs" />
     <Compile Include="PlayerAnimation.cs" />
     <Compile Include="ParallaxLayer2.cs" />
+    <Compile Include="Smoke.cs" />
+    <Compile Include="SmokeCloud1.cs" />
+    <Compile Include="SmokeCloud2.cs" />
+    <Compile Include="SmokeCloud3.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GXPEngine\" />
