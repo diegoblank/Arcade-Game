@@ -80,12 +80,11 @@ namespace GXPEngine
 			Smoke smoke = new Smoke();
 			AddChild(smoke);
 
-<<<<<<< HEAD
-=======
+
+
 			//train objects
 
 
->>>>>>> 19e908bf2c323b253f005dcc37cfc8fd6827ee88
 			Crate crate1 = new Crate(380, 560);
 			AddChild(crate1);
 

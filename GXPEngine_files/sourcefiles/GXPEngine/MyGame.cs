@@ -29,7 +29,7 @@ public class MyGame : Game //MyGame is a Game
 		SetMenu();
 		StartMusic();
 
-<<<<<<< HEAD
+
 	}
 
 	public void StartMusic()
@@ -37,19 +37,16 @@ public class MyGame : Game //MyGame is a Game
 		_music = new Sound("music.ogg", true, true);
 		_musicChannel = _music.Play();
 	}
-=======
 
-		Menu menu;
-		menu = new Menu();
-		AddChild(menu);
-	}
+
+
 
 	//public void ShowMenu()
 	//{
  	//	_button.visible = true;
 	//}
 
->>>>>>> 19e908bf2c323b253f005dcc37cfc8fd6827ee88
+
 
 	public void CreateHud()
 	{
@@ -67,7 +64,7 @@ public class MyGame : Game //MyGame is a Game
 	public void DestroyLevel()
 	{
 		
-		Gameover gameover = new Gameover();
+		gameover = new Gameover();
 		AddChild(gameover);
 		level.Destroy();
 	}
