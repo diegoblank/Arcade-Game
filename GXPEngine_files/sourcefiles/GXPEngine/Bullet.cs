@@ -5,6 +5,7 @@ namespace GXPEngine
 	{
 		public int _direction = -1;
 		public int _score = 0;
+		Sound _bullitsound;
 
 		public Bullet(float spawnX, float spawnY, int direction) : base("bullet.png")
 		{
@@ -14,6 +15,9 @@ namespace GXPEngine
 			x = spawnX;
 			y = spawnY;
 			_direction = direction;
+
+			_bullitsound = new Sound("gunshot.wav", false, false);
+			_bullitsound.Play();
 
 			//Check direction
 			if (_direction == 2)

@@ -110,9 +110,8 @@ namespace GXPEngine
 			if (Lives <= 0)
 			{
 				this.Destroy();
-				//MyGame myGame = game as MyGame;
-				//myGame.DestroyLevel();
-				//myGame.ShowMenu();
+				MyGame myGame = game as MyGame;
+				myGame.DestroyLevel();
 			}
 
 			if (y <= 100) 

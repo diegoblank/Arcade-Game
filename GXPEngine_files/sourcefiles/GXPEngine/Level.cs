@@ -18,7 +18,7 @@ namespace GXPEngine
 		private int[] levelDataPointer = null;
 
 
-		private int[] level1 = new int[10] {1, 2, 1, 2, 1, 2, 1, 2, 1, 2};
+		private int[] level1 = new int[10] {1, 1, 1, 2, 1, 2, 1, 1, 1, 2};
 
 		private int[] level2 = new int[20] { 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1};
 
@@ -93,12 +93,9 @@ namespace GXPEngine
 			LongBackgroundLocomotive longlocomotive = new LongBackgroundLocomotive(4920, 400);
 			AddChild(longlocomotive);
 
-<<<<<<< HEAD
-=======
 			Smoke smoke = new Smoke();
 			AddChild(smoke);
 
->>>>>>> 479de626e62bf68dd2f44e5c34511e09cb3e6cca
 			Crate crate1 = new Crate(380, 560);
 			AddChild(crate1);
 
