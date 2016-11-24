@@ -6,11 +6,15 @@ public class MyGame : Game //MyGame is a Game
 {
 
 	private int _waveTimer;
+	private int _timer;
 	private bool _gameRunning;
 	private int _currentLevel;
 	private int _currentColumn;
 	private Level level;
 	private Station station;
+	private HUD _hud;
+	private Button _button;
+
 
 
 	//initialize game here
@@ -19,25 +23,42 @@ public class MyGame : Game //MyGame is a Game
 
 		_currentLevel = 1;
 		_currentColumn = 0;
-		_gameRunning = true;
-		
-		level = new Level();
+		_gameRunning = false;
+		_timer = 0;
 
-
-		AddChild(level);
-
-		HUD hud;
-		hud = new HUD();
-		AddChild(hud);
-
-
+		Menu menu;
+		menu = new Menu();
+		AddChild(menu);
 	}
 
+	//public void ShowMenu()
+	//{
+ 	//	_button.visible = true;
+	//}
+
+	public void CreateHud()
+	{
+		_hud = new HUD();
+		AddChild(_hud);
+	}
+
+	//public void DestroyLevel()
+	//{
+	//	Gameover gameover = new Gameover();
+	//	AddChild(gameover);
+	//
+	//}
+
+	public void CreateLevel()
+	{
+		level = new Level();
+		AddChild(level);
+		_gameRunning = true;
+	}
 
 	public void CallBulletSpawn(float pX, float pY, int pState) 
 	{
 		level.CreateBullet(pX, pY, pState);
-	
 	}
 
 	public void CallBulletSpawn2(float pX, float pY, int pState)

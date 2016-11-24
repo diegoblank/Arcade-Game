@@ -13,7 +13,6 @@ namespace GXPEngine
 		void Update() 
 		{
 			x = x - 3;
-		
 		}
 
 		public void DestroyItself() 

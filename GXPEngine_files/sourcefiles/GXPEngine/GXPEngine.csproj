@@ -87,6 +87,9 @@
     <Compile Include="Bullet2.cs" />
     <Compile Include="ParallaxLayer.cs" />
     <Compile Include="PlayerAnimation.cs" />
+    <Compile Include="Menu.cs" />
+    <Compile Include="Button.cs" />
+    <Compile Include="Gameover.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GXPEngine\" />
