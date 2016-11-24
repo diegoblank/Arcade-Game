@@ -14,7 +14,9 @@ public class MyGame : Game //MyGame is a Game
 	private Station station;
 	private HUD _hud;
 	private Button _button;
-
+	private Gameover gameover;
+	Sound _music;
+	SoundChannel _musicChannel;
 
 	//initialize game here
 	public MyGame () : base(1280, 960, false, false)
@@ -23,8 +25,19 @@ public class MyGame : Game //MyGame is a Game
 		_currentLevel = 1;
 		_currentColumn = 0;
 		_gameRunning = false;
-		_timer = 0;
+		_timer = 50;
+		SetMenu();
+		StartMusic();
 
+<<<<<<< HEAD
+	}
+
+	public void StartMusic()
+	{
+		_music = new Sound("music.ogg", true, true);
+		_musicChannel = _music.Play();
+	}
+=======
 
 		Menu menu;
 		menu = new Menu();
@@ -36,6 +49,7 @@ public class MyGame : Game //MyGame is a Game
  	//	_button.visible = true;
 	//}
 
+>>>>>>> 19e908bf2c323b253f005dcc37cfc8fd6827ee88
 
 	public void CreateHud()
 	{
@@ -43,12 +57,20 @@ public class MyGame : Game //MyGame is a Game
 		AddChild(_hud);
 	}
 
-	//public void DestroyLevel()
-	//{
-	//	Gameover gameover = new Gameover();
-	//	AddChild(gameover);
-	//
-	//}
+	public void SetMenu() 
+	{ 
+		Menu menu;
+		menu = new Menu();
+		AddChild(menu);
+	}
+
+	public void DestroyLevel()
+	{
+		
+		Gameover gameover = new Gameover();
+		AddChild(gameover);
+		level.Destroy();
+	}
 
 	public void CreateLevel()
 	{
@@ -83,7 +105,7 @@ public class MyGame : Game //MyGame is a Game
 	//update game here
 	void Update ()
 	{
-
+		_timer = _timer - 1;
 		_waveTimer = _waveTimer - 1;
 		if (_waveTimer <= 0) 
 		{

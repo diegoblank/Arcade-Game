@@ -10,6 +10,10 @@ namespace GXPEngine
 		{
 			_hasStarted = false;
 
+			Startscreen startscreen = new Startscreen();
+			AddChild(startscreen);
+
+
 			_button = new Button();
 			AddChild(_button);
 			_button.x = (game.width - _button.width) / 2;
@@ -23,21 +27,17 @@ namespace GXPEngine
 				if (_button.HitTestPoint (Input.mouseX, Input.mouseY))
 				{
 					StartGame();
-					HideMenu();
+					DestroyMenu();
 				}
 			}
 
 		}
 
-		public void HideMenu()
+		public void DestroyMenu()
 		{
-			_button.visible = false;
+			this.Destroy();
 		}
 
-		public void ShowMenu()
-		{
-			_button.visible = true;
-		}
 
 		public void StartGame()
 		{

@@ -87,16 +87,25 @@
     <Compile Include="Bullet2.cs" />
     <Compile Include="ParallaxLayer.cs" />
     <Compile Include="PlayerAnimation.cs" />
+<<<<<<< HEAD
+    <Compile Include="Menu.cs" />
+    <Compile Include="Button.cs" />
+    <Compile Include="Gameover.cs" />
+=======
 
     <Compile Include="Menu.cs" />
     <Compile Include="Button.cs" />
     <Compile Include="Gameover.cs" />
 
+>>>>>>> 19e908bf2c323b253f005dcc37cfc8fd6827ee88
     <Compile Include="ParallaxLayer2.cs" />
     <Compile Include="Smoke.cs" />
     <Compile Include="SmokeCloud1.cs" />
     <Compile Include="SmokeCloud2.cs" />
     <Compile Include="SmokeCloud3.cs" />
+<<<<<<< HEAD
+    <Compile Include="Startscreen.cs" />
+=======
 
     <Compile Include="TrainBottomShort.cs" />
     <Compile Include="TrainBottomIntermediate.cs" />
@@ -112,7 +121,11 @@
     <Compile Include="Rails.cs" />
     <Compile Include="EnemyAnimationType1.cs" />
     <Compile Include="EnemyAnimationType2.cs" />
+<<<<<<< HEAD
     <Compile Include="HealthPickup.cs" />
+=======
+>>>>>>> 19e908bf2c323b253f005dcc37cfc8fd6827ee88
+>>>>>>> bc28f49868f8e0fe2d340291059388c1cdc5892a
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GXPEngine\" />
