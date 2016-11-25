@@ -87,15 +87,31 @@
     <Compile Include="Bullet2.cs" />
     <Compile Include="ParallaxLayer.cs" />
     <Compile Include="PlayerAnimation.cs" />
+<<<<<<< HEAD
     <Compile Include="Menu.cs" />
     <Compile Include="Button.cs" />
     <Compile Include="Gameover.cs" />
+=======
+
+    <Compile Include="Button.cs" />
+    <Compile Include="Gameover.cs" />
+
+
+    <Compile Include="Menu.cs" />
+>>>>>>> 3045e6b0e916456dc3ae7bb50cf16ab14fa51b4b
     <Compile Include="ParallaxLayer2.cs" />
     <Compile Include="Smoke.cs" />
     <Compile Include="SmokeCloud1.cs" />
     <Compile Include="SmokeCloud2.cs" />
     <Compile Include="SmokeCloud3.cs" />
+<<<<<<< HEAD
     <Compile Include="Startscreen.cs" />
+=======
+
+    <Compile Include="Startscreen.cs" />
+
+
+>>>>>>> 3045e6b0e916456dc3ae7bb50cf16ab14fa51b4b
     <Compile Include="TrainBottomShort.cs" />
     <Compile Include="TrainBottomIntermediate.cs" />
     <Compile Include="LocomotiveWheelAnim.cs" />
@@ -110,6 +126,14 @@
     <Compile Include="Rails.cs" />
     <Compile Include="EnemyAnimationType1.cs" />
     <Compile Include="EnemyAnimationType2.cs" />
+<<<<<<< HEAD
+=======
+
+    <Compile Include="HealthPickup.cs" />
+
+
+    <Compile Include="WinScreen.cs" />
+>>>>>>> 3045e6b0e916456dc3ae7bb50cf16ab14fa51b4b
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GXPEngine\" />

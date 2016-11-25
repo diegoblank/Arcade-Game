@@ -1,17 +1,17 @@
 ﻿using System;
 namespace GXPEngine
 {
-	public class Gameover : Sprite
+	public class WinScreen : Sprite
 	{
 
 		private int _timer;
-		public Gameover() : base ("gameover.png")
+		public WinScreen() : base("winscreen.png")
 		{
 			scaleX = scaleX * 1.1f;
-			_timer = 200;
+			_timer = 300;
 		}
 
-		void Update() 
+		void Update()
 		{
 			_timer = _timer - 1;
 			if (_timer <= 0)

@@ -29,16 +29,14 @@ public class MyGame : Game //MyGame is a Game
 		SetMenu();
 		StartMusic();
 
+<<<<<<< HEAD
 		Menu menu;
 		menu = new Menu();
 		AddChild(menu);
 	}
+=======
 
-	//public void ShowMenu()
-	//{
- 	//	_button.visible = true;
-	//}
-
+	}
 
 	public void StartMusic()
 	{
@@ -46,6 +44,25 @@ public class MyGame : Game //MyGame is a Game
 		_musicChannel = _music.Play();
 	}
 
+
+
+>>>>>>> 3045e6b0e916456dc3ae7bb50cf16ab14fa51b4b
+
+	//public void ShowMenu()
+	//{
+ 	//	_button.visible = true;
+	//}
+
+
+<<<<<<< HEAD
+	public void StartMusic()
+	{
+		_music = new Sound("music.ogg", true, true);
+		_musicChannel = _music.Play();
+	}
+
+=======
+>>>>>>> 3045e6b0e916456dc3ae7bb50cf16ab14fa51b4b
 
 	public void CreateHud()
 	{
@@ -63,7 +80,7 @@ public class MyGame : Game //MyGame is a Game
 	public void DestroyLevel()
 	{
 		
-		Gameover gameover = new Gameover();
+		gameover = new Gameover();
 		AddChild(gameover);
 		level.Destroy();
 	}
@@ -73,6 +90,20 @@ public class MyGame : Game //MyGame is a Game
 		level = new Level();
 		AddChild(level);
 		_gameRunning = true;
+	}
+
+	public void SetWinScreen() 
+	{
+		WinScreen winscreen = new WinScreen();
+		AddChild(winscreen);
+		level.Destroy();
+	
+	}
+
+	public void SetLeveltoOne() 
+	{
+		_currentLevel = 1;
+		_currentColumn = 0;
 	}
 
 	public void CallBulletSpawn(float pX, float pY, int pState) 

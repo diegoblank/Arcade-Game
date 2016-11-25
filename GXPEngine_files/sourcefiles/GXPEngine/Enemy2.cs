@@ -10,6 +10,7 @@ namespace GXPEngine
 		private float _distance;
 		private int _walkSpeed;
 		private int _timer;
+		private bool _enemyMovement;
 
 		private bool _canJump;
 		private bool _isAttacking;
@@ -27,6 +28,8 @@ namespace GXPEngine
 			_gravity = 1.05f;
 			scaleX = scaleX * 0.2f;
 			scaleY = scaleY * 0.2f;
+
+			_enemyMovement = true;
 
 			alpha = 0.0f;
 
@@ -51,6 +54,13 @@ namespace GXPEngine
 		void Update()
 		{
 
+			if (_timer >= 150)
+			{
+				_enemyMovement = false;
+				enemyAnim2.Enemy2AnimState = 3;
+			}
+			else {_enemyMovement = true;};
+
 			if (_timer <= 0)
 			{
 				_timer = 0;
@@ -71,7 +81,7 @@ namespace GXPEngine
 
 
 
-			if (this.x < Player.PlayerPosX)
+			if (this.x < Player.PlayerPosX && _enemyMovement == true)
 			{
 				x = x + _walkSpeed;
 				Mirror(false, false);
@@ -79,7 +89,7 @@ namespace GXPEngine
 				enemyAnim2.Enemy2AnimState = 1;
 			}
 
-			if (this.x > Player.PlayerPosX)
+			if (this.x > Player.PlayerPosX && _enemyMovement == true)
 			{
 				x = x - _walkSpeed;
 				Mirror(true, false);

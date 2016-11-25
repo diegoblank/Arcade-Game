@@ -22,6 +22,12 @@ namespace GXPEngine
 
 		private int[] levelDataPointer = null;
 
+		//private int[] level1 = new int[2] { 1, 1};
+
+		//private int[] level2 = new int[2] { 1, 1};
+
+	//	private int[] level3 = new int[2] { 1, 1};
+
 
 		private int[] level1 = new int[10] {1, 1, 1, 2, 1, 2, 1, 1, 1, 2};
 
@@ -84,6 +90,11 @@ namespace GXPEngine
 			Smoke smoke = new Smoke();
 			AddChild(smoke);
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 3045e6b0e916456dc3ae7bb50cf16ab14fa51b4b
 			//train objects
 
 
@@ -212,6 +223,8 @@ namespace GXPEngine
 			if (pCurrentLevel == 4)
 			{
 				levelDataPointer = null;
+				MyGame myGame = game as MyGame;
+				myGame.SetWinScreen();
 			}
 
 			if (levelDataPointer != null) 
