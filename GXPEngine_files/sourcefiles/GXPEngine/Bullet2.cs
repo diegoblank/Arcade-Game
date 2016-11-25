@@ -36,6 +36,17 @@ namespace GXPEngine
 
 		private void Update()
 		{
+
+			if (x <= -1000)
+			{
+				Destroy();
+			}
+
+			if (x >= 7000)
+			{
+				Destroy();
+			}
+
 			if (_direction == -1) //wrong, no direction
 				return;
 			if (_direction == 2) //left
@@ -58,6 +69,12 @@ namespace GXPEngine
 			if (other is TallLongCargo)
 			{
 				this.Destroy();
+			}
+
+			if (other is LongBackgroundLocomotive)
+			{
+				this.Destroy();
+
 			}
 
 			if (other is Station)

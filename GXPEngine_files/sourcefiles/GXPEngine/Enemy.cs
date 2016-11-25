@@ -135,7 +135,7 @@ namespace GXPEngine
 
 						if (x > talllongcargo.x)
 						{
-							x = talllongcargo.x + 800;
+							x = talllongcargo.x + 820;
 							Jump();
 						}
 

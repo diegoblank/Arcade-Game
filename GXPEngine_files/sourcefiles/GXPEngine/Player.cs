@@ -222,7 +222,7 @@ namespace GXPEngine
 					
 				}
 
-			if (Input.GetKeyDown(Key.LEFT_SHIFT) && _gunReloadTimer <= 0 && _crouchTimer == 0)
+			if (Input.GetKeyDown(Key.LEFT_SHIFT) && _gunReloadTimer == 0 && _crouchTimer == 0)
 			{
 
 				MyGame myGame = game as MyGame;

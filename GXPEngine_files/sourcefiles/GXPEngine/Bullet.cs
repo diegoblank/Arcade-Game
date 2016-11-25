@@ -32,11 +32,20 @@ namespace GXPEngine
 				x += 80;
 			}
 
-
 		}
 
 		private void Update()
 		{
+
+			if (x <= -1000) 
+			{
+				Destroy();
+			}
+
+			if (x >= 7000) 
+			{
+				Destroy();
+			}
 
 			if (_direction == -1) //wrong, no direction
 				return;
@@ -63,6 +72,13 @@ namespace GXPEngine
 				this.Destroy();
 
 			}
+
+			if (other is LongBackgroundLocomotive)
+			{
+				this.Destroy();
+
+			}
+
 			else if (other is Crate)
 			{
 				Destroy();

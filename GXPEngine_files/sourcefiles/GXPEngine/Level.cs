@@ -90,11 +90,8 @@ namespace GXPEngine
 			Smoke smoke = new Smoke();
 			AddChild(smoke);
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 3045e6b0e916456dc3ae7bb50cf16ab14fa51b4b
 			//train objects
 
 
