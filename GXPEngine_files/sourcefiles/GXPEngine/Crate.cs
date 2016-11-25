@@ -10,6 +10,15 @@ namespace GXPEngine
 
 		}
 
+		void Update() 
+		{
+			if (x <= -140) 
+			{
+				x = -140;
+			}
+		
+		}
+
 		public void OnCollision(GameObject other) 
 		{ 
 			if (other is Crate)

@@ -45,7 +45,7 @@ namespace GXPEngine
 
 		void Update() 
 		{
-			if ((this.x - Player.PlayerPosX) < 30) 
+			if ((this.x - Player.PlayerPosX) > 50 || (this.x + Player.PlayerPosX) < 50) 
 			{
 				enemyAnim1.Enemy1AnimState = 3;
 			

@@ -32,6 +32,15 @@ namespace GXPEngine
 				}
 			}
 
+			if (Input.GetKeyDown(Key.ENTER)) 
+			{ 
+				MyGame myGame = game as MyGame;
+				myGame.CreateLevel();
+				myGame.CreateHud();
+				this.Destroy();
+			
+			}
+
 		}
 	}
 }

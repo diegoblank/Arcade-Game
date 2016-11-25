@@ -120,7 +120,7 @@ public class MyGame : Game //MyGame is a Game
 		_waveTimer = _waveTimer - 1;
 		if (_waveTimer <= 0) 
 		{
-			_waveTimer = 100;
+			_waveTimer = 150;
 		}
 
 		if (_gameRunning == true && _waveTimer == 1)

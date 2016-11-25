@@ -49,7 +49,7 @@ namespace GXPEngine
 					else currentFrame = 0;
 					break;
 				case 3:
-					if (currentFrame < 19){ currentFrame = 18;}
+					currentFrame = 18;
 					break;
 
 				default:
