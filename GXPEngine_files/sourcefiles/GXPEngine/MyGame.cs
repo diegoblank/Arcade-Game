@@ -76,6 +76,20 @@ public class MyGame : Game //MyGame is a Game
 		_gameRunning = true;
 	}
 
+	public void SetWinScreen() 
+	{
+		WinScreen winscreen = new WinScreen();
+		AddChild(winscreen);
+		level.Destroy();
+	
+	}
+
+	public void SetLeveltoOne() 
+	{
+		_currentLevel = 1;
+		_currentColumn = 0;
+	}
+
 	public void CallBulletSpawn(float pX, float pY, int pState) 
 	{
 		level.CreateBullet(pX, pY, pState);

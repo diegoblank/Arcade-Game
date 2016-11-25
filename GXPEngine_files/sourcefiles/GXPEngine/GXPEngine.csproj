@@ -120,6 +120,7 @@
     <Compile Include="HealthPickup.cs" />
 
 
+    <Compile Include="WinScreen.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GXPEngine\" />

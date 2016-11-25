@@ -4,27 +4,30 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="GXPEngine\EnemyAnimationType1.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GXPEngine\MyGame.cs">
     <Files>
-      <File FileName="GXPEngine\MyGame.cs" Line="61" Column="18" />
+      <File FileName="GXPEngine\MyGame.cs" Line="46" Column="29" />
       <File FileName="GXPEngine\Player.cs" Line="137" Column="4" />
       <File FileName="GXPEngine\Enemy.cs" Line="49" Column="5" />
-      <File FileName="GXPEngine\EnemyAnimationType1.cs" Line="63" Column="3" />
+      <File FileName="GXPEngine\EnemyAnimationType1.cs" Line="61" Column="4" />
       <File FileName="GXPEngine\Enemy2.cs" Line="59" Column="28" />
       <File FileName="GXPEngine\EnemyAnimationType2.cs" Line="65" Column="3" />
       <File FileName="GXPEngine\PlayerAnimation.cs" Line="17" Column="27" />
       <File FileName="GXPEngine\Smoke.cs" Line="30" Column="3" />
-      <File FileName="GXPEngine\Level.cs" Line="87" Column="4" />
       <File FileName="GXPEngine\LocomotiveWheelAnim.cs" Line="38" Column="20" />
       <File FileName="GXPEngine\Rails.cs" Line="17" Column="3" />
       <File FileName="GXPEngine\ParallaxLayer2.cs" Line="15" Column="4" />
       <File FileName="GXPEngine\SmokeCloud1.cs" Line="23" Column="18" />
       <File FileName="GXPEngine\SmokeCloud2.cs" Line="23" Column="18" />
       <File FileName="GXPEngine\SmokeCloud3.cs" Line="29" Column="16" />
-      <File FileName="GXPEngine\HUD.cs" Line="20" Column="69" />
+      <File FileName="GXPEngine\HUD.cs" Line="19" Column="95" />
       <File FileName="GXPEngine\HealthPickup.cs" Line="8" Column="37" />
-      <File FileName="GXPEngine\Menu.cs" Line="40" Column="3" />
-      <File FileName="GXPEngine\Gameover.cs" Line="1" Column="1" />
+      <File FileName="GXPEngine\Menu.cs" Line="13" Column="26" />
+      <File FileName="GXPEngine\Gameover.cs" Line="21" Column="28" />
+      <File FileName="GXPEngine\Station.cs" Line="14" Column="14" />
+      <File FileName="GXPEngine\WinScreen.cs" Line="27" Column="2" />
+      <File FileName="GXPEngine\Startscreen.cs" Line="6" Column="33" />
+      <File FileName="GXPEngine\Level.cs" Line="220" Column="27" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.GXPEngine PreferredExecutionTarget="MonoDevelop.Default" />

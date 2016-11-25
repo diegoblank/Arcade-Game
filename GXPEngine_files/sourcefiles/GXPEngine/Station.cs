@@ -11,7 +11,7 @@ namespace GXPEngine
 
 		void Update() 
 		{
-			x = x - 25;
+			x = x - 40;
 
 			if (x <= -5000) 
 			{
