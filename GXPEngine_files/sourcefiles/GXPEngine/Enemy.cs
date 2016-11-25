@@ -8,14 +8,11 @@ namespace GXPEngine
 		private float speedY;
 		private float speedX;
 		private int _walkSpeed;
-
 		public int Enemy1AnimState;
-
 		private EnemyAnimationType1 enemyAnim1; 
-
 		private bool _canJump;
-
 		private Random random;
+		Sound _hitsound;
 
 		public Enemy(float PosX, float PosY) : base ("playerhitbox.png")
 		{

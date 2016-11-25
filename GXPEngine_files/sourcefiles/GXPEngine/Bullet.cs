@@ -76,12 +76,6 @@ namespace GXPEngine
 				this.Destroy();
 			}
 
-			if (other is Player)
-			{
-				Player.LoseLife();
-				this.Destroy();
-			}
-
 			if (other is TallLongCargo)
 			{
 				this.Destroy();

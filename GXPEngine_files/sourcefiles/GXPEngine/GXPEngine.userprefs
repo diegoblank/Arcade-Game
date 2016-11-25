@@ -4,18 +4,18 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="MyGame.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Enemy.cs">
     <Files>
       <File FileName="Enemy2.cs" Line="97" Column="5" />
-      <File FileName="Level.cs" Line="25" Column="43" />
-      <File FileName="Background.cs" Line="15" Column="14" />
-      <File FileName="MyGame.cs" Line="39" Column="3" />
+      <File FileName="Level.cs" Line="37" Column="44" />
+      <File FileName="MyGame.cs" Line="43" Column="2" />
       <File FileName="Menu.cs" Line="38" Column="19" />
-      <File FileName="Player.cs" Line="114" Column="27" />
-      <File FileName="HUD.cs" Line="15" Column="4" />
+      <File FileName="Player.cs" Line="114" Column="19" />
       <File FileName="Startscreen.cs" Line="8" Column="4" />
-      <File FileName="Gameover.cs" Line="27" Column="1" />
-      <File FileName="Bullet.cs" Line="22" Column="21" />
+      <File FileName="Bullet.cs" Line="20" Column="4" />
+      <File FileName="Explosion.cs" Line="49" Column="28" />
+      <File FileName="Bullet2.cs" Line="7" Column="3" />
+      <File FileName="Enemy.cs" Line="12" Column="30" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.GXPEngine PreferredExecutionTarget="MonoDevelop.Default" />
