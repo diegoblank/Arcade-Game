@@ -29,6 +29,12 @@ public class MyGame : Game //MyGame is a Game
 		SetMenu();
 		StartMusic();
 
+<<<<<<< HEAD
+		Menu menu;
+		menu = new Menu();
+		AddChild(menu);
+	}
+=======
 
 	}
 
@@ -40,6 +46,7 @@ public class MyGame : Game //MyGame is a Game
 
 
 
+>>>>>>> 3045e6b0e916456dc3ae7bb50cf16ab14fa51b4b
 
 	//public void ShowMenu()
 	//{
@@ -47,6 +54,15 @@ public class MyGame : Game //MyGame is a Game
 	//}
 
 
+<<<<<<< HEAD
+	public void StartMusic()
+	{
+		_music = new Sound("music.ogg", true, true);
+		_musicChannel = _music.Play();
+	}
+
+=======
+>>>>>>> 3045e6b0e916456dc3ae7bb50cf16ab14fa51b4b
 
 	public void CreateHud()
 	{

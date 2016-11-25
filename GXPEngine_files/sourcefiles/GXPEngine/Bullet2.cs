@@ -4,6 +4,8 @@ namespace GXPEngine
 	public class Bullet2 : Sprite
 	{
 		public int _direction = -1;
+		Sound _hitsound;
+		Sound _bullitsound;
 
 		public Bullet2(float spawnX, float spawnY, int direction) : base ("bulletred.png")
 		{
@@ -15,6 +17,9 @@ namespace GXPEngine
 			x = spawnX;
 			y = spawnY;
 			_direction = direction;
+			_hitsound = new Sound("hit.ogg", false, false);
+			_bullitsound = new Sound("gunshot.wav", false, false);
+			_bullitsound.Play();
 
 			//Check direction
 			if (_direction == 2)
@@ -58,6 +63,12 @@ namespace GXPEngine
 			if (other is Station)
 			{
 				this.Destroy();
+			}
+			if (other is Player)
+			{
+				Player.LoseLife();
+				this.Destroy();
+				_hitsound.Play();
 			}
 
 

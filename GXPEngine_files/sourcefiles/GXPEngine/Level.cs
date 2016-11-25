@@ -15,6 +15,8 @@ namespace GXPEngine
 		private ParallaxLayer parallaxlayer;
 		private ParallaxLayer2 parallaxlayer2;
 		private Rails rails;
+		Sound _background;
+		SoundChannel _backgroundChannel;
 
 		public static int EnemiesLeft;
 
@@ -37,6 +39,8 @@ namespace GXPEngine
 		{
 
 			random = new Random();
+			_background = new Sound("background.ogg", true, true);
+			_backgroundChannel = _background.Play();
 			
 			background = new Background();
 			AddChild(background);
@@ -86,8 +90,11 @@ namespace GXPEngine
 			Smoke smoke = new Smoke();
 			AddChild(smoke);
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 3045e6b0e916456dc3ae7bb50cf16ab14fa51b4b
 			//train objects
 
 

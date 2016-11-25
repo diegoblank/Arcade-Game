@@ -29,10 +29,9 @@ namespace GXPEngine
 		private float speedX;
 		private float speedY;
 
-
 		private int _gunReloadTimer;
-
 		private int state;
+		Sound _hitsound;
 
 
 		public Player(int PosX, int PosY) : base ("playerhitbox.png")
@@ -44,6 +43,7 @@ namespace GXPEngine
 			_crouchTimer = 0;
 			_gunReloadTimer = 0;
 			_idleTimer = 20;
+			_hitsound = new Sound("hit.ogg", false, false);
 
 			_blinkTimer = 0;
 			_blink = false;
@@ -271,6 +271,7 @@ namespace GXPEngine
 				LoseLife();
 				_blinkTimer = 100;
 				SetBlinkTrue();
+				_hitsound.Play();
 			}
 
 			if (other is Bullet2 && _blinkTimer <= 0)

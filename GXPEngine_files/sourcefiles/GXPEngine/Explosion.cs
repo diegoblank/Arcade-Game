@@ -7,6 +7,7 @@ namespace GXPEngine
 
 		private int _timer;
 		private int _frameTimer;
+		Sound _explosionSound;
 
 
 		public Explosion(float spawnX, float spawnY) : base("explosionred.png", 15, 1)
@@ -21,7 +22,8 @@ namespace GXPEngine
 
 			_timer = 20;
 			_frameTimer = 3;
-
+			_explosionSound = new Sound("explosion.wav", false, false);
+			                            
 		}
 
 
@@ -44,6 +46,7 @@ namespace GXPEngine
 			{
 				this.Destroy();
 				_timer = 0;
+				_explosionSound.Play();
 			}
 
 		}
